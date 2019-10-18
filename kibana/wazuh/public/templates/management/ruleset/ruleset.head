@@ -1,0 +1,4 @@
+<div flex="auto" layout="column" ng-if="mctrl.globalRuleSet == 'ruleset'">
+<div class="md-padding-h">
+    <react-component name="Tabs" props="mctrl.rulesetTabsProps" />
+</div>

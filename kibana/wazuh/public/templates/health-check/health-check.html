@@ -1,0 +1,35 @@
+<md-content flex="auto" layout="column" layout-align="center" class="health-check" ng-controller="healthCheck as ctrl">
+    <div layout="row" layout-align="center" class="health-check-loader">
+    </div>
+    <img aria-hidden="true" wz-src="/plugins/wazuh/img/icon_blue.svg" class="health-check-logo" />
+    <div layout="row" class="layout-align-center margin-top-30">
+        <table flex="40" class="table">
+            <tbody>
+                <tr ng-repeat="result in ctrl.results track by $index">
+                    <td>{{result.description}}</td>
+                    <td ng-if="result.status === 'disabled'" class="discover-field-details">
+                        Disabled
+                    </td>
+                    <td ng-if="result.status === 'Ready' || result.status === 'Error'">
+                        <i ng-if="result.status === 'Ready'" class="fa fa-fw fa-check wz-text-teal"></i>
+                        <i ng-if="result.status === 'Error'" class="fa fa-fw fa-warning wz-text-red"></i>
+                        {{result.status}}</td>
+                    <td ng-if="result.status !== 'Ready' && result.status !== 'Error' && result.status !== 'disabled'">
+                        <i class="fa fa-fw fa-spin fa-spinner"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div layout="row" ng-if="ctrl.errors.length" class="layout-align-center margin-top-30">
+        <ul>
+            <li class="wz-text-red" ng-repeat='error in ctrl.errors track by $index'>{{error}}</li>
+        </ul>
+    </div>
+    <div ng-if="ctrl.errors.length" layout="row" class="layout-align-center margin-top-30">
+        <md-button class="wz-button md-raised md-primary" ng-click="ctrl.goApp()" aria-label="Go to app">
+            <i class="fa fa-fw fa-sign-out"></i> Go to app
+        </md-button>
+    </div>
+
+</md-content>

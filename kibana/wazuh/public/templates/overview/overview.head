@@ -1,0 +1,80 @@
+<div flex="auto" layout="column" ng-cloak ng-controller="overviewController as octrl">
+    <!-- Navigation section -->
+    <div layout="row" layout-align="start center">
+        <!-- Breadcrumbs -->
+        <div layout="row" layout-padding>
+            <!-- If you're not on the Welcome tab, show a functional breadcrumb -->
+            <div ng-if="octrl.tab !== 'welcome'">
+                <span class="wz-text-link cursor-pointer" ng-click="octrl.switchTab('welcome')">Overview</span>
+                <span> / </span>
+                <span>{{ octrl.tabNames[octrl.tab] }}</span>
+            </div>
+        </div>
+        <!-- End breadcrumbs -->
+
+        <!-- Separator -->
+        <span flex></span>
+        <!-- End separator -->
+
+        <!-- Reporting button section -->
+        <div ng-if="octrl.tab !== 'welcome' && octrl.tabView === 'panels'">
+            <!-- Report button -->
+            <button class="kuiButton kuiButton--secondary wz-margin-right-8 small" tooltip="Generate report"
+                tooltip-placement="bottom"
+                ng-class="{'euiButtonEmpty--disabled': !rendered || loading || resultState !== 'ready'}"
+                ng-disabled="!rendered || loading || resultState !== 'ready'" ng-click="octrl.startVis2Png()"
+                aria-label="Generate report button">
+                <i class="fa fa-fw fa-print" aria-hidden="true"></i>
+            </button>
+        </div>
+        <!-- End Reporting buttons section -->
+
+        <!-- Discover/Dashboard buttons section -->
+        <div ng-if="octrl.tab !== 'welcome'" class="wz-margin-right-8">
+            <!-- Dashboard button -->
+            <button class="kuiButton kuiButton--secondary small"
+                ng-click="octrl.tabView === 'discover' ? octrl.switchSubtab('panels') : octrl.switchSubtab('discover')"
+                aria-label="Dashboard button">
+                <span ng-if="octrl.tabView === 'discover'"><i class="fa fa-fw fa-th" aria-hidden="true"></i>
+                    Dashboard</span>
+                <span ng-if="octrl.tabView === 'panels'"><i class="fa fa-fw fa-compass" aria-hidden="true"></i>
+                    Discover</span>
+            </button>
+        </div>
+        <!-- End Discover/Dashboard buttons section -->
+    </div>
+    <!-- End navigation section -->
+
+    <!-- Navigation bar -->
+    <div ng-if="octrl.overviewTabsProps">
+        <react-component name="Tabs" props="octrl.overviewTabsProps" />
+    </div>
+    <!-- End of navigation bar -->
+
+    <!-- Discover search bar section -->
+    <kbn-dis ng-show="octrl.tab !== 'welcome'"></kbn-dis>
+    <!-- End Discover search bar section -->
+
+    <!-- Loading status section -->
+    <div layout="column" layout-align="center center"
+        ng-if="octrl.tab !== 'welcome' && octrl.tabView === 'panels' && !rendered && resultState !== 'none'">
+        <div class="percentage"><i class="fa fa-fw fa-spin fa-spinner" aria-hidden="true"></i></div>
+        <div class="percentage">{{loadingStatus}}</div>
+    </div>
+    <!-- End loading status section -->
+
+    <!-- Report status section -->
+    <div layout="column" layout-align="center center" ng-if="octrl.tab !== 'welcome'"
+        ng-show="reportBusy && reportStatus">
+        <div class="percentage"><i class="fa fa-fw fa-spin fa-spinner" aria-hidden="true"></i></div>
+        <div class="percentage">{{reportStatus}}</div>
+    </div>
+    <!-- End report status section -->
+
+    <!-- No results section -->
+    <div layout="row" class="wz-margin-top-10 wz-margin-right-8 wz-margin-left-8" ng-if="octrl.tab !== 'welcome'"
+        ng-show="resultState === 'none' && octrl.tabView === 'panels'">
+        <react-component flex name="EuiCallOut" props="{color:'warning',iconType:'help', title:'There are no results for selected time range. Try another
+            one.'}" />
+    </div>
+    <!-- No results section -->

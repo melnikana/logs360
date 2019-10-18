@@ -1,0 +1,21 @@
+<div layout="column">
+
+    <!-- No configuration card -->
+    <md-card class="wz-md-card">
+        <md-card-content class="wz-text-center">
+            <react-component name="EuiIcon" props="{type:'help'}" /> <span class="wz-headline-title">Configuração não acessível</span>
+            <md-divider class="wz-margin-top-10"></md-divider>
+            <div layout="column" class="wz-padding-top-10">
+                <p ng-if="error === 'not-present'">Esta seção não está presente no arquivo de configuração.</p>
+                <p ng-if="error !== 'not-present'">Ocorreu um problema ao buscar a configuração para esta seção.</p>
+            </div>
+            <div layout="column" class="wz-padding-top-10">
+                <p>Clique no
+                    <react-component name="EuiIcon" props="{type:'questionInCircle'}" /> ícone para obter ajuda.
+                     Verifique os links da documentação para saber mais sobre como configurá-lo.</p>
+            </div>
+        </md-card-content>
+    </md-card>
+    <!-- End no configuration card -->
+
+</div>
