@@ -1,51 +1,51 @@
 export const configEquivalences = {
-  pattern: 'Default index pattern to use on the app.',
+  pattern: 'Padrão de índice padrão para usar no aplicativo.',
   'checks.pattern':
-    'Enable or disable the index pattern health check when opening the app.',
+    'Ative ou desative a verificação de integridade do padrão de índice ao abrir o aplicativo.',
   'checks.template':
-    'Enable or disable the template health check when opening the app.',
-  'checks.api': 'Enable or disable the API health check when opening the app.',
+    'Ative ou desative a verificação de integridade do modelo ao abrir o aplicativo.',
+  'checks.api': 'Ative ou desative a verificação de integridade da API ao abrir o aplicativo.',
   'checks.setup':
-    'Enable or disable the setup health check when opening the app.',
-  'extensions.pci': 'Enable or disable the PCI DSS tab on Overview and Agents.',
-  'extensions.gdpr': 'Enable or disable the GDPR tab on Overview and Agents.',
-  'extensions.audit': 'Enable or disable the Audit tab on Overview and Agents.',
+    'Ative ou desative a verificação de integridade da instalação ao abrir o aplicativo.',
+  'extensions.pci': 'Ative ou desative a guia PCI DSS em Overview and Agents.',
+  'extensions.gdpr': 'Ativar ou desativar a guia GDPR em Visão geral e agentes.',
+  'extensions.audit': 'Ativar ou desativar a guia Auditoria em Visão geral e agentes.',
   'extensions.oscap':
-    'Enable or disable the Open SCAP tab on Overview and Agents.',
+    'Ativar ou desativar a guia Open SCAP em Visão geral e agentes.',
   'extensions.ciscat':
-    'Enable or disable the CIS-CAT tab on Overview and Agents.',
-  'extensions.aws': 'Enable or disable the Amazon (AWS) tab on Overview.',
+    'Ative ou desative a guia CIS-CAT em Overview and Agents.',
+  'extensions.aws': 'Ativar ou desativar a guia Amazon (AWS) em Visão geral.',
   'extensions.virustotal':
-    'Enable or disable the VirusTotal tab on Overview and Agents.',
+    'Ativar ou desativar a guia VirusTotal em Visão geral e agentes.',
   'extensions.osquery':
-    'Enable or disable the Osquery tab on Overview and Agents.',
+    'Ativar ou desativar a guia Osquery em Visão geral e agentes.',
   'extensions.docker':
-    'Enable or disable the Docker listener tab on Overview and Agents.',
+    'Habilite ou desabilite a guia ouvinte do Docker em Visão geral e agentes.',
   timeout:
-    'Defines the maximum time the app will wait for an API response when making requests to it.',
-  'wazuh.shards': 'Define the number of shards to use for the .wazuh index.',
+    'Defina o tempo máximo que o aplicativo aguardará uma resposta da API ao fazer solicitações.',
+  'wazuh.shards': 'Defina o número de shards a serem usados no índice .logs360.',
   'wazuh.replicas':
-    'Define the number of replicas to use for the .wazuh index.',
+    'Defina o número de réplicas a serem usadas para o índice .logs360.',
   'ip.selector':
-    'Defines if the user is allowed to change the selected index pattern directly from the top menu bar.',
+    'Define se o usuário tem permissão para alterar o padrão de índice selecionado diretamente na barra de menus superior.',
   'ip.ignore':
-    'Disable certain index pattern names from being available in index pattern selector from the Wazuh app.',
+    'Desabilite que certos nomes de padrões de índice estejam disponíveis no seletor de padrões de índice do aplicativo Wazuh.',
   'xpack.rbac.enabled':
-    'Enable or disable X-Pack RBAC security capabilities when using the app.',
+    'Ative ou desative os recursos de segurança do X-Pack RBAC ao usar o aplicativo.',
   'wazuh.monitoring.enabled':
-    'Enable or disable the wazuh-monitoring index creation and/or visualization.',
+    'Ative ou desative a criação e/ou visualização do índice de monitoramento Logs360.',
   'wazuh.monitoring.frequency':
-    'Define in seconds the frequency the app generates a new document on the wazuh-monitoring index.',
+    'Defina em segundos a frequência com que o aplicativo gera um novo documento no índice de monitoramento logs360.',
   'wazuh.monitoring.shards':
-    'Define the number of shards to use for the logs360-monitoring-1.x-* indices.',
+    'Defina o número de shards a serem usados nos índices logs360-Monitoring-1.x- *.',
   'wazuh.monitoring.replicas':
-    'Define the number of replicas to use for the logs360-monitoring-1.x-* indices.',
+    'Defina o número de réplicas a serem usadas para os índices logs360-Monitoring-1.x- *.',
   'wazuh.monitoring.creation':
-    'Define the interval in which the wazuh-monitoring index will be created.',
+    'Defina o intervalo em que o índice de monitoramento Logs360 será criado.',
   'wazuh.monitoring.pattern':
-    'Default index pattern to use on the app for Wazuh monitoring.',
+    'Padrão de índice padrão a ser usado no aplicativo para monitoramento Logs360.',
   admin:
-    'Enable or disable administrator requests to the Wazuh API when using the app.',
+    'Ativar ou desativar solicitações de administrador para a API Logs360 ao usar o aplicativo.',
   'logs.level':
-    'Set the app logging level, allowed values are info and debug. Default is info.'
+    'Defina o nível de log do aplicativo, os valores permitidos são informações e depuração. O padrão é informação.'
 };

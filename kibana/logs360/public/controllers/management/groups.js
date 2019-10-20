@@ -612,7 +612,7 @@ export function GroupsController(
     try {
       $scope.addingGroup = false;
       await groupHandler.createGroup(name);
-      errorHandler.info(`Group ${name} has been created`);
+      errorHandler.info(`O grupo ${name} foi criado`);
     } catch (error) {
       errorHandler.handle(error.message || error);
     }
