@@ -7,10 +7,10 @@
     <md-card-content>
         <div layout="row" layout-align="start center">
             <div>
-                <span class="font-size-16">Who-data audit keys</span>
+                <span class="font-size-16">Chaves de auditoria Who-data</span>
                 <div class="wz-margin-top-10">
-                    <span class="md-subheader small">Wazuh will include in its FIM baseline those events being
-                        monitored by Audit using audit_key.</span>
+                    <span class="md-subheader small">O Logs360 incluirá em sua linha de base FIM os eventos
+                        que estão sendo monitorados pela Auditoria usando audit_key.</span>
                 </div>
             </div>
             <span flex></span>
@@ -35,7 +35,7 @@
         <div class="wz-padding-top-10" ng-show="currentConfig['syscheck-syscheck'].syscheck.whodata.audit_key">
             <table class="table table-striped table-condensed" style="table-layout: fixed !important;">
                 <thead class="wz-text-bold">
-                    <th class="wz-text-left">Keys</th>
+                    <th class="wz-text-left">Chaves</th>
                 </thead>
                 <tbody class="wz-word-wrap">
                     <tr ng-repeat="auditkey in currentConfig['syscheck-syscheck'].syscheck.whodata.audit_key">
@@ -45,9 +45,9 @@
             </table>
         </div>
         <div class="wz-padding-top-10" ng-show="!currentConfig['syscheck-syscheck'].syscheck.whodata">
-            <i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> No audit keys were found. Visit the
-            documentation on <a href="https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/syscheck.html#whodata">this
-                link</a> to enable it.
+            <i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> Nenhuma chave de auditoria foi encontrada. Visite a
+            documentação <a href="https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/syscheck.html#whodata"> nesse
+                link</a> para habilitá-lo.
         </div>
         <!-- End configuration block -->
     </md-card-content>

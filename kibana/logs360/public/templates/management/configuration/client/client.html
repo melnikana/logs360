@@ -3,9 +3,9 @@
     <!-- Headline -->
     <div layout="column" layout-padding>
         <div>
-            <span class="font-size-18">Communication</span>
+            <span class="font-size-18">Comunicação</span>
         </div>
-        <span class="md-subheader">Settings related to the connection with the manager</span>
+        <span class="md-subheader">Configurações relacionadas à conexão com o console</span>
     </div>
     <!-- End headline -->
 
@@ -29,9 +29,9 @@
                 <md-card-content>
                     <div layout="row" layout-align="start center">
                         <div>
-                            <span class="font-size-16">Main settings</span>
+                            <span class="font-size-16">Configurações principais</span>
                             <div class="wz-margin-top-10">
-                                <span class="md-subheader small">Basic manager-agent communication settings</span>
+                                <span class="md-subheader small">Configurações básicas de comunicação console-agente</span>
                             </div>
                         </div>
                         <span flex></span>
@@ -73,9 +73,9 @@
                     <!-- End configuration block -->
 
                     <div ng-if="currentConfig['agent-client'].client.server.length" class="wz-margin-top-10">
-                        <span class="font-size-16">Server settings</span>
+                        <span class="font-size-16">Configurações do servidor</span>
                         <div class="wz-margin-top-10">
-                            <span class="md-subheader small">List of managers to connect</span>
+                            <span class="md-subheader small">Lista de consoles para conectar</span>
                         </div>
                     </div>
                     <md-divider ng-if="currentConfig['agent-client'].client.server.length" class="wz-margin-top-10">
@@ -86,9 +86,9 @@
 
                         <table class="table table-striped table-condensed" style="table-layout: fixed !important;">
                             <thead class="wz-text-bold">
-                                <th class="wz-text-left">Address</th>
-                                <th class="wz-text-left">Port</th>
-                                <th class="wz-text-left">Protocol</th>
+                                <th class="wz-text-left">Endereço</th>
+                                <th class="wz-text-left">Porta</th>
+                                <th class="wz-text-left">Protocolo</th>
                             </thead>
                             <tbody class="wz-word-wrap">
                                 <tr ng-repeat="item in currentConfig['agent-client'].client.server">
@@ -116,14 +116,14 @@
             <span class="wz-margin-right-8 wz-text-link wz-text-right wz-margin-top-8"
                 ng-click="showHelp = !showHelp"><i class="fa fa-fw fa-question-circle-o"></i></span>
             <md-list ng-if="showHelp">
-                <md-subheader>More info about this section</md-subheader>
+                <md-subheader>Mais informações sobre esta seção</md-subheader>
                 <md-list-item target="_blank" class="wz-text-link"
-                    ng-href="https://documentation.wazuh.com/current/user-manual/agents/agent-connection.html">Checking
-                    connection with manager</md-list-item>
+                    ng-href="https://documentation.wazuh.com/current/user-manual/agents/agent-connection.html">Verificando
+                    a conexão com o console</md-list-item>
                 <md-list-item target="_blank" class="wz-text-link"
                     ng-href="https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/client.html">
-                    Client
-                    reference</md-list-item>
+                    Referência
+                    do Cliente</md-list-item>
             </md-list>
         </md-sidenav>
         <!-- End right sidenav section -->
