@@ -17,13 +17,13 @@ import { resolve } from 'path';
 export default kibana =>
   new kibana.Plugin({
     id: 'logs360',
-    name: 'logs360',
+    name: 'Logs360',
     require: ['kibana', 'elasticsearch'],
     uiExports: {
       app: {
         id: 'logs360',
-        title: 'logs360',
-        description: 'logs360 app for Kibana',
+        title: 'Logs360',
+        description: 'Logs360 App para Kibana',
         icon: 'plugins/logs360/img/icon.svg',
         main: 'plugins/logs360/app'
       },
@@ -44,7 +44,7 @@ export default kibana =>
       if (xpackMainPlugin) {
         xpackMainPlugin.registerFeature({
           id: 'logs360',
-          name: 'logs360',
+          name: 'Logs360',
           app: ['logs360', 'kibana', 'elasticsearch'],
           navLinkId: 'logs360',
           privileges: {}
