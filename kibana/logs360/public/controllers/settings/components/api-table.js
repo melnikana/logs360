@@ -148,16 +148,16 @@ export class ApiTable extends Component {
       },
       {
         field: '_source.api_port',
-        name: 'Port',
+        name: 'Porta',
         align: 'left'
       },
       {
         field: '_source.api_user',
-        name: 'User',
+        name: 'Usuario',
         align: 'left'
       },
       {
-        name: 'Actions',
+        name: 'Ações',
         render: item => (
           <EuiFlexGroup>
             <EuiFlexItem grow={false}>
@@ -247,7 +247,7 @@ export class ApiTable extends Component {
               iconType="plusInCircle"
               onClick={() => this.props.switch()}
             >
-              Add new
+              Adicionar Novo
             </EuiButtonEmpty>
           </EuiFlexItem>
           <EuiFlexItem />

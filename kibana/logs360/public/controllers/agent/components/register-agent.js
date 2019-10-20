@@ -163,11 +163,11 @@ export class RegisterAgent extends Component {
         )
       },
       {
-        title: 'Wazuh server address',
+        title: 'Logs360 server address',
         children: <Fragment>{ipInput}</Fragment>
       },
       {
-        title: 'Complete the installation',
+        title: 'Completar instalação',
         children: (
           <div>
             <Fragment>

@@ -11,59 +11,59 @@
  */
 export const TabDescription = {
   general: {
-    title: 'Security events',
+    title: 'Eventos de segurança',
     description:
-      'Browse through your security alerts, identifying issues and threats in your environment.'
+      'Navegue pelos alertas de segurança, identificando problemas e ameaças no seu ambiente.'
   },
   fim: {
-    title: 'Integrity monitoring',
+    title: 'Monitoramento de integridade',
     description:
-      'Alerts related to file changes, including permissions, content, ownership and attributes.'
+      'Alertas relacionados a alterações de arquivos, incluindo permissões, conteúdo, propriedade e atributos.'
   },
   pm: {
-    title: 'Policy monitoring',
+    title: 'Monitoramento de políticas',
     description:
-      'Verify that your systems are configured according to your security policies baseline.'
+      'Verifique se seus sistemas estão configurados de acordo com a linha de base das políticas de segurança.'
   },
   vuls: {
-    title: 'Vulnerabilities',
+    title: 'Vulnerabilidades',
     description:
-      'Discover what applications in your environment are affected by well-known vulnerabilities.'
+      'Descubra quais aplicativos em seu ambiente são afetados por vulnerabilidades conhecidas.'
   },
   oscap: {
     title: 'OpenSCAP',
     description:
-      'Configuration assessment and automation of compliance monitoring using SCAP checks.'
+      'Avaliação de configuração e automação do monitoramento de conformidade usando verificações SCAP.'
   },
   audit: {
-    title: 'System auditing',
+    title: 'Auditoria do sistema',
     description:
-      'Audit users behavior, monitoring command execution and alerting on access to critical files.'
+      'Audite o comportamento dos usuários, monitorando a execução de comandos e alertando sobre o acesso a arquivos críticos.'
   },
   pci: {
     title: 'PCI DSS',
     description:
-      'Global security standard for entities that process, store or transmit payment cardholder data.'
+      'Padrão de segurança global para entidades que processam, armazenam ou transmitem dados do titular do cartão de pagamento.'
   },
   gdpr: {
-    title: 'GDPR',
+    title: 'LGPD',
     description:
-      'General Data Protection Regulation (GDPR) sets guidelines for processing of personal data.'
+      'O Regulamento Geral de Proteção de Dados (LGPD) define diretrizes para o processamento de dados pessoais.'
   },
   hipaa: {
     title: 'HIPAA',
     description:
-      'Health Insurance Portability and Accountability Act of 1996 (HIPAA) provides data privacy and security provisions for safeguarding medical information.'
+      'A Lei de Portabilidade e Responsabilidade do Seguro de Saúde de 1996 (HIPAA) fornece cláusulas de privacidade e segurança de dados para proteger informações médicas.'
   },
   nist: {
     title: 'NIST 800-53',
     description:
-      'National Institute of Standards and Technology Special Publication 800-53 (NIST 800-53) sets guidelines for federal information systems.'
+      'A Publicação Especial 800-53 do Instituto Nacional de Padrões e Tecnologia (NIST 800-53) estabelece diretrizes para os sistemas de informação federais.'
   },
   ciscat: {
     title: 'CIS-CAT',
     description:
-      'Configuration assessment using Center of Internet Security scanner and SCAP checks.'
+      'Avaliação da configuração usando o verificador Center of Internet Security e verificações SCAP.'
   },
   aws: {
     title: 'Amazon AWS',
@@ -76,27 +76,27 @@ export const TabDescription = {
       'Alerts resulting from VirusTotal analysis of suspicious files via an integration with their API.'
   },
   syscollector: {
-    title: 'Inventory data',
+    title: 'Dados de inventário',
     description:
-      'Applications, network configuration, open ports and processes running on your monitored systems.'
+      'Aplicativos, configuração de rede, portas abertas e processos em execução nos seus sistemas monitorados.'
   },
   configuration: {
-    title: 'Configuration',
+    title: 'Configuração',
     description:
-      'Check the current agent configuration remotely applied by its group.'
+      'Verifique a configuração atual do agente aplicada remotamente por seu grupo.'
   },
   osquery: {
     title: 'Osquery',
     description:
-      'Osquery can be used to expose an operating system as a high-performance relational database.'
+      'O Osquery pode ser usado para expor um sistema operacional como um banco de dados relacional de alto desempenho.'
   },
   sca: {
-    title: 'Security configuration assessment',
-    description: 'Scan your assets as part of a configuration assessment audit.'
+    title: 'Avaliação da configuração de segurança',
+    description: 'Examine seus ativos como parte de uma auditoria de avaliação da configuração.'
   },
   docker: {
-    title: 'Docker listener',
+    title: 'Monitor Docker',
     description:
-      'Monitor and collect the activity from Docker containers such as creation, running, starting, stopping or pausing events.'
+      'Monitore e colete a atividade dos contêineres do Docker, como criação, execução, inicialização, parada ou pausa de eventos.'
   }
 };

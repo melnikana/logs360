@@ -25,7 +25,7 @@ pattern: logs360-alerts-1.x-*
 # ----------------------------------- Checks -----------------------------------
 #
 # Defines which checks must to be consider by the healthcheck
-# step once the Wazuh app starts. Values must to be true or false.
+# step once the Logs360 app starts. Values must to be true or false.
 checks.pattern : true
 checks.template: true
 checks.api     : true
@@ -34,7 +34,7 @@ checks.setup   : true
 # --------------------------------- Extensions ---------------------------------
 #
 # Defines which extensions should be activated when you add a new API entry.
-# You can change them after Wazuh app starts.
+# You can change them after Logs360 app starts.
 # Values must to be true or false.
 extensions.pci       : true
 extensions.gdpr      : true
@@ -58,7 +58,7 @@ timeout: 50000
 #
 # ------------------------------ Advanced indices ------------------------------
 #
-# Configure .wazuh indices shards and replicas.
+# Configure .Logs360 indices shards and replicas.
 wazuh.shards          : 1
 wazuh.replicas        : 0
 #
@@ -78,12 +78,12 @@ ip.selector: true
 # Default: enabled
 xpack.rbac.enabled: true
 #
-# ------------------------------ wazuh-monitoring ------------------------------
+# ------------------------------ Logs360-monitoring ------------------------------
 #
-# Custom setting to enable/disable wazuh-monitoring indices.
+# Custom setting to enable/disable Logs360-monitoring indices.
 # Values: true, false, worker
 # If worker is given as value, the app will show the Agents status
-# visualization but won't insert data on wazuh-monitoring indices.
+# visualization but won't insert data on Logs360-monitoring indices.
 # Default: true
 wazuh.monitoring.enabled: true
 #
