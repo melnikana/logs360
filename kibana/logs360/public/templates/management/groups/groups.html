@@ -11,7 +11,7 @@
         <div ng-show="!load" layout="column" layout-padding ng-if="!currentGroup || !currentGroup.name">
             <div layout="row">
                 <span class="font-size-18">
-                    <i class="fa fa-fw fa-object-group" aria-hidden="true"></i> Groups </span>
+                    <i class="fa fa-fw fa-object-group" aria-hidden="true"></i> Grupos </span>
                 <span ng-if='adminMode' class="font-size-18 wz-text-link wz-margin-left-8" ng-click="switchAddingGroup()">
                     <react-component ng-if="!addingGroup" name="EuiIcon" props="{type:'plusInCircle', color:'primary'}" />
                     <svg ng-if="addingGroup" class="euiIcon euiIcon--medium" focusable="false" xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@
                 </button>
             </div>
             <div layout="row" ng-if="!addingGroup">
-                <span class="md-subheader">List and check your groups, its agents and files</span>
+                <span class="md-subheader">Liste e verifique seus grupos, seus agentes e arquivos</span>
             </div>
         </div>
         <!-- End headline -->
@@ -49,13 +49,13 @@
             <!-- XML editor for group agents -->
             <div ng-show="editingFile">
                 <div layout="row" class="md-padding-h wz-margin-top-10">
-                    <span ng-click='closeEditingFile()' class='wz-margin-top-3 kuiButton kuiButton--hollow'>Cancel</span>
+                    <span ng-click='closeEditingFile()' class='wz-margin-top-3 kuiButton kuiButton--hollow'>Cancelar</span>
                     <button ng-disabled='xmlHasErrors' ng-click='doSaveGroupAgentConfig()' class='height-35 kuiButton kuiButton--secondary wz-margin-left-8'>
                         <span ng-show='!xmlHasErrors'>
-                            <react-component name="EuiIcon" props="{type: 'save'}" /> Save file
+                            <react-component name="EuiIcon" props="{type: 'save'}" /> Salvar Arquivo
                         </span>
                         <span ng-show='xmlHasErrors' class='btn-danger'><i aria-hidden='true' class='fa fa-fw fa-exclamation-triangle'></i>
-                            XML format error</span>
+                            Erro no formato XML</span>
                     </button>
                 </div>
                 <div class="md-padding md-padding-top-10" ng-if="fetchedXML && currentGroup">
@@ -69,12 +69,12 @@
             <div ng-if="!editingFile">
                 <div layout="row" class="md-padding" ng-if="lookingGroup && currentGroup && addingAgents">
                     <span ng-click='addMultipleAgents(false)' class='wz-margin-top-3 kuiButton kuiButton--hollow'>
-                        Cancel</span>
+                        Cancelar</span>
                     <span ng-hide='moreThan500' ng-click='saveAddAgents()' class='btn wz-button wz-margin-left-8'><i
                             aria-hidden='true' class='fa fa-fw fa-save'></i>
-                        Apply changes</span>
-                    <span class='error-msg' ng-show='moreThan500'><i class="fa fa-exclamation-triangle"></i> It is not
-                        possible to apply changes of more than 500 additions or deletions</span>
+                        Aplicar mudanças</span>
+                    <span class='error-msg' ng-show='moreThan500'><i class="fa fa-exclamation-triangle"></i> Não é possível
+                        aplicar alterações de mais de 500 adições ou exclusões</span>
                 </div>
 
                 <!-- Search bar -->
@@ -91,7 +91,7 @@
 
                     <button type="submit" aria-label="Search" class="euiFlexItem euiFlexItem--flexGrowZero height-35 kuiButton kuiButton--secondary wz-margin-left-8"
                         ng-click="search(custom_search)">
-                        Search
+                        Pesquisar
                     </button>
                     <div ng-if="lookingGroup && currentGroup && !addingAgents && !editingFile && !file && adminMode"
                         class="euiFlexItem euiFlexItem--flexGrowZero height-35 wz-margin-left-8">
@@ -101,13 +101,13 @@
                         class="euiFlexItem euiFlexItem--flexGrowZero height-35 kuiButton kuiButton--secondary ng-scope wz-margin-left-8"
                         ng-click="editGroupAgentConfig(currentGroup)" aria-label="Edit group configuration">
                         <react-component name="EuiIcon" props="{type:'pencil', color:'primary'}" />
-                        Edit group configuration
+                        Editar configuração do grupo
                     </button>
                     <button ng-if="lookingGroup && currentGroup && !addingAgents && !editingFile && !file && adminMode && groupsSelectedTab==='agents'"
                         class="euiFlexItem euiFlexItem--flexGrowZero height-35 kuiButton kuiButton--secondary ng-scope wz-margin-left-8"
                         ng-click="addMultipleAgents(true)" aria-label="Add or remove agents">
                         <react-component name="EuiIcon" props="{type:'plusInCircle', color:'primary'}" />
-                        Add or remove agents
+                        Adicionar ou remover agentes
                     </button>
 
                 </div>
@@ -125,7 +125,7 @@
                             <button type="button" ng-click="downloadCsv('/agents/groups')" class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--small">
                                 <span class="euiButtonEmpty__content">
                                     <react-component name="EuiIcon" props="{type:'importAction'}" />
-                                    <span class="euiButtonEmpty__text">Formatted</span>
+                                    <span class="euiButtonEmpty__text">Formatado</span>
                                 </span>
                             </button>
                         </div>
@@ -163,7 +163,7 @@
                                     class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--small">
                                     <span class="euiButtonEmpty__content">
                                         <react-component name="EuiIcon" props="{type:'importAction'}" />
-                                        <span class="euiButtonEmpty__text">Formatted</span>
+                                        <span class="euiButtonEmpty__text">Formatado</span>
                                     </span>
                                 </button>
                             </div>
@@ -188,7 +188,7 @@
                                     class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--small">
                                     <span class="euiButtonEmpty__content">
                                         <react-component name="EuiIcon" props="{type:'importAction'}" />
-                                        <span class="euiButtonEmpty__text">Formatted</span>
+                                        <span class="euiButtonEmpty__text">Formatado</span>
                                     </span>
                                 </button>
                             </div>

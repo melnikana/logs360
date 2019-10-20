@@ -3,9 +3,9 @@
     <!-- Headline -->
     <div layout="column" layout-padding>
         <div>
-            <span class="font-size-18">Integrations</span>
+            <span class="font-size-18">Integrações</span>
         </div>
-        <span class="md-subheader">Slack, VirusTotal and PagerDuty integrations with external APIs</span>
+        <span class="md-subheader">Integrações Slack, VirusTotal e PagerDuty com APIs externas</span>
     </div>
     <!-- End headline -->
 
@@ -33,7 +33,7 @@
                         <div ng-if="integrations['virustotal']">
                             <span class="font-size-16">VirusTotal</span>
                             <div class="wz-margin-top-10">
-                                <span class="md-subheader small">Get notified when malicious software is found</span>
+                                <span class="md-subheader small">Seja notificado quando software malicioso for encontrado</span>
                             </div>
                         </div>
                         <span flex></span>
@@ -69,7 +69,7 @@
                     <div class="wz-margin-top-10" ng-if="integrations['slack']">
                         <span class="font-size-16">Slack</span>
                         <div class="wz-margin-top-10">
-                            <span class="md-subheader small">Get alerts directly on Slack</span>
+                            <span class="md-subheader small">Receba alertas diretamente em Slack</span>
                         </div>
                     </div>
                     <md-divider class="wz-margin-top-10" ng-if="integrations['slack']"></md-divider>
@@ -98,8 +98,7 @@
                     <div class="wz-margin-top-10" ng-if="integrations['pagerduty']">
                         <span class="font-size-16">PagerDuty</span>
                         <div class="wz-margin-top-10">
-                            <span class="md-subheader small">Get alerts on this streamlined incident resolution
-                                software</span>
+                            <span class="md-subheader small">Receba alertas sobre este software simplificado de resolução de incidentes</span>
                         </div>
                     </div>
                     <md-divider class="wz-margin-top-10" ng-if="integrations['pagerduty']"></md-divider>
@@ -141,18 +140,18 @@
                 <react-component name="EuiIcon" props="{type:'questionInCircle'}" />
             </span>
             <md-list ng-if="showHelp">
-                <md-subheader>More info about this section</md-subheader>
+                <md-subheader>Mais informações sobre esta seção</md-subheader>
                 <md-list-item target="_blank" class="wz-text-link"
-                    ng-href="https://documentation.wazuh.com/current/user-manual/manager/manual-integration.html">How
-                    to integrate Wazuh with external APIs</md-list-item>
+                    ng-href="https://documentation.wazuh.com/current/user-manual/manager/manual-integration.html">Como
+                    integrar o Logs360 com APIs externas</md-list-item>
                 <md-list-item target="_blank" class="wz-text-link"
                     ng-href="https://documentation.wazuh.com/current/user-manual/capabilities/virustotal-scan/index.html">
                     VirusTotal
-                    integration documentation</md-list-item>
+                    documentação de integração</md-list-item>
                 <md-list-item target="_blank" class="wz-text-link"
                     ng-href="https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/integration.html">
-                    Integration
-                    reference</md-list-item>
+                    Referência
+                    de integração</md-list-item>
             </md-list>
         </md-sidenav>
         <!-- End right sidenav section -->

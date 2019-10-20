@@ -8,7 +8,7 @@
         ng-show="!loading && currentNode && !showConfig">
         <md-card flex class="wz-md-card">
             <md-card-content class="wazuh-column">
-                <span class="wz-headline-title">{{ currentNode.name }} alerts summary</span>
+                <span class="wz-headline-title">{{ currentNode.name }} resumo de alertas</span>
                 <md-divider class="wz-margin-top-10"></md-divider>
                 <kbn-vis ng-show="rendered" vis-id="'Wazuh-App-Cluster-monitoring-Overview-Node'" id="Wazuh-App-Cluster-monitoring-Overview-Node"></kbn-vis>
             </md-card-content>
@@ -21,27 +21,28 @@
         <!-- Node information card -->
         <md-card flex class="wz-md-card" ng-show="currentNode && currentNode.healthCheck && currentNode.healthCheck.info">
             <md-card-content>
-                <i class="fa fa-fw fa-info" aria-hidden="true"></i> <span class="wz-headline-title">Node
-                    information</span>
+                <i class="fa fa-fw fa-info" aria-hidden="true"></i> <span class="wz-headline-title">Informação
+                    de nós
+                </span>
                 <md-divider class="wz-margin-top-10"></md-divider>
                 <div layout="row" class="wz-padding-top-10">
                     <span flex="30">IP</span>
                     <span class="color-grey">{{currentNode.healthCheck.info.ip}}</span>
                 </div>
                 <div layout="row" class="wz-padding-top-10">
-                    <span flex="30">Version</span>
+                    <span flex="30">Versão</span>
                     <span class="color-grey">{{currentNode.healthCheck.info.version}}</span>
                 </div>
                 <div layout="row" class="wz-padding-top-10">
-                    <span flex="30">Type</span>
+                    <span flex="30">Tipo</span>
                     <span class="color-grey">{{currentNode.healthCheck.info.type}}</span>
                 </div>
                 <div layout="row" class="wz-padding-top-10">
-                    <span flex="30">Name</span>
+                    <span flex="30">Nome</span>
                     <span class="color-grey">{{currentNode.healthCheck.info.name}}</span>
                 </div>
                 <div layout="row" class="wz-padding-top-10">
-                    <span flex="30">Active agents</span>
+                    <span flex="30">Agentes ativos</span>
                     <span class="color-grey">{{ currentNode.healthCheck.info.n_active_agents }}</span>
                 </div>
             </md-card-content>
@@ -88,19 +89,19 @@
         <!-- Agents sync card -->
         <md-card flex class="wz-md-card">
             <md-card-content>
-                <i class="fa fa-fw fa-tv" aria-hidden="true"></i> <span class="wz-headline-title">Last agents
-                    information synchronization</span>
+                <i class="fa fa-fw fa-tv" aria-hidden="true"></i> <span class="wz-headline-title">Sincronização das
+                    informações dos últimos agentes</span>
                 <md-divider class="wz-margin-top-10"></md-divider>
                 <div layout="row" class="wz-padding-top-10">
-                    <span flex="30">Last sync</span>
+                    <span flex="30">Última Sinc</span>
                     <span class="color-grey">{{currentNode.healthCheck.status.last_sync_agentinfo.date_end_master}}</span>
                 </div>
                 <div layout="row" class="wz-padding-top-10">
-                    <span flex="30">Duration</span>
+                    <span flex="30">Duração</span>
                     <span class="color-grey">{{currentNode.healthCheck.status.last_sync_agentinfo.duration}}</span>
                 </div>
                 <div layout="row" class="wz-padding-top-10">
-                    <span flex="30">Total agent info</span>
+                    <span flex="30">Total de informações do agente</span>
                     <span class="color-grey">{{currentNode.healthCheck.status.last_sync_agentinfo.total_agentinfo}}</span>
                 </div>
             </md-card-content>
@@ -113,15 +114,15 @@
                     groups synchronization</span>
                 <md-divider class="wz-margin-top-10"></md-divider>
                 <div layout="row" class="wz-padding-top-10">
-                    <span flex="30">Last sync</span>
+                    <span flex="30">Última Sinc</span>
                     <span class="color-grey">{{currentNode.healthCheck.status.last_sync_agentgroups.date_end_master}}</span>
                 </div>
                 <div layout="row" class="wz-padding-top-10">
-                    <span flex="30">Duration</span>
+                    <span flex="30">Duração</span>
                     <span class="color-grey">{{currentNode.healthCheck.status.last_sync_agentgroups.duration}}</span>
                 </div>
                 <div layout="row" class="wz-padding-top-10">
-                    <span flex="30">Total agent info</span>
+                    <span flex="30">Total de informações do agente</span>
                     <span class="color-grey">{{currentNode.healthCheck.status.last_sync_agentgroups.total_agentgroups}}</span>
                 </div>
             </md-card-content>

@@ -3,15 +3,15 @@
     <!-- Headline -->
     <div layout="column" layout-padding>
         <div>
-            <span class="font-size-18">Anti-flooding settings</span>
+            <span class="font-size-18">Configurações anti-inundação</span>
             <span
                 ng-if="(currentConfig['agent-buffer'] && currentConfig['agent-buffer'].buffer && currentConfig['agent-buffer'].buffer.disabled === 'no') || (currentConfig['agent-buffer'] && currentConfig['agent-buffer'].buffer && !currentConfig['agent-buffer'].buffer.disabled)"
-                class="wz-agent-status-indicator small teal">Enabled</span>
+                class="wz-agent-status-indicator small teal">Habilitado</span>
             <span
                 ng-if="currentConfig['agent-buffer'] && currentConfig['agent-buffer'].buffer && currentConfig['agent-buffer'].buffer.disabled === 'yes'"
-                class="wz-agent-status-indicator small red">Disabled</span>
+                class="wz-agent-status-indicator small red">Desabilitado</span>
         </div>
-        <span class="md-subheader">Agent bucket parameters to avoid event flooding</span>
+        <span class="md-subheader">Parâmetros do bucket do agente para evitar inundações de eventos</span>
     </div>
     <!-- End headline -->
 
@@ -39,10 +39,10 @@
                 <md-card-content>
                     <div layout="row" layout-align="start center">
                         <div>
-                            <span class="font-size-16">Main settings</span>
+                            <span class="font-size-16">Configurações principais</span>
                             <div class="wz-margin-top-10">
-                                <span class="md-subheader small">These settings determine the event processing rate for
-                                    the agent</span>
+                                <span class="md-subheader small">Essas configurações determinam a taxa de processamento de eventos para
+                                    o agente</span>
                             </div>
                         </div>
                         <span flex></span>
@@ -85,15 +85,15 @@
                 <react-component name="EuiIcon" props="{type:'questionInCircle'}" />
             </span>
             <md-list ng-if="showHelp">
-                <md-subheader>More info about this section</md-subheader>
+                <md-subheader>Mais informações sobre esta seção</md-subheader>
                 <md-list-item target="_blank" class="wz-text-link"
                     ng-href="https://documentation.wazuh.com/current/user-manual/capabilities/antiflooding.html">
-                    Anti-flooding
-                    mechanism</md-list-item>
+                    Mecanismo
+                    anti-inundação</md-list-item>
                 <md-list-item target="_blank" class="wz-text-link"
                     ng-href="https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/agent_buffer.html">
-                    Client
-                    buffer reference</md-list-item>
+                    Referência
+                    do buffer do cliente</md-list-item>
             </md-list>
         </md-sidenav>
         <!-- End right sidenav section -->

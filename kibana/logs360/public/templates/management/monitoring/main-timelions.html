@@ -4,7 +4,7 @@
     <div flex class="euiCallOut euiCallOut--warning">
         <div class="euiCallOutHeader">
             <react-component name="EuiIcon" props="{type:'help',className:'euiCallOutHeader__title'}" />
-            <span class="euiCallOutHeader__title">There are no results for selected time range. Try another one.</span>
+            <span class="euiCallOutHeader__title">Não há resultados para o intervalo de tempo selecionado. Tente outro.</span>
         </div>
     </div>
 </div>
@@ -16,7 +16,7 @@
     ng-show="!loading && !showConfig && !showNodes && rendered">
     <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[0]}">
         <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(0)">
-            <span class="wz-headline-title">Cluster alerts summary</span>
+            <span class="wz-headline-title">Resumo de alertas de cluster</span>
             <span flex></span>
             <span class="cursor-pointer" ng-click="expand(0)">
                 <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -28,7 +28,7 @@
     </md-card>
     <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[1]}">
         <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(1)">
-            <span class="wz-headline-title">Alerts by node summary</span>
+            <span class="wz-headline-title">Resumo de alertas por nó</span>
             <span flex></span>
             <span class="cursor-pointer" ng-click="expand(1)">
                 <react-component name="EuiIcon" props="{type:'expand'}" />

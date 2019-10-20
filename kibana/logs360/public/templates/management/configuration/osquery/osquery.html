@@ -5,12 +5,12 @@
         <div>
             <span class="font-size-18">Osquery</span>
             <span ng-if="currentConfig && currentConfig.osquery && currentConfig.osquery.disabled === 'no'"
-                class="wz-agent-status-indicator small teal">Enabled</span>
+                class="wz-agent-status-indicator small teal">Habilitado</span>
             <span
                 ng-if="(currentConfig && currentConfig.osquery && currentConfig.osquery.disabled === 'yes') || (currentConfig && !currentConfig.osquery)"
-                class="wz-agent-status-indicator small red">Disabled</span>
+                class="wz-agent-status-indicator small red">Desabilitado</span>
         </div>
-        <span class="md-subheader">Expose an operating system as a high-performance relational database</span>
+        <span class="md-subheader">Expor um sistema operacional como um banco de dados relacional de alto desempenho</span>
     </div>
     <!-- End headline -->
 
@@ -37,9 +37,9 @@
                 <md-card-content>
                     <div layout="row" layout-align="start center">
                         <div>
-                            <span class="font-size-16">Main settings</span>
+                            <span class="font-size-16">Configurações principais</span>
                             <div class="wz-margin-top-10">
-                                <span class="md-subheader small">General Osquery integration settings</span>
+                                <span class="md-subheader small">Configurações gerais de integração do Osquery</span>
                             </div>
                         </div>
                         <span flex></span>
@@ -76,10 +76,10 @@
 
                     <div ng-if="currentConfig.osquery.packs && isArray(currentConfig.osquery.packs) && currentConfig.osquery.packs.length"
                         class="wz-margin-top-10">
-                        <span class="font-size-16">Osquery packs</span>
+                        <span class="font-size-16">Pacotes Osquery</span>
                         <div class="wz-margin-top-10">
-                            <span class="md-subheader small">A pack contains multiple queries to quickly retrieve
-                                system information</span>
+                            <span class="md-subheader small">Um pacote contém várias consultas para recuperar rapidamente
+                                as informações do sistema</span>
                         </div>
                     </div>
                     <md-divider
@@ -92,8 +92,8 @@
 
                         <table class="table table-striped table-condensed" style="table-layout: fixed !important;">
                             <thead class="wz-text-bold">
-                                <th class="wz-text-left col-lg-4">Name</th>
-                                <th class="wz-text-left col-lg-8">Path</th>
+                                <th class="wz-text-left col-lg-4">Nome</th>
+                                <th class="wz-text-left col-lg-8">Caminho</th>
                             </thead>
                             <tbody class="wz-word-wrap">
                                 <tr ng-repeat="item in currentConfig.osquery.packs">
@@ -121,14 +121,14 @@
                 <react-component name="EuiIcon" props="{type:'questionInCircle'}" />
             </span>
             <md-list ng-if="showHelp">
-                <md-subheader>More info about this section</md-subheader>
+                <md-subheader>Mais informações sobre esta seção</md-subheader>
                 <md-list-item target="_blank" class="wz-text-link"
-                    ng-href="https://documentation.wazuh.com/current/user-manual/capabilities/osquery.html">Osquery
-                    module documentation</md-list-item>
+                    ng-href="https://documentation.wazuh.com/current/user-manual/capabilities/osquery.html">Documentação
+                    do módulo Osquery</md-list-item>
                 <md-list-item target="_blank" class="wz-text-link"
                     ng-href="https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/wodle-osquery.html">
-                    Osquery
-                    module reference</md-list-item>
+                    Referência
+                    do módulo Osquery</md-list-item>
             </md-list>
         </md-sidenav>
         <!-- End right sidenav section -->

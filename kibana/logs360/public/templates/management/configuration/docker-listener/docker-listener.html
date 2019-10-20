@@ -3,16 +3,16 @@
     <!-- Headline -->
     <div layout="column" layout-padding>
         <div>
-            <span class="font-size-18">Docker listener</span>
+            <span class="font-size-18">Monitoramento do Docker</span>
             <span
                 ng-if="currentConfig && currentConfig['docker-listener'] && currentConfig['docker-listener'].disabled === 'no'"
-                class="wz-agent-status-indicator small teal">Enabled</span>
+                class="wz-agent-status-indicator small teal">Habilitado</span>
             <span
                 ng-if="(currentConfig && currentConfig['docker-listener'] && currentConfig['docker-listener'].disabled === 'yes') || (currentConfig && !currentConfig['docker-listener'])"
-                class="wz-agent-status-indicator small red">Disabled</span>
+                class="wz-agent-status-indicator small red">Desabilitado</span>
         </div>
-        <span class="md-subheader">Monitor and collect the activity from Docker containers such as creation, running,
-            starting, stopping or pausing events</span>
+        <span class="md-subheader">Monitore e colete a atividade dos contêineres do Docker, como criação, execução,
+            inicialização, parada ou pausa de eventos</span>
     </div>
     <!-- End headline -->
 
@@ -39,9 +39,9 @@
                 <md-card-content>
                     <div layout="row" layout-align="start center">
                         <div>
-                            <span class="font-size-16">Main settings</span>
+                            <span class="font-size-16">Configurações principais</span>
                             <div class="wz-margin-top-10">
-                                <span class="md-subheader small">General Docker listener settings</span>
+                                <span class="md-subheader small">Configurações gerais de monitoramento do Docker</span>
                             </div>
                         </div>
                         <span flex></span>
@@ -87,10 +87,10 @@
                 <react-component name="EuiIcon" props="{type:'questionInCircle'}" />
             </span>
             <md-list ng-if="showHelp">
-                <md-subheader>More info about this section</md-subheader>
+                <md-subheader>Mais informações sobre esta seção</md-subheader>
                 <md-list-item target="_blank" class="wz-text-link"
                     ng-href="https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/wodle-docker.html">
-                    Docker listener module reference
+                    Referência do módulo de monitoramento do Docker
                 </md-list-item>
             </md-list>
         </md-sidenav>

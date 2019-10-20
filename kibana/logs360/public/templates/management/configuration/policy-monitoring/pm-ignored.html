@@ -7,9 +7,9 @@
     <md-card-content>
         <div layout="row" layout-align="start center">
             <div>
-                <span class="font-size-16">Ignored files and directories</span>
+                <span class="font-size-16">Arquivos e diretórios ignorados</span>
                 <div class="wz-margin-top-10">
-                    <span class="md-subheader small">These files and directories are ignored from the rootcheck scan</span>
+                    <span class="md-subheader small">Esses arquivos e diretórios são ignorados na verificação de verificação de raiz</span>
                 </div>
             </div>
             <span flex></span>
@@ -24,7 +24,7 @@
 
             <table class="table table-striped table-condensed" style="table-layout: fixed !important;" ng-if="(currentConfig['syscheck-rootcheck'].rootcheck.ignore || {}).length">
                 <thead class="wz-text-bold">
-                    <th class="wz-text-left">Path</th>
+                    <th class="wz-text-left">Caminho</th>
                 </thead>
                 <tbody class="wz-word-wrap">
                     <tr ng-repeat="path in currentConfig['syscheck-rootcheck'].rootcheck.ignore">

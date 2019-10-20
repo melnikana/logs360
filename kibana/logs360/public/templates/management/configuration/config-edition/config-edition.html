@@ -7,7 +7,7 @@
             ng-show="editctrl.clusterStatus.data.data.enabled === 'yes' && editctrl.clusterStatus.data.data.running === 'yes' ">
             <div layout="row">
                 <span class="font-size-18">
-                    <react-component name="EuiIcon" props="{type:'gear', size:'l'}" /> Cluster configuration
+                    <react-component name="EuiIcon" props="{type:'gear', size:'l'}" /> Configuração do cluster
                 </span>
             </div>
         </div>
@@ -17,7 +17,7 @@
             ng-show="editctrl.clusterStatus.data.data.enabled !== 'yes' || editctrl.clusterStatus.data.data.running !== 'yes' ">
             <div layout="row">
                 <span class="font-size-18">
-                    <react-component name="EuiIcon" props="{type:'gear', size:'l'}" /> Manager configuration
+                    <react-component name="EuiIcon" props="{type:'gear', size:'l'}" /> Configuração do console
                 </span>
             </div>
         </div>
@@ -45,7 +45,7 @@
                         ng-disabled="editctrl.xmlHasErrors || editctrl.doingSaving || editctrl.isRestarting || wazuhNotReadyYet"
                         ng-click="mconfigctrl.switchConfigurationTab('welcome', false)"
                         class='kuiButton kuiButton--hollow height-35'>
-                        <span>Cancel</span>
+                        <span>Cancelar</span>
                     </button>
 
                     <div layout="row" class="fullWidth">
@@ -61,7 +61,7 @@
                             </span>
                             <span ng-show="editctrl.xmlHasErrors" class='btn-danger'><i aria-hidden='true'
                                     class='fa fa-fw fa-exclamation-triangle'></i>
-                                XML format error</span>
+                                erro no formato XML</span>
                         </button>
                         <span flex ng-if="!restartBtn"></span>
                         <button ng-show="!showConfirmRestartNode && !restartBtn" class="btn wz-button"
@@ -76,17 +76,17 @@
                             <div layout="row no-wrap">
                                 <span
                                     class="wz-padding-top-10 wz-padding-left-8"><strong>{{editctrl.selectedNode}}</strong>
-                                    will be
-                                    restarted
+                                    será
+                                    reiniciado
                                 </span>
                             </div>
                             <div layout="row">
                                 <md-button class="kuiButton kuiButton--hollow height-35" type="button"
-                                    ng-click="showConfirmRestartNode = false">Cancel</md-button>
+                                    ng-click="showConfirmRestartNode = false">Cancelar</md-button>
                                 <md-button class="btn wz-button" type="button"
                                     ng-click="editctrl.restartNode(editctrl.selectedNode);showConfirmRestartNode = false">
                                     <react-component name="EuiIcon" props="{type:'check'}" />
-                                    Confirm</md-button>
+                                    Confirmar</md-button>
                             </div>
                         </div>
                     </div>
@@ -102,14 +102,14 @@
                         <md-card flex="50" class="wz-md-card" flex>
                             <md-card-content class="wz-text-center">
                                 <span class="wz-headline-title">
-                                    <react-component name="EuiIcon" props="{type: 'alert'}" /> Wazuh manager not
-                                    reachable.
+                                    <react-component name="EuiIcon" props="{type: 'alert'}" />Gerenciador Logs360
+                                    não acessível.
                                 </span>
                                 <md-divider class="wz-margin-top-10"></md-divider>
                                 <div layout="row" class="wz-margin-top-10 layout-align-center-center">
                                     <button class="kuiButton kuiButton--secondary height-35"
                                         ng-click="editctrl.changeNode(true)">
-                                        <react-component name="EuiIcon" props="{type: 'refresh'}" /> Refresh
+                                        <react-component name="EuiIcon" props="{type: 'refresh'}" /> Atualizar
                                     </button>
                                 </div>
                             </md-card-content>

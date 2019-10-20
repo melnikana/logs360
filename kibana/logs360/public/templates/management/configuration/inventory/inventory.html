@@ -3,14 +3,14 @@
     <!-- Headline -->
     <div layout="column" layout-padding>
         <div>
-            <span class="font-size-18">Inventory data</span>
+            <span class="font-size-18">Dados de inventário</span>
             <span ng-if="currentConfig && currentConfig.syscollector && currentConfig.syscollector.disabled === 'no'"
-                class="wz-agent-status-indicator small teal">Enabled</span>
+                class="wz-agent-status-indicator small teal">Habilitado</span>
             <span
                 ng-if="(currentConfig && currentConfig.syscollector && currentConfig.syscollector.disabled === 'yes') || (currentConfig && !currentConfig.syscollector)"
-                class="wz-agent-status-indicator small red">Disabled</span>
+                class="wz-agent-status-indicator small red">Desabilitado</span>
         </div>
-        <span class="md-subheader">Gather relevant information about system OS, hardware, networking and packages</span>
+        <span class="md-subheader">Reunir informações relevantes sobre sistema operacional, hardware, rede e pacotes do sistema</span>
     </div>
     <!-- End headline -->
 
@@ -37,9 +37,9 @@
                 <md-card-content>
                     <div layout="row" layout-align="start center">
                         <div>
-                            <span class="font-size-16">Main settings</span>
+                            <span class="font-size-16">Configurações principais</span>
                             <div class="wz-margin-top-10">
-                                <span class="md-subheader small">General settings applied to all the scans</span>
+                                <span class="md-subheader small">Configurações gerais aplicadas a todas as verificações</span>
                             </div>
                         </div>
                         <span flex></span>
@@ -67,9 +67,9 @@
                     <!-- End configuration block -->
 
                     <div class="wz-margin-top-10">
-                        <span class="font-size-16">Scan settings</span>
+                        <span class="font-size-16">Configurações de digitalização</span>
                         <div class="wz-margin-top-10">
-                            <span class="md-subheader small">Specific inventory scans to collect</span>
+                            <span class="md-subheader small">Varreduras de inventário específicas para coletar</span>
                         </div>
                     </div>
                     <md-divider class="wz-margin-top-10"></md-divider>
@@ -111,15 +111,15 @@
                 <react-component name="EuiIcon" props="{type:'questionInCircle'}" />
             </span>
             <md-list ng-if="showHelp">
-                <md-subheader>More info about this section</md-subheader>
+                <md-subheader>Mais informações sobre esta seção</md-subheader>
                 <md-list-item target="_blank" class="wz-text-link"
                     ng-href="https://documentation.wazuh.com/current/user-manual/capabilities/syscollector.html">
-                    Syscollector
-                    module documentation</md-list-item>
+                    Documentação
+                    do módulo Syscollector</md-list-item>
                 <md-list-item target="_blank" class="wz-text-link"
                     ng-href="https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/wodle-syscollector.html">
-                    Syscollector
-                    module reference</md-list-item>
+                    Referência
+                    do módulo Syscollector</md-list-item>
             </md-list>
         </md-sidenav>
         <!-- End right sidenav section -->
