@@ -87,28 +87,28 @@ xpack.rbac.enabled: true
 # Default: true
 wazuh.monitoring.enabled: true
 #
-# Custom setting to set the frequency for wazuh-monitoring indices cron task.
+# Custom setting to set the frequency for logs360-monitoring indices cron task.
 # Default: 900 (s)
 wazuh.monitoring.frequency: 900
 #
-# Configure wazuh-monitoring-3.x-* indices shards and replicas.
+# Configure logs360-alerts-1.x-* indices shards and replicas.
 wazuh.monitoring.shards: 2
 wazuh.monitoring.replicas: 0
 #
-# Configure wazuh-monitoring-3.x-* indices custom creation interval.
+# Configure logs360-alerts-1.x-* indices custom creation interval.
 # Values: h (hourly), d (daily), w (weekly), m (monthly)
 # Default: d
 wazuh.monitoring.creation: d
 #
-# Default index pattern to use for Wazuh monitoring
-wazuh.monitoring.pattern: logs360-alerts-1.x-*
+# Default index pattern to use for Logs360 monitoring
+wazuh.monitoring.pattern: logs360-monitoring-1.x-*
 #
 #
 # ------------------------------- App privileges --------------------------------
 admin: true
 #
 # ------------------------------- App logging level ---------------------------------
-# Set the logging level for the Wazuh App log files.
+# Set the logging level for the Logs360 App log files.
 # Default value: info
 # Allowed values: info, debug
 logs.level: debug
