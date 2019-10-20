@@ -247,7 +247,7 @@ export class ApiTable extends Component {
               iconType="plusInCircle"
               onClick={() => this.props.switch()}
             >
-              Add new
+              Adicionar Novo
             </EuiButtonEmpty>
           </EuiFlexItem>
           <EuiFlexItem />
