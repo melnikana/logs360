@@ -432,7 +432,7 @@ export class AgentsController {
           );
           this.$scope.addingGroupToAgent = false;
           this.$scope.editGroup = false;
-          this.errorHandler.info(`Group ${group} has been added.`);
+          this.errorHandler.info(`O grupo ${group} foi adicionado.`);
           this.$scope.$applyAsync();
         })
         .catch(error => {
@@ -440,7 +440,7 @@ export class AgentsController {
           this.$scope.addingGroupToAgent = false;
           this.errorHandler.handle(
             error.message || error,
-            'Error adding group to agent'
+            'Erro ao adicionar grupo ao agente'
           );
         });
     };
@@ -581,14 +581,14 @@ export class AgentsController {
         const pciTabs = await this.commonData.getPCI();
         this.$scope.pciReqs = {
           items: pciTabs,
-          reqTitle: 'PCI DSS Requirement'
+          reqTitle: 'Requisitos PCI DSS'
         };
       }
       if (tab === 'gdpr') {
         const gdprTabs = await this.commonData.getGDPR();
         this.$scope.gdprReqs = {
           items: gdprTabs,
-          reqTitle: 'GDPR Requirement'
+          reqTitle: 'Requisitos LGPD'
         };
       }
 
@@ -596,7 +596,7 @@ export class AgentsController {
         const hipaaTabs = await this.commonData.getHIPAA();
         this.$scope.hipaaReqs = {
           items: hipaaTabs,
-          reqTitle: 'HIPAA Requirement'
+          reqTitle: 'Requisitos HIPAA'
         };
       }
 
@@ -604,7 +604,7 @@ export class AgentsController {
         const nistTabs = await this.commonData.getNIST();
         this.$scope.nistReqs = {
           items: nistTabs,
-          reqTitle: 'NIST 800-53 Requirement'
+          reqTitle: 'Requisitos NIST 800-53'
         };
       }
 
@@ -860,7 +860,7 @@ export class AgentsController {
     } catch (error) {
       if (!this.$scope.agent) {
         if ((error || {}).status === -1) {
-          this.$scope.emptyAgent = 'Wazuh API timeout.';
+          this.$scope.emptyAgent = 'Tempo excedido do Logs360 API.';
         }
       }
       this.errorHandler.handle(error, 'Agents');
@@ -958,7 +958,7 @@ export class AgentsController {
   async downloadCsv(path, fileName, filters = []) {
     try {
       this.errorHandler.info(
-        'Your download should begin automatically...',
+        'Seu download deve começar automaticamente ...',
         'CSV'
       );
       const currentApi = JSON.parse(this.appState.getCurrentAPI()).id;
@@ -999,7 +999,7 @@ export class AgentsController {
     try {
       const isActive = ((this.$scope.agent || {}).status || '') === 'Active';
       if (!isActive) {
-        throw new Error('Agent is not active');
+        throw new Error('O agente não está ativo');
       }
       await this.apiReq.request(
         'PUT',
@@ -1007,7 +1007,7 @@ export class AgentsController {
         {}
       );
       this.errorHandler.info(
-        `Policy monitoring scan launched successfully on agent ${this.$scope.agent.id}`,
+        `Varredura de monitoramento de política iniciada com sucesso no agente ${this.$scope.agent.id}`,
         ''
       );
     } catch (error) {
@@ -1020,11 +1020,11 @@ export class AgentsController {
     try {
       const isActive = ((this.$scope.agent || {}).status || '') === 'Active';
       if (!isActive) {
-        throw new Error('Agent is not active');
+        throw new Error('O agente não está ativo');
       }
       await this.apiReq.request('PUT', `/syscheck/${this.$scope.agent.id}`, {});
       this.errorHandler.info(
-        `FIM scan launched successfully on agent ${this.$scope.agent.id}`,
+        `FIM da busca iniciada com sucesso no agente ${this.$scope.agent.id}`,
         ''
       );
     } catch (error) {
