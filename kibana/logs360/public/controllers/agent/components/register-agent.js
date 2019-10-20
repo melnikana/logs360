@@ -185,7 +185,7 @@ export class RegisterAgent extends Component {
             <EuiFlexGroup>
               <EuiFlexItem>
                 <EuiTitle>
-                  <h2>Add a new agent</h2>
+                  <h2>Adicionado um novo agente</h2>
                 </EuiTitle>
               </EuiFlexItem>
               <EuiFlexItem grow={false}>
@@ -194,7 +194,7 @@ export class RegisterAgent extends Component {
                   onClick={() => this.props.addNewAgent(false)}
                   iconType="cross"
                 >
-                  close
+                  Fechar
                 </EuiButtonEmpty>
               </EuiFlexItem>
             </EuiFlexGroup>
