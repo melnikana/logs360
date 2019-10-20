@@ -162,11 +162,11 @@ export class SettingsController {
       this.isEditing = false;
       for (const key in this.showEditForm) this.showEditForm[key] = false;
       this.$scope.$emit('updateAPI', {});
-      this.errorHandler.info('The API was removed successfully', 'Settings');
+      this.errorHandler.info('A API foi removida com sucesso', 'Settings');
       this.apiTableProps.apiEntries = this.apiEntries;
       this.$scope.$applyAsync();
     } catch (error) {
-      this.errorHandler.handle('Could not remove the API', 'Settings');
+      this.errorHandler.handle('Não foi possível remover a API', 'Settings');
     }
     return this.apiEntries;
   }
@@ -220,7 +220,7 @@ export class SettingsController {
     this.$scope.$applyAsync();
 
     this.errorHandler.info(
-      `API ${this.apiEntries[index]._source.cluster_info.manager} set as default`,
+      `API ${this.apiEntries[index]._source.cluster_info.manager} configurar como padrao`,
       'Settings'
     );
 
@@ -248,7 +248,7 @@ export class SettingsController {
       this.indexPatterns = patternList.data.data;
 
       if (!patternList.data.data.length) {
-        this.wzMisc.setBlankScr('Sorry but no valid index patterns were found');
+        this.wzMisc.setBlankScr('Desculpe, mas nenhum padrão de índice válido foi encontrado');
         this.$location.search('tab', null);
         this.$location.path('/blank-screen');
         return;
@@ -282,7 +282,7 @@ export class SettingsController {
       this.$scope.$applyAsync();
       return;
     } catch (error) {
-      this.errorHandler.handle('Error getting API entries', 'Settings');
+      this.errorHandler.handle('Erro ao obter entradas da API', 'Settings');
     }
     return;
   }
@@ -294,12 +294,12 @@ export class SettingsController {
   validator(formName) {
     // Validate user
     if (!this.userRegEx.test(this[formName].user)) {
-      return 'Invalid user field';
+      return 'Campo de usuário inválido';
     }
 
     // Validate password
     if (!this.passRegEx.test(this[formName].password)) {
-      return 'Invalid password field';
+      return 'Campo de senha inválido';
     }
 
     // Validate url
@@ -307,7 +307,7 @@ export class SettingsController {
       !this.urlRegEx.test(this[formName].url) &&
       !this.urlRegExIP.test(this[formName].url)
     ) {
-      return 'Invalid url field';
+      return 'Campo de URL inválido';
     }
 
     // Validate port
@@ -317,7 +317,7 @@ export class SettingsController {
       validatePort <= 0 ||
       validatePort >= 99999
     ) {
-      return 'Invalid port field';
+      return 'Campo de porta inválido';
     }
 
     return false;
@@ -345,7 +345,7 @@ export class SettingsController {
   async saveSettings(entry) {
     try {
       if (this.savingApi) {
-        this.errorHandler.info('Please, wait for success message', 'Settings');
+        this.errorHandler.info('Por favor, aguarde a mensagem de sucesso', 'Settings');
         return this.apiEntries;
       }
 
@@ -426,7 +426,7 @@ export class SettingsController {
       }
       this.$scope.$applyAsync();
 
-      this.errorHandler.info('Wazuh API successfully added', 'Settings');
+      this.errorHandler.info('Logs360 API adicionada com sucesso', 'Settings');
       this.addManagerContainer = false;
 
       this.formData = {};
@@ -463,7 +463,7 @@ export class SettingsController {
       } catch (error) {
         if ((error || {}).status === -1) {
           this.errorHandler.handle(
-            'Wazuh API was inserted correctly, but something happened while fetching agents data.',
+            'Logs360 API foi inserida corretamente, mas ocorreu algo ao buscar dados dos agentes.',
             'Fetch agents',
             true
           );
@@ -476,7 +476,7 @@ export class SettingsController {
     } catch (error) {
       if (error.status === 400) {
         error.message =
-          'Please, fill all the fields in order to connect with Wazuh RESTful API.';
+          'Por favor, preencha todos os campos para se conectar à API RESTful do Logs360.';
       }
       this.printError(error);
     }
@@ -499,7 +499,7 @@ export class SettingsController {
   async updateSettings(item, useItem = false) {
     try {
       if (this.savingApi) {
-        this.errorHandler.info('Please, wait for success message', 'Settings');
+        this.errorHandler.info('Por favor, aguarde a mensagem de sucesso', 'Settings');
         return this.apiEntries;
       }
       this.savingApi = true;
@@ -554,7 +554,7 @@ export class SettingsController {
       this.showEditForm[this.apiEntries[index]._id] = false;
       this.isEditing = false;
 
-      this.errorHandler.info('The API was updated successfully', 'Settings');
+      this.errorHandler.info('A API foi atualizada com sucesso', 'Settings');
     } catch (error) {
       this.printError(error, true);
     }
@@ -599,7 +599,7 @@ export class SettingsController {
       this.apiEntries[index]._source.cluster_info = tmpData.cluster_info;
       this.wzMisc.setApiIsDown(false);
       this.apiIsDown = false;
-      !silent && this.errorHandler.info('Connection success', 'Settings');
+      !silent && this.errorHandler.info('Sucesso na conexão', 'Settings');
 
       this.$scope.$applyAsync();
       return;
@@ -625,7 +625,7 @@ export class SettingsController {
       );
       this.$scope.$emit('updatePattern', {});
       this.errorHandler.info(
-        'Successfully changed the default index-pattern',
+        'Alterado com sucesso o padrão de índice padrão',
         'Settings'
       );
       this.selectedIndexPattern = newIndexPattern;
@@ -633,7 +633,7 @@ export class SettingsController {
       return;
     } catch (error) {
       this.errorHandler.handle(
-        'Error while changing the default index-pattern',
+        'Erro ao alterar o padrão de índice padrão',
         'Settings'
       );
     }
@@ -666,7 +666,7 @@ export class SettingsController {
         {
           date: new Date(),
           level: 'error',
-          message: 'Error when loading Wazuh app logs'
+          message: 'Erro ao carregar os logs do aplicativo Logs360'
         }
       ];
     }
@@ -707,7 +707,7 @@ export class SettingsController {
       return;
     } catch (error) {
       this.errorHandler.handle(
-        'Error when loading Wazuh setup info',
+        'Erro ao carregar as informações de configuração do Logs360',
         'Settings'
       );
     }
@@ -746,7 +746,7 @@ export class SettingsController {
       try {
         value = JSON.stringify(value);
       } catch (err) {
-        this.errorHandler.handle('Error parsing value', key);
+        this.errorHandler.handle('Erro ao analisar o valor', key);
       }
     }
     this.editingKey = key;
@@ -771,13 +771,13 @@ export class SettingsController {
       );
       if (response.data.data) {
         this.errorHandler.handle(
-          'You must restart Kibana for the changes to take effect',
+          'Você deve reiniciar o Kibana para que as alterações entrem em vigor',
           '',
           true
         );
       } else {
         this.errorHandler.info(
-          'Success. The configuration has been successfully updated'
+          'Sucesso. A configuração foi atualizada com sucesso'
         );
       }
       this.configuration[key] = newValue;
@@ -800,10 +800,10 @@ export class SettingsController {
     selectedTab: this.tab || 'api',
     tabs: [
       { id: 'api', name: 'API' },
-      { id: 'pattern', name: 'Pattern' },
-      { id: 'configuration', name: 'Configuration' },
+      { id: 'pattern', name: 'Index' },
+      { id: 'configuration', name: 'Configuração' },
       { id: 'logs', name: 'Logs' },
-      { id: 'about', name: 'About' }
+      { id: 'about', name: 'Sobre' }
     ]
   };
 }
