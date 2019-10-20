@@ -63,7 +63,7 @@ export async function checkKnownFields(
     !quiet &&
       log(
         'initialize:checkKnownFields',
-        `Found ${list.length} valid index patterns for Wazuh alerts`,
+        `Encontrados ${list.length} index validos para Alertas do Logs360`,
         'debug'
       );
 
@@ -77,7 +77,7 @@ export async function checkKnownFields(
       !quiet &&
         log(
           'initialize:checkKnownFields',
-          `Default index pattern not found, creating it...`,
+          `index padrao nao foi encontrado, criando...`,
           'info'
         );
 
@@ -90,7 +90,7 @@ export async function checkKnownFields(
       !quiet &&
         log(
           'initialize:checkKnownFields',
-          'Waiting for default index pattern creation to complete...',
+          'Esperando index padrao ser criado...',
           'debug'
         );
 
@@ -110,15 +110,15 @@ export async function checkKnownFields(
       !quiet &&
         log(
           'initialize:checkKnownFields',
-          `Default index pattern found`,
+          `Index padrao nao encontrado`,
           'debug'
         );
     }
 
     for (const item of list) {
       if (
-        item.title.includes('wazuh-monitoring-*') ||
-        item.id.includes('wazuh-monitoring-*')
+        item.title.includes('logs360-monitoring-*') ||
+        item.id.includes('logs360-monitoring-*')
       ) {
         continue;
       }
@@ -134,8 +134,8 @@ export async function checkKnownFields(
       await wzWrapper.updateIndexPatternKnownFields(`${prefix}${item.id}`);
     }
 
-    !quiet && log('initialize', 'App ready to be used.', 'info');
-    !quiet && server.log('info', 'Wazuh app ready to be used.');
+    !quiet && log('initialize', 'App Pronto para uso.', 'info');
+    !quiet && server.log('info', 'Logs360 app Pronto para ser usado.');
 
     return;
   } catch (error) {
@@ -143,7 +143,7 @@ export async function checkKnownFields(
     !quiet &&
       server.log(
         'error',
-        'Wazuh app had en error importing objects into Elasticsearch.' +
+        'Logs360 Teve um erro ao tentar importar objetos para Elasticssearch.' +
           error.message || error
       );
   }

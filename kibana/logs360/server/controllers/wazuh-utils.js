@@ -64,7 +64,7 @@ export class WazuhUtilsCtrl {
   }
 
   /**
-   * Returns Wazuh app logs
+   * Returns Logs360 app logs
    * @param {Object} req
    * @param {Object} reply
    * @returns {Array<String>} app logs or ErrorResponse

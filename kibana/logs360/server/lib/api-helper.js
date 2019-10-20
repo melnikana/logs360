@@ -39,7 +39,7 @@ export async function fetchAllAgents(api, maxSize, payload, options) {
         agents = agents.concat(response.body.data.items);
         payload.offset += payload.limit;
       } else {
-        throw new Error('Can not access Wazuh API');
+        throw new Error('Nao foi possivel acessar Logs360API');
       }
     }
     return agents;

@@ -1,5 +1,5 @@
 /*
- * Logs360 app - Wazuh table directive data methods
+ * Logs360 app - Logs360 table directive data methods
  * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify

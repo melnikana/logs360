@@ -1,5 +1,5 @@
 /*
- * Logs360 app - Module for wazuh-monitoring index pattern known fields
+ * Logs360 app - Module for Logs360-monitoring index pattern known fields
  * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify

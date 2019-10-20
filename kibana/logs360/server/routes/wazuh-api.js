@@ -1,5 +1,5 @@
 /*
- * Logs360 app - Module for Wazuh-API routes
+ * Logs360 app - Module for Logs360-API routes
  * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
@@ -14,7 +14,7 @@ import { WazuhApiCtrl } from '../controllers';
 export function WazuhApiRoutes(server) {
   const ctrl = new WazuhApiCtrl(server);
 
-  // Returns if the wazuh-api configuration is working
+  // Returns if the Logs360-api configuration is working
   server.route({
     method: 'POST',
     path: '/api/check-stored-api',
@@ -23,8 +23,8 @@ export function WazuhApiRoutes(server) {
     }
   });
 
-  // Check if credentials on POST connect to Wazuh API. Not storing them!
-  // Returns if the wazuh-api configuration received in the POST body will work
+  // Check if credentials on POST connect to Logs360 API. Not storing them!
+  // Returns if the Logs360-api configuration received in the POST body will work
   server.route({
     method: 'POST',
     path: '/api/check-api',
@@ -78,7 +78,7 @@ export function WazuhApiRoutes(server) {
     }
   });
 
-  // Force fetch data to be inserted on wazuh-monitoring indices
+  // Force fetch data to be inserted on Logs360-monitoring indices
   server.route({
     method: 'GET',
     path: '/api/monitoring',
@@ -87,7 +87,7 @@ export function WazuhApiRoutes(server) {
     }
   });
 
-  // Returns data from the Wazuh API on CSV readable format
+  // Returns data from the Logs360 API on CSV readable format
   server.route({
     method: 'POST',
     path: '/api/csv',
@@ -123,7 +123,7 @@ export function WazuhApiRoutes(server) {
     }
   });
 
-  // Return Wazuh Appsetup info
+  // Return Logs360 Appsetup info
   server.route({
     method: 'GET',
     path: '/api/setup',

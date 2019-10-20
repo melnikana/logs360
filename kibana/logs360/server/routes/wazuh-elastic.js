@@ -1,5 +1,5 @@
 /*
- * Logs360 app - Module for Wazuh-Elastic routes
+ * Logs360 app - Module for Logs360-Elastic routes
  * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify

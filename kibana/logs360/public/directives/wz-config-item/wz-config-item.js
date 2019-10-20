@@ -1,5 +1,5 @@
 /*
- * Logs360 app - Wazuh configuration item directive
+ * Logs360 app - Logs360 configuration item directive
  * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify

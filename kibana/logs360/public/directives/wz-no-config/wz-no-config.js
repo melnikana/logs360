@@ -1,5 +1,5 @@
 /*
- * Logs360 app - Wazuh no configuration card directive
+ * Logs360 app - Logs360 no configuration card directive
  * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify

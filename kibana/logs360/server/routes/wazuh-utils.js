@@ -1,5 +1,5 @@
 /*
- * Logs360 app - Module for Wazuh utils routes
+ * Logs360 app - Module for Logs360 utils routes
  * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
@@ -32,7 +32,7 @@ export function WazuhUtilsRoutes(server) {
     }
   });
 
-  // Returns Wazuh app logs ...
+  // Returns Logs360 app logs ...
   server.route({
     method: 'GET',
     path: '/utils/logs',

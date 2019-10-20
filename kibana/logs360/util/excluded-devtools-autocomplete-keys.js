@@ -1,5 +1,5 @@
 /*
- * Logs360 app - Wazuh DevTools autocomplete excluded keys
+ * Logs360 app - Logs360 DevTools autocomplete excluded keys
  * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify

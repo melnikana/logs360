@@ -1,5 +1,5 @@
 /*
- * Logs360 app - Wazuh table directive helper
+ * Logs360 app - Logs360 table directive helper
  * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify

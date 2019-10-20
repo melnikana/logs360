@@ -1,5 +1,5 @@
 /*
- * Logs360 app - Wazuh search and filter by tags bar
+ * Logs360 app - Logs360 search and filter by tags bar
  * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify

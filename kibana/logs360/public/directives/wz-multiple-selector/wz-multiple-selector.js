@@ -1,5 +1,5 @@
 /*
- * Logs360 app - Wazuh Multiple selector
+ * Logs360 app - Logs360 Multiple selector
  * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
