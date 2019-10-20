@@ -83,7 +83,7 @@ export class HealthCheck {
    */
   handleError(error) {
     this.errors.push(
-      this.errorHandler.handle(error, 'Health Check', false, true)
+      this.errorHandler.handle(error, 'Exame de saúde', false, true)
     );
   }
 
@@ -105,7 +105,7 @@ export class HealthCheck {
           `/elastic/index-patterns/${patternTitle}`
         );
         if (!patternData.data.status) {
-          this.errors.push('The selected index-pattern is not present.');
+          this.errors.push('O padrão de índice selecionado não está presente.');
           this.results[i].status = 'Error';
         } else {
           this.processedChecks++;
@@ -120,7 +120,7 @@ export class HealthCheck {
           `/elastic/template/${patternTitle}`
         );
         if (!templateData.data.status) {
-          this.errors.push('No template found for the selected index-pattern.');
+          this.errors.push('Nenhum modelo encontrado para o padrão de índice selecionado.');
           this.results[i].status = 'Error';
         } else {
           this.processedChecks++;
@@ -152,14 +152,14 @@ export class HealthCheck {
         }
         const i = this.results.map(item => item.id).indexOf(0);
         if (data === 3099) {
-          this.errors.push('Wazuh not ready yet.');
+          this.errors.push('Logs360 ainda não está pronto.');
           this.results[i].status = 'Error';
           if (this.checks.setup) {
             const i = this.results.map(item => item.id).indexOf(1);
             this.results[i].status = 'Error';
           }
         } else if (data.data.error || data.data.data.apiIsDown) {
-          this.errors.push('Error connecting to the API.');
+          this.errors.push('Erro ao conectar-se à API.');
           this.results[i].status = 'Error';
         } else {
           this.processedChecks++;
@@ -177,10 +177,10 @@ export class HealthCheck {
             );
             if (!setupData.data.data['app-version'] || !apiVersion) {
               this.errorHandler.handle(
-                'Error fetching app version or API version',
-                'Health Check'
+                'Erro ao obter a versão do aplicativo ou da API',
+                'Exame de saúde'
               );
-              this.errors.push('Error fetching version');
+              this.errors.push('Erro ao buscar a versão');
             }
             const apiSplit = apiVersion.split('v')[1].split('.');
             const appSplit = setupData.data.data['app-version'].split('.');
@@ -188,7 +188,7 @@ export class HealthCheck {
             const i = this.results.map(item => item.id).indexOf(1);
             if (apiSplit[0] !== appSplit[0] || apiSplit[1] !== appSplit[1]) {
               this.errors.push(
-                'API version mismatch. Expected v' +
+                'Incompatibilidade de versão da API. Esperado v' +
                   setupData.data.data['app-version']
               );
               this.results[i].status = 'Error';
@@ -225,27 +225,27 @@ export class HealthCheck {
       this.results.push(
         {
           id: 0,
-          description: 'Check Wazuh API connection',
+          description: 'Verifique a conexão da API do Logs360',
           status: this.checks.api ? 'Checking...' : 'disabled'
         },
         {
           id: 1,
-          description: 'Check for Wazuh API version',
+          description: 'Verifique a versão da API do Logs360',
           status: this.checks.setup ? 'Checking...' : 'disabled'
         },
         {
           id: 2,
-          description: 'Check Elasticsearch index pattern',
+          description: 'Verificar padrão de índice do Elasticsearch',
           status: this.checks.pattern ? 'Checking...' : 'disabled'
         },
         {
           id: 3,
-          description: 'Check Elasticsearch template',
+          description: 'Verifique o modelo do Elasticsearch',
           status: this.checks.template ? 'Checking...' : 'disabled'
         },
         {
           id: 4,
-          description: 'Check index pattern known fields',
+          description: 'Verifique os campos conhecidos do padrão de índice',
           status: 'Checking...'
         }
       );
@@ -269,7 +269,7 @@ export class HealthCheck {
       if (!this.errors || !this.errors.length) {
         await this.$timeout(300);
         this.$window.location.assign(
-          chrome.addBasePath('wazuh#' + this.$rootScope.previousLocation || '')
+          chrome.addBasePath('logs360#' + this.$rootScope.previousLocation || '')
         );
         return;
       }
@@ -286,7 +286,7 @@ export class HealthCheck {
    */
   goApp() {
     this.$window.location.assign(
-      chrome.addBasePath('wazuh#' + this.$rootScope.previousLocation || '')
+      chrome.addBasePath('logs360#' + this.$rootScope.previousLocation || '')
     );
   }
 }
