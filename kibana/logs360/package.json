@@ -1,29 +1,29 @@
 {
-  "name": "wazuh",
+  "name": "logs360",
   "version": "3.10.2",
-  "revision": "0546",
-  "code": "0546-0",
+  "revision": "0001",
+  "code": "000-1",
   "kibana": {
     "version": "7.3.2"
   },
-  "description": "Wazuh app",
+  "description": "Logs360 app",
   "main": "index.js",
   "keywords": [
     "kibana",
-    "wazuh",
+    "Logs360",
     "ossec"
   ],
   "node_build": "8.14.0",
-  "author": "Wazuh, Inc",
+  "author": "IT4US, Inc",
   "license": "GPL-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wazuh/wazuh-kibana-app.git"
+    "url": "https://github.com/melnikana/logs360.git"
   },
   "bugs": {
-    "url": "https://github.com/wazuh/wazuh-kibana-app/issues"
+    "url": "https://github.com/melnikana/logs360/issues"
   },
-  "homepage": "https://www.wazuh.com/",
+  "homepage": "http://logs360.com.br/",
   "dependencies": {
     "angular-animate": "1.7.8",
     "angular-chart.js": "1.1.1",
