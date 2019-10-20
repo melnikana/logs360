@@ -127,7 +127,7 @@ export class LogsController {
   async downloadCsv() {
     try {
       this.errorHandler.info(
-        'Your download should begin automatically...',
+        'Seu download deve começar automaticamente...',
         'CSV'
       );
       const currentApi = JSON.parse(this.appState.getCurrentAPI()).id;

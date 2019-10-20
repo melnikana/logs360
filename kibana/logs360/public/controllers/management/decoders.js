@@ -258,7 +258,7 @@ export class DecodersController {
       this.$scope.$broadcast('fetchedFile', { data: this.fetchedXML });
     } catch (error) {
       this.fetchedXML = null;
-      this.errorHandler.handle(error, 'Fetch file error');
+      this.errorHandler.handle(error, 'Erro ao buscar arquivo');
     }
   }
 
@@ -279,7 +279,7 @@ export class DecodersController {
           this.currentDecoder = response[0];
         }
       } catch (err) {
-        this.errorHandler.handle(err, 'Decoder reload error.');
+        this.errorHandler.handle(err, 'Erro de recarga do decodificador.');
       }
     }
     this.editingFile = false;

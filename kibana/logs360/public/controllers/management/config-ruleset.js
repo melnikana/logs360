@@ -68,7 +68,7 @@ export class ConfigurationRulesetController {
         this.$scope.$broadcast('fetchedFile', { data: this.$scope.fetchedXML });
       } catch (error) {
         this.$scope.fetchedXML = null;
-        this.errorHandler.handle(error, 'Fetch file error');
+        this.errorHandler.handle(error, 'Erro ao buscar arquivo');
       }
     };
 
@@ -89,7 +89,7 @@ export class ConfigurationRulesetController {
     this.$scope.doSaveConfig = (isNewFile, fileName) => {
       if (isNewFile && !fileName) {
         this.errorHandler.handle(
-          'Error creating a new file. You need to specify a file name',
+          'Erro ao criar um novo arquivo. Você precisa especificar um nome de arquivo',
           ''
         );
         return false;
@@ -102,7 +102,7 @@ export class ConfigurationRulesetController {
           }
           if (containsNumber.test(fileName)) {
             this.errorHandler.handle(
-              'Error creating a new file. The filename can not contain numbers',
+              'Erro ao criar um novo arquivo. O nome do arquivo não pode conter números',
               ''
             );
             return false;
@@ -184,13 +184,13 @@ export class ConfigurationRulesetController {
       $('#config-ruleset-input-search').val('');
       this.$scope.selectedItem = false;
       if (rulesettab === 'rules') {
-        this.$scope.searchPlaceholder = 'Filter local rules...';
+        this.$scope.searchPlaceholder = 'Filtrar regras locais...';
       }
       if (rulesettab === 'decoders') {
-        this.$scope.searchPlaceholder = 'Filter local decoders...';
+        this.$scope.searchPlaceholder = 'Filtrar decodificadores locais...';
       }
       if (rulesettab === 'cdblists') {
-        this.$scope.searchPlaceholder = 'Filter CDB lists...';
+        this.$scope.searchPlaceholder = 'Filtrar listas CDB...';
         this.$scope.currentList = false;
         this.$scope.search();
       }

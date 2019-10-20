@@ -97,8 +97,8 @@ export class CdbListsController {
         })
         .catch(() =>
           this.errorHandler.handle(
-            `Error fetching list: ${incomingList} from the Wazuh API`,
-            'CDB Lists'
+            `Erro ao buscar lista: ${incomingList} da API Logs360`,
+            'Listas de CDB'
           )
         );
     }
@@ -144,7 +144,7 @@ export class CdbListsController {
   async downloadCsv() {
     try {
       this.errorHandler.info(
-        'Your download should begin automatically...',
+        'Seu download deve começar automaticamente ...',
         'CSV'
       );
       const currentApi = JSON.parse(this.appState.getCurrentAPI()).id;

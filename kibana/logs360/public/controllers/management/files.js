@@ -82,7 +82,7 @@ export class FilesController {
         clusterInfo.status === 'enabled' ? 'cluster' : 'manager';
       if (isNewFile && !fileName) {
         this.errorHandler.handle(
-          'Error creating a new file. You need to specify a file name',
+          'Erro ao criar um novo arquivo. Você precisa especificar um nome de arquivo',
           ''
         );
         return false;
@@ -95,7 +95,7 @@ export class FilesController {
           }
           if (containsBlanks.test(fileName)) {
             this.errorHandler.handle(
-              'Error creating a new file. The filename can not contain white spaces.',
+              'Erro ao criar um novo arquivo. O nome do arquivo não pode conter espaços em branco.',
               ''
             );
             return false;
@@ -187,7 +187,7 @@ export class FilesController {
       }
     } catch (error) {
       this.$scope.fetchedXML = null;
-      this.errorHandler.handle(error, 'Fetch file error');
+      this.errorHandler.handle(error, 'Erro ao buscar arquivo');
     }
   }
 
@@ -196,7 +196,7 @@ export class FilesController {
     this.$scope.newFile = true;
     this.$scope.newFileName = '';
     this.$scope.selectedFileName = this.$scope.selectedRulesetTab;
-    this.$scope.selectedItem = { file: 'new file' };
+    this.$scope.selectedItem = { file: 'Novo arquivo' };
     this.$scope.fetchedXML = '<!-- Modify it at your will. -->';
     this.$scope.type = type;
     this.$scope.cancelSaveAndOverwrite();
