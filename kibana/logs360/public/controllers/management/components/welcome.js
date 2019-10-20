@@ -1,7 +1,7 @@
 /*
- * Wazuh app - React component for building the management welcome screen.
+ * Logs360 app - React component for building the management welcome screen.
  *
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,25 +33,25 @@ export class WelcomeScreen extends Component {
       <div>
         <EuiFlexGroup>
           <EuiFlexItem>
-            <EuiPanel betaBadgeLabel="Administration">
+            <EuiPanel betaBadgeLabel="Administração">
               <EuiSpacer size="m" />
               <EuiFlexGroup>
                 <EuiFlexItem>
                   <EuiCard
                     layout="horizontal"
                     icon={<EuiIcon size="xl" type="indexRollupApp" />}
-                    title="Ruleset"
+                    title="Conjunto de Regras"
                     onClick={() => this.props.switchTab('ruleset', true)}
-                    description="Manage your Wazuh cluster ruleset."
+                    description="Gerencie seu conjunto de regras no Cluster Logs360."
                   />
                 </EuiFlexItem>
                 <EuiFlexItem>
                   <EuiCard
                     layout="horizontal"
                     icon={<EuiIcon size="xl" type="usersRolesApp" />}
-                    title="Groups"
+                    title="Grupos"
                     onClick={() => this.props.switchTab('groups', true)}
-                    description="Manage your agent groups."
+                    description="Gerencie seu grupo de agentes."
                   />
                 </EuiFlexItem>
               </EuiFlexGroup>
@@ -60,9 +60,9 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                     layout="horizontal"
                     icon={<EuiIcon size="xl" type="devToolsApp" />}
-                    title="Configuration"
+                    title="Configurações"
                     onClick={() => this.props.switchTab('configuration', true)}
-                    description="Manage your Wazuh cluster configuration."
+                    description="Gerencie as configurações do seu cluster Logs360."
                   />
                 </EuiFlexItem>
                 <EuiFlexItem />
@@ -70,7 +70,7 @@ export class WelcomeScreen extends Component {
             </EuiPanel>
           </EuiFlexItem>
           <EuiFlexItem>
-            <EuiPanel betaBadgeLabel="Status and reports">
+            <EuiPanel betaBadgeLabel="Status e Relatórios">
               <EuiSpacer size="m" />
               <EuiFlexGroup>
                 <EuiFlexItem>
@@ -79,7 +79,7 @@ export class WelcomeScreen extends Component {
                     icon={<EuiIcon size="xl" type="uptimeApp" />}
                     title="Status"
                     onClick={() => this.props.switchTab('status', true)}
-                    description="Manage your Wazuh cluster status."
+                    description="Gerencie o status do seu cluster Logs360."
                   />
                 </EuiFlexItem>
                 <EuiFlexItem>
@@ -88,7 +88,7 @@ export class WelcomeScreen extends Component {
                     icon={<EuiIcon size="xl" type="indexPatternApp" />}
                     title="Cluster"
                     onClick={() => this.props.switchTab('monitoring', true)}
-                    description="Visualize your Wazuh cluster."
+                    description="Visualize seu Cluster Logs360."
                   />
                 </EuiFlexItem>
               </EuiFlexGroup>
@@ -99,16 +99,16 @@ export class WelcomeScreen extends Component {
                     icon={<EuiIcon size="xl" type="filebeatApp" />}
                     title="Logs"
                     onClick={() => this.props.switchTab('logs', true)}
-                    description="Logs from your Wazuh cluster."
+                    description="Logs do seu Cluster Logs360."
                   />
                 </EuiFlexItem>
                 <EuiFlexItem>
                   <EuiCard
                     layout="horizontal"
                     icon={<EuiIcon size="xl" type="reportingApp" />}
-                    title="Reporting"
+                    title="Relatórios"
                     onClick={() => this.props.switchTab('reporting', true)}
-                    description="Check your stored Wazuh reports."
+                    description="Cheque seus Relatórios armazenados."
                   />
                 </EuiFlexItem>
               </EuiFlexGroup>

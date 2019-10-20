@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Custom visualization directive
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Custom visualization directive
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@ import { getVisualizeLoader } from './loader';
 import { timefilter } from 'ui/timefilter';
 import dateMath from '@elastic/datemath';
 
-const app = uiModules.get('app/wazuh', []);
+const app = uiModules.get('app/logs360', []);
 let lockFields = false;
 
 app.directive('kbnVis', function() {

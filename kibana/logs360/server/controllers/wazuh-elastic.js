@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Class for Wazuh-Elastic functions
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Class for Wazuh-Elastic functions
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -408,7 +408,7 @@ export class WazuhElasticCtrl {
     try {
       const config = getConfiguration();
       let monitoringPattern =
-        (config || {})['wazuh.monitoring.pattern'] || 'wazuh-monitoring-3.x-*';
+        (config || {})['wazuh.monitoring.pattern'] || 'logs360-monitoring-1.x-*';
       log(
         'wazuh-elastic:buildVisualizationsRaw',
         `Building ${app_objects.length} visualizations`,
@@ -702,7 +702,7 @@ export class WazuhElasticCtrl {
    */
   async alerts(req, reply) {
     try {
-      const pattern = req.payload.pattern || 'wazuh-alerts-3.x-*';
+      const pattern = req.payload.pattern || 'logs360-alerts-1.x-*';
       const from = req.payload.from || 'now-1d';
       const to = req.payload.to || 'now';
       const size = req.payload.size || 10;

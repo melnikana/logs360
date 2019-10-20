@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Class for Wazuh-API functions
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Class for Wazuh-API functions
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -72,7 +72,7 @@ export class WazuhUtilsCtrl {
   async getAppLogs(req, reply) {
     try {
       const lastLogs = await simpleTail(
-        path.join(__dirname, '../../../../optimize/wazuh-logs/wazuhapp.log'),
+        path.join(__dirname, '../../../../optimize/logs360-logs/logs360App.log'),
         20
       );
       return lastLogs && Array.isArray(lastLogs)

@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Specific methods to fetch Wazuh Audit data from Elasticsearch
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Specific methods to fetch Wazuh Audit data from Elasticsearch
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ export class AuditRequest {
     gte,
     lte,
     filters,
-    pattern = 'wazuh-alerts-3.x-*'
+    pattern = 'logs360-alerts-1.x-*'
   ) {
     try {
       const base = {};
@@ -98,7 +98,7 @@ export class AuditRequest {
     gte,
     lte,
     filters,
-    pattern = 'wazuh-alerts-3.x-*'
+    pattern = 'logs360-alerts-1.x-*'
   ) {
     try {
       const base = {};
@@ -170,7 +170,7 @@ export class AuditRequest {
     gte,
     lte,
     filters,
-    pattern = 'wazuh-alerts-3.x-*'
+    pattern = 'logs360-alerts-1.x-*'
   ) {
     try {
       const base = {};

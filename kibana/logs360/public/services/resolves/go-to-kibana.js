@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Module to catch last url
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Module to catch last url
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,16 +16,16 @@ export function goToKibana($location, $window) {
   if (
     $window.sessionStorage
       .getItem(`lastSubUrl:${url}`)
-      .includes('/wazuh#/visualize') ||
+      .includes('/logs360#/visualize') ||
     $window.sessionStorage
       .getItem(`lastSubUrl:${url}`)
-      .includes('/wazuh#/doc') ||
+      .includes('/logs360#/doc') ||
     $window.sessionStorage
       .getItem(`lastSubUrl:${url}`)
-      .includes('/wazuh#/context')
+      .includes('/logs360#/context')
   ) {
     $window.sessionStorage.setItem(`lastSubUrl:${url}`, url);
   }
 
-  $window.location.href = $location.absUrl().replace('/wazuh#', '/kibana#');
+  $window.location.href = $location.absUrl().replace('/logs360#', '/kibana#');
 }

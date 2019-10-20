@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Class for the Elastic wrapper
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Class for the Elastic wrapper
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -74,7 +74,7 @@ export class ElasticWrapper {
 
   /**
    * This function creates a new index pattern.
-   * @param {*} title Eg: 'wazuh-alerts-3.x-*'
+   * @param {*} title Eg: 'logs360-alerts-1.x-*'
    * @param {*} id Optional.
    */
   async createIndexPattern(title, id) {
@@ -405,7 +405,7 @@ export class ElasticWrapper {
         false;
 
       const data = await this.elasticRequest.callWithInternalUser('search', {
-        index: title || 'wazuh-alerts-3.x-*',
+        index: title || 'logs360-alerts-1.x-*',
         type: '_doc',
         body: payload
       });

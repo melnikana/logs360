@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Module for app initialization
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Module for app initialization
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@ export function Initialize(server) {
     pattern =
       configurationFile && typeof configurationFile.pattern !== 'undefined'
         ? configurationFile.pattern
-        : 'wazuh-alerts-3.x-*';
+        : 'logs360-alerts-1.x-*';
     global.XPACK_RBAC_ENABLED =
       configurationFile &&
       typeof configurationFile['xpack.rbac.enabled'] !== 'undefined'
@@ -64,7 +64,7 @@ export function Initialize(server) {
     );
   }
 
-  const defaultIndexPattern = pattern || 'wazuh-alerts-3.x-*';
+  const defaultIndexPattern = pattern || 'logs360-alerts-1.x-*';
 
   // Save Wazuh App setup
   const saveConfiguration = () => {

@@ -1,8 +1,8 @@
 /*
  * Author: Elasticsearch B.V.
- * Updated by Wazuh, Inc.
+ * Updated by Logs360, Inc.
  *
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
 import { uiModules } from 'ui/modules';
 import discoverTemplate from '../templates/kibana-template/kibana-discover-template.html';
 
-uiModules.get('app/wazuh', ['kibana/courier']).directive('kbnDis', [
+uiModules.get('app/logs360', ['kibana/courier']).directive('kbnDis', [
   function() {
     return {
       restrict: 'E',
@@ -118,7 +118,7 @@ const app = uiModules.get('apps/discover', [
   'kibana/courier',
   'kibana/url',
   'kibana/index_patterns',
-  'app/wazuh'
+  'app/logs360'
 ]);
 
 app.directive('discoverAppW', function() {

@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Load all the Angular.js factories.
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Load all the Angular.js factories.
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@ import { WzMisc } from './misc';
 import { WazuhConfig } from './wazuh-config';
 import { uiModules } from 'ui/modules';
 
-const app = uiModules.get('app/wazuh', []);
+const app = uiModules.get('app/logs360', []);
 
 app
   .service('rawVisualizations', RawVisualizations)

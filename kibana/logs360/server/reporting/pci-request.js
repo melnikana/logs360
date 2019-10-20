@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Specific methods to fetch Wazuh PCI DSS data from Elasticsearch
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Specific methods to fetch Wazuh PCI DSS data from Elasticsearch
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,7 +28,7 @@ export class PciRequest {
    * @param {String} filters E.g: cluster.name: wazuh AND rule.groups: vulnerability
    * @returns {Array<String>}
    */
-  async topPCIRequirements(gte, lte, filters, pattern = 'wazuh-alerts-3.x-*') {
+  async topPCIRequirements(gte, lte, filters, pattern = 'logs360-alerts-1.x-*') {
     if (filters.includes('rule.pci_dss: exists')) {
       const first = filters.split('AND rule.pci_dss: exists')[0];
       const second = filters.split('AND rule.pci_dss: exists')[1];
@@ -98,7 +98,7 @@ export class PciRequest {
     lte,
     filters,
     requirement,
-    pattern = 'wazuh-alerts-3.x-*'
+    pattern = 'logs360-alerts-1.x-*'
   ) {
     if (filters.includes('rule.pci_dss: exists')) {
       const first = filters.split('AND rule.pci_dss: exists')[0];

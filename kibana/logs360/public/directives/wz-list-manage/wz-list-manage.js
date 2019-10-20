@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Wazuh search and filter by tags bar
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Wazuh search and filter by tags bar
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@ import * as pagination from '../wz-table/lib/pagination';
 import { checkGap } from '../wz-table/lib/check-gap';
 import * as FileSaver from '../../services/file-saver';
 
-const app = uiModules.get('app/wazuh', []);
+const app = uiModules.get('app/logs360', []);
 
 app.directive('wzListManage', function() {
   return {
