@@ -16,18 +16,18 @@ import { resolve } from 'path';
 
 export default kibana =>
   new kibana.Plugin({
-    id: 'wazuh',
-    name: 'wazuh',
+    id: 'logs360',
+    name: 'logs360',
     require: ['kibana', 'elasticsearch'],
     uiExports: {
       app: {
-        id: 'wazuh',
-        title: 'Wazuh',
-        description: 'Wazuh app for Kibana',
-        icon: 'plugins/wazuh/img/icon.svg',
-        main: 'plugins/wazuh/app'
+        id: 'logs360',
+        title: 'logs360',
+        description: 'logs360 app for Kibana',
+        icon: 'plugins/logs360/img/icon.svg',
+        main: 'plugins/logs360/app'
       },
-      hacks: ['plugins/wazuh/icon-style'],
+      hacks: ['plugins/logs360/icon-style'],
       __bundleProvider__(kbnServer) {
         kbnServer.uiBundles.addPostLoader({
           test: /\.pug$/,
@@ -43,10 +43,10 @@ export default kibana =>
 
       if (xpackMainPlugin) {
         xpackMainPlugin.registerFeature({
-          id: 'wazuh',
-          name: 'Wazuh',
-          app: ['wazuh', 'kibana', 'elasticsearch'],
-          navLinkId: 'wazuh',
+          id: 'logs360',
+          name: 'logs360',
+          app: ['logs360', 'kibana', 'elasticsearch'],
+          navLinkId: 'logs360',
           privileges: {}
         });
       }
