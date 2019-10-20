@@ -6,9 +6,9 @@
     <div layout="row">
         <md-card flex class="wz-md-card wz-metric-color">
             <md-card-content layout="row" class="wz-padding-metric">
-                <div flex>Last score: <span class="wz-text-bold" ng-bind="scapLastScore()"></span></div>
-                <div flex>Highest score: <span class="wz-text-bold" ng-bind="scapHighestScore()"></span></div>
-                <div flex>Lowest score: <span class="wz-text-bold" ng-bind="scapLowestScore()"></span></div>
+                <div flex>Última pontuação: <span class="wz-text-bold" ng-bind="scapLastScore()"></span></div>
+                <div flex>Pontuação maisalta: <span class="wz-text-bold" ng-bind="scapHighestScore()"></span></div>
+                <div flex>Pontuação mais baixa: <span class="wz-text-bold" ng-bind="scapLowestScore()"></span></div>
             </md-card-content>
         </md-card>
     </div>
@@ -23,7 +23,7 @@
         <md-card flex="25" class="wz-md-card" ng-class="{'fullscreen': expandArray[0]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(0)">
-                <span class="wz-headline-title">Top 5 Scans</span>
+                <span class="wz-headline-title">Top 5 verificações</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(0)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -36,7 +36,7 @@
         <md-card flex="25" class="wz-md-card" ng-class="{'fullscreen': expandArray[1]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(1)">
-                <span class="wz-headline-title">Top 5 Profiles</span>
+                <span class="wz-headline-title">Top 5 Perfis</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(1)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -49,7 +49,7 @@
         <md-card flex="25" class="wz-md-card" ng-class="{'fullscreen': expandArray[2]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(2)">
-                <span class="wz-headline-title">Top 5 Content</span>
+                <span class="wz-headline-title">Top 5 Conteúdo</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(2)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -62,7 +62,7 @@
         <md-card flex="25" class="wz-md-card" ng-class="{'fullscreen': expandArray[3]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(3)">
-                <span class="wz-headline-title">Top 5 Severity</span>
+                <span class="wz-headline-title">Top 5 Severidade</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(3)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -78,7 +78,7 @@
         <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[4]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(4)">
-                <span class="wz-headline-title">Daily scans evolution</span>
+                <span class="wz-headline-title">Evolução diária das varreduras</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(4)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -94,7 +94,7 @@
         <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[5]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(5)">
-                <span class="wz-headline-title">Top 5 - Alerts</span>
+                <span class="wz-headline-title">Top 5 - Alertas</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(5)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -107,7 +107,7 @@
         <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[6]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(6)">
-                <span class="wz-headline-title">Top 5 - High risk alerts</span>
+                <span class="wz-headline-title">Top 5 - Alertas de alto risco</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(6)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -123,7 +123,7 @@
         <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[7]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(7)">
-                <span class="wz-headline-title">Alerts summary</span>
+                <span class="wz-headline-title">Resumo de alertas</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(7)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />

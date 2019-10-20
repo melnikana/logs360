@@ -3,12 +3,12 @@
     <div layout="row" layout-padding class="wz-padding-top-0">
         <span flex></span>
         <md-button ng-click="launchRootcheckScan()" class="discoverSectionSwitchBtn pull-right"><i class="fa fa-fw fa-play"></i>
-            Run scan</md-button>
+            Executar verificação</md-button>
     </div>
     <div layout="row" class="height-290">
         <md-card flex="50" class="wz-md-card" ng-class="{'fullscreen': expandArray[0]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(0)">
-                <span class="wz-headline-title">Alerts over time</span>
+                <span class="wz-headline-title">Histórico de alertas</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(0)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -21,7 +21,7 @@
         </md-card>
         <md-card flex="50" class="wz-md-card" ng-class="{'fullscreen': expandArray[1]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(1)">
-                <span class="wz-headline-title">Rule distribution</span>
+                <span class="wz-headline-title">Regras de distribuição</span>
                 <span flex></span>
                 </span>
                 <span class="cursor-pointer" ng-click="expand(1)">
@@ -38,7 +38,7 @@
         <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[3]}">
             <md-card-content class="wazuh-column">
                 <div layout="row" ng-dblclick="expand(3)">
-                    <span class="wz-headline-title">Events per control type evolution</span>
+                    <span class="wz-headline-title">Eventos por evolução do tipo de controle</span>
                     <span flex></span>
                     <span class="cursor-pointer" ng-click="expand(3)">
                         <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -53,7 +53,7 @@
     <div layout="row" layout-align="space-between stretch" class="height-570">
         <md-card flex="100" class="wz-md-card" ng-class="{'fullscreen': expandArray[4]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(4)">
-                <span class="wz-headline-title">Alerts summary</span>
+                <span class="wz-headline-title">Resumo de alertas</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(4)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />

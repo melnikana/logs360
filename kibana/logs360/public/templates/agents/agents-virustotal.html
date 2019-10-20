@@ -7,8 +7,8 @@
     <div layout="row">
         <md-card flex class="wz-md-card wz-metric-color">
             <md-card-content layout="row" class="wz-padding-metric">
-                <div flex>Total malicious: <span class="wz-text-bold" ng-bind="virusMalicious()"></span></div>
-                <div flex>Total positives: <span class="wz-text-bold" ng-bind="virusPositives()"></span></div>
+                <div flex>Total malicioso: <span class="wz-text-bold" ng-bind="virusMalicious()"></span></div>
+                <div flex>Total positivos: <span class="wz-text-bold" ng-bind="virusPositives()"></span></div>
                 <div flex>Total: <span class="wz-text-bold" ng-bind="virusTotal()"></span></div>
             </md-card-content>
         </md-card>
@@ -24,7 +24,7 @@
         <md-card flex="33" class="wz-md-card" ng-class="{'fullscreen': expandArray[0]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(0)">
-                <span class="wz-headline-title">Last scanned files</span>
+                <span class="wz-headline-title">Últimos arquivos verificados</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(0)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -38,7 +38,7 @@
             <md-card-content class="wazuh-column" ng-class="{'fullscreen': expandArray[1]}">
                 <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                     ng-dblclick="expand(1)">
-                    <span class="wz-headline-title">Malicious files alerts Evolution</span>
+                    <span class="wz-headline-title">Alertas de arquivos maliciosos Evolution</span>
                     <span flex></span>
                     <span class="cursor-pointer" ng-click="expand(1)">
                         <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -52,7 +52,7 @@
         <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[2]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(2)">
-                <span class="wz-headline-title">Last files</span>
+                <span class="wz-headline-title">Últimos arquivos</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(2)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />

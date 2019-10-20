@@ -4,19 +4,19 @@
         <span flex></span>
         <md-button ng-click="launchSyscheckScan()" class="discoverSectionSwitchBtn pull-right"><i
                 class="fa fa-fw fa-play"></i>
-            Run
-            scan</md-button>
+            Executar
+            verificação</md-button>
         <span></span>
         <md-button ng-click="switchSyscheckFiles()" class="discoverSectionSwitchBtn pull-right"><i
                 class="fa fa-fw fa-database"></i>
-            Show files</md-button>
+            visualizar arquivos</md-button>
     </div>
     <!-- View: Panels -->
     <div layout="row" class="height-300">
 
         <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[0]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(0)">
-                <span class="wz-headline-title">Most active users</span>
+                <span class="wz-headline-title">Usuários mais ativos</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(0)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -28,7 +28,7 @@
         </md-card>
         <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[1]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(1)">
-                <span class="wz-headline-title">Actions</span>
+                <span class="wz-headline-title">Ações</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(1)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -41,7 +41,7 @@
 
         <md-card flex="40" class="wz-md-card" ng-class="{'fullscreen': expandArray[2]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(2)">
-                <span class="wz-headline-title">Events</span>
+                <span class="wz-headline-title">Eventos</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(2)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -57,7 +57,7 @@
     <div layout="row" class="height-230">
         <md-card flex="33" class="wz-md-card" ng-class="{'fullscreen': expandArray[3]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(3)">
-                <span class="wz-headline-title">Files added</span>
+                <span class="wz-headline-title">Arquivos adicionados</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(3)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -69,7 +69,7 @@
         </md-card>
         <md-card flex="33" class="wz-md-card" ng-class="{'fullscreen': expandArray[4]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(4)">
-                <span class="wz-headline-title">Files modified</span>
+                <span class="wz-headline-title">Arquivos modificados</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(4)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -82,7 +82,7 @@
         </md-card>
         <md-card flex="33" class="wz-md-card" ng-class="{'fullscreen': expandArray[5]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(5)">
-                <span class="wz-headline-title">Files deleted</span>
+                <span class="wz-headline-title">Arquivos deletados</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(5)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -98,7 +98,7 @@
     <div layout="row" layout-align="space-between stretch" class="height-570">
         <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[6]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(6)">
-                <span class="wz-headline-title">Alerts summary</span>
+                <span class="wz-headline-title">Resumo dos alertas</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="expand(6)">
                     <react-component name="EuiIcon" props="{type:'expand'}" />
@@ -117,11 +117,11 @@
         <span flex></span>
         <md-button ng-click="launchSyscheckScan()" class="discoverSectionSwitchBtn pull-right"><i
                 class="fa fa-fw fa-play"></i>
-            Run scan</md-button>
+            Executar verificação</md-button>
         <span></span>
         <md-button ng-click="switchSyscheckFiles()" class="discoverSectionSwitchBtn pull-right"><i
                 class="fa fa-fw fa-area-chart"></i>
-            Show alerts</md-button>
+            Visualizar alertas</md-button>
     </div>
 
     <div layout="row" class="wz-margin-top-10 wz-margin-right-8 wz-margin-left-8"
@@ -129,7 +129,7 @@
         <div flex class="euiCallOut euiCallOut--warning">
             <div class="euiCallOutHeader">
                 <react-component name="EuiIcon" props="{type:'help',className:'euiCallOutHeader__title'}" />
-                <span class="euiCallOutHeader__title">This agent has never connected.</span>
+                <span class="euiCallOutHeader__title">Este agente nunca se conectou.</span>
             </div>
         </div>
     </div>
@@ -137,7 +137,7 @@
     <div layout="row" class="wz-padding-top-0" ng-if="agent && agent.os && agent.os.platform === 'windows'">
         <md-card flex="" class="wz-md-card _md flex">
             <md-card-content class="wz-padding-bottom-30">
-                <span class="wz-headline-title"><i class="fa fa-fw fa-windows"></i> Windows registry</span>
+                <span class="wz-headline-title"><i class="fa fa-fw fa-windows"></i>Registro Windows</span>
                 <md-divider class="wz-margin-top-10"></md-divider>
                 <div layout="row" class="wz-margin-top-10">
                     <input placeholder="Filter registry..." ng-model="registrySearch" type="text"
@@ -162,7 +162,7 @@
                     class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--small">
                     <span class="euiButtonEmpty__content">
                         <react-component name="EuiIcon" props="{type:'importAction'}" />
-                        <span class="euiButtonEmpty__text">Formatted</span>
+                        <span class="euiButtonEmpty__text">Formatado</span>
                     </span>
                 </button>
             </md-card-actions>
@@ -172,7 +172,7 @@
     <div layout="row" class="wz-padding-top-0" ng-if="agent && agent.os && agent.os.platform === 'windows'">
         <md-card flex="" class="wz-md-card _md flex">
             <md-card-content class="wz-padding-bottom-30">
-                <span class="wz-headline-title"><i class="fa fa-fw fa-file-o"></i> Files</span>
+                <span class="wz-headline-title"><i class="fa fa-fw fa-file-o"></i> Arquivos</span>
                 <md-divider class="wz-margin-top-10"></md-divider>
                 <div layout="row" class="wz-margin-top-10">
                     <input placeholder="Filter files..." ng-model="filesSearch" type="text"
@@ -196,7 +196,7 @@
                     class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--small">
                     <span class="euiButtonEmpty__content">
                         <react-component name="EuiIcon" props="{type:'importAction'}" />
-                        <span class="euiButtonEmpty__text">Formatted</span>
+                        <span class="euiButtonEmpty__text">Formatado</span>
                     </span>
                 </button>
             </md-card-actions>
@@ -228,7 +228,7 @@
                     class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--small">
                     <span class="euiButtonEmpty__content">
                         <react-component name="EuiIcon" props="{type:'importAction'}" />
-                        <span class="euiButtonEmpty__text">Formatted</span>
+                        <span class="euiButtonEmpty__text">Formatado</span>
                     </span>
                 </button>
             </md-card-actions>

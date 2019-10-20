@@ -3,12 +3,12 @@
         <md-card flex class="wz-md-card" flex>
             <md-card-content class="wz-text-center">
                 <div layout="row" layout-padding>
-                    <i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> <span class="wz-headline-title">Could
-                        not fetch data for this agent. <span ng-if="emptyAgent">Reason: {{emptyAgent}}</span></span>
+                    <i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> <span class="wz-headline-title">Não foi
+                        possível buscar dados para este agente. <span ng-if="emptyAgent">Razão: {{emptyAgent}}</span></span>
                 </div>
                 <div layout="row" layout-padding ng-if="emptyAgent">
                     <span class="cursor-pointer" ng-click="getAgent()"><i class="fa fa-fw fa-refresh" aria-hidden="true"></i>
-                        Try again</span>
+                        Tente novamente</span>
                 </div>
             </md-card-content>
         </md-card>
@@ -19,7 +19,7 @@
     <div layout="row" class="wz-margin-left-16 wz-margin-right-16 wz-margin-top-8">
         <span flex></span>
         <button class="kuiButton kuiButton--secondary small wz-no-margin" ng-click="goDiscover()"><i class="fa fa-compass"></i>
-            Discover
+            Descobrir
         </button>
     </div>
     <div layout="row" layout-padding>

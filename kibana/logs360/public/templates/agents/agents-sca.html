@@ -4,7 +4,7 @@
         <div flex class="euiCallOut euiCallOut--warning">
             <div class="euiCallOutHeader">
                 <react-component name="EuiIcon" props="{type:'help',className:'euiCallOutHeader__title'}" />
-                <span class="euiCallOutHeader__title">This agent has never connected.</span>
+                <span class="euiCallOutHeader__title">Este agente nunca se conectou.</span>
             </div>
         </div>
     </div>
@@ -18,12 +18,12 @@
         <md-card flex="50" class="wz-md-card" flex>
             <md-card-content class="wz-text-center">
                 <span class="wz-headline-title">
-                    <react-component name="EuiIcon" props="{type: 'alert'}" /> No scans available.
+                    <react-component name="EuiIcon" props="{type: 'alert'}" /> Nenhuma verificação disponível.
                 </span>
                 <md-divider class="wz-margin-top-10"></md-divider>
                 <div layout="row" class="wz-margin-top-10 layout-align-center-center">
                     <button class="kuiButton kuiButton--secondary height-35" ng-click="switchTab('sca')">
-                        <react-component name="EuiIcon" props="{type: 'refresh'}" /> Refresh
+                        <react-component name="EuiIcon" props="{type: 'refresh'}" /> Atualizar
                     </button>
                 </div>
             </md-card-content>
@@ -47,27 +47,27 @@
             <thead>
                 <tr>
                     <th class="euiTableHeaderCell padding-left-0">
-                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Policy</span></div>
+                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Politica</span></div>
                     </th>
                     <th class="euiTableHeaderCell padding-left-0">
-                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Description</span>
+                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Descrição</span>
                         </div>
                     </th>
                     <th class="euiTableHeaderCell padding-left-0">
-                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Last scan</span></div>
+                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Última verificação</span></div>
                     </th>
                     <th class="euiTableHeaderCell padding-left-0">
-                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Pass</span></div>
+                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Verificação</span></div>
                     </th>
                     <th class="euiTableHeaderCell padding-left-0">
-                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Fail</span></div>
+                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Falha</span></div>
                     </th>
                     <th class="euiTableHeaderCell padding-left-0">
-                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Not applicable</span>
+                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Não aplicável</span>
                         </div>
                     </th>
                     <th class="euiTableHeaderCell padding-left-0">
-                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Score</span></div>
+                        <div class="euiTableCellContent"><span class="euiTableCellContent__text">Pontuação</span></div>
                     </th>
 
                 </tr>
@@ -123,11 +123,11 @@
                     <span><i class="fa fa-fw fa-arrow-left cursor-pointer" ng-click="closeScaChecks()"></i>
                         {{lookingSca.name}}
                     </span>
-                    <span class="wz-margin-left-16">Pass: <span class="wz-text-bold">{{lookingSca.pass}}</span></span>
-                    <span class="wz-margin-left-16">Fail: <span class="wz-text-bold">{{lookingSca.fail}}</span></span>
-                    <span class="wz-margin-left-16">Not applicable: <span
+                    <span class="wz-margin-left-16">Verificação: <span class="wz-text-bold">{{lookingSca.pass}}</span></span>
+                    <span class="wz-margin-left-16">Falha: <span class="wz-text-bold">{{lookingSca.fail}}</span></span>
+                    <span class="wz-margin-left-16">Não aplicável: <span
                             class="wz-text-bold">{{lookingSca.invalid}}</span></span>
-                    <span class="wz-margin-left-16">Score: <span
+                    <span class="wz-margin-left-16">Pontuação: <span
                             class="wz-text-bold">{{lookingSca.score}}%</span></span>
                     <span flex></span>
                     <span class="wz-text-gray">{{lookingSca.end_scan}}</span>
@@ -135,7 +135,7 @@
             </md-card-actions>
             <md-card-content class="wz-padding-bottom-30">
                 <div layout="row" ng-show="lookingSca.hash_file" class="sca-checksum">
-                    <span>Policy checksum: {{lookingSca.hash_file}}
+                    <span>Soma de verificação política: {{lookingSca.hash_file}}
                     </span>
                 </div>
                 <div layout="row" class="wz-margin-bottom-25">
@@ -160,7 +160,7 @@
                     class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--small">
                     <span class="euiButtonEmpty__content">
                         <react-component name="EuiIcon" props="{type:'importAction'}" />
-                        <span class="euiButtonEmpty__text">Formatted</span>
+                        <span class="euiButtonEmpty__text">Formatado</span>
                     </span>
                 </button>
             </md-card-actions>
