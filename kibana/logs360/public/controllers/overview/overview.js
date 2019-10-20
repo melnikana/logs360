@@ -281,24 +281,24 @@ export class OverviewController {
 
       if (newTab === 'pci') {
         const pciTabs = await this.commonData.getPCI();
-        this.pciReqs = { items: pciTabs, reqTitle: 'PCI DSS Requirement' };
+        this.pciReqs = { items: pciTabs, reqTitle: 'Requisito do PCI DSS' };
       }
 
       if (newTab === 'gdpr') {
         const gdprTabs = await this.commonData.getGDPR();
-        this.gdprReqs = { items: gdprTabs, reqTitle: 'GDPR Requirement' };
+        this.gdprReqs = { items: gdprTabs, reqTitle: 'Requisitos da LGPD' };
       }
 
       if (newTab === 'hipaa') {
         const hipaaTabs = await this.commonData.getHIPAA();
-        this.hipaaReqs = { items: hipaaTabs, reqTitle: 'HIPAA Requirement' };
+        this.hipaaReqs = { items: hipaaTabs, reqTitle: 'Requisitos do HIPAA' };
       }
 
       if (newTab === 'nist') {
         const nistTabs = await this.commonData.getNIST();
         this.nistReqs = {
           items: nistTabs,
-          reqTitle: 'NIST 800-53 Requirement'
+          reqTitle: 'Requisitos do NIST 800-53'
         };
       }
 
@@ -360,7 +360,7 @@ export class OverviewController {
         this.agentsCountTotal = total;
         this.agentsCoverity = total ? (active / total) * 100 : 0;
       } else {
-        throw new Error('Error fetching /agents/summary from Wazuh API');
+        throw new Error('Erro ao acessar /agents/summary na api Logs360');
       }
       return;
     } catch (error) {

@@ -36,7 +36,7 @@ export class RequirementCard extends Component {
   buildSlider() {
     const items = this.props.items.map((req, index) => {
       const title = `${this.props.reqTitle}: ${req.title}`;
-      const expandMessage = this.expanded ? 'Show less' : 'More info';
+      const expandMessage = this.expanded ? 'Mostre menos' : 'Mais informações';
       const cardFooterContent = (
         <EuiButtonEmpty
           iconType="iInCircle"
