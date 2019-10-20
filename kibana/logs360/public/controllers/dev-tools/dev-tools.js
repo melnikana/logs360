@@ -300,7 +300,7 @@ export class DevToolsController {
               this.$document[0].createElement('span')
             );
             advice.id = new Date().getTime() / 1000;
-            advice.innerText = error.message || 'Error parsing query';
+            advice.innerText = error.message || 'Erro ao analisar a consulta';
             advice.className = 'lint-block-wz';
           };
 
@@ -536,7 +536,7 @@ export class DevToolsController {
           item => item === desiredGroup.requestText
         );
         if (filteredAffectedGroups.length) {
-          this.apiOutputBox.setValue('Error parsing JSON query');
+          this.apiOutputBox.setValue('Erro ao analisar a consulta JSON');
           return;
         }
 
