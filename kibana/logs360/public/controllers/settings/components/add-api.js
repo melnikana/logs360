@@ -46,18 +46,18 @@ export class AddApi extends Component {
       <EuiPanel>
         <EuiFlexGroup>
           <EuiFlexItem>
-            <EuiFormRow label="Username">
+            <EuiFormRow label="Usuario">
               <EuiFieldText
                 onChange={e => this.onChangeEdit(e, 'user')}
-                placeholder="foo"
+                placeholder="Usuario de API"
               />
             </EuiFormRow>
           </EuiFlexItem>
           <EuiFlexItem>
-            <EuiFormRow label="Password">
+            <EuiFormRow label="Senha">
               <EuiFieldPassword
                 onChange={e => this.onChangeEdit(e, 'password')}
-                placeholder="bar"
+                placeholder="Senha"
               />
             </EuiFormRow>
           </EuiFlexItem>
@@ -65,12 +65,12 @@ export class AddApi extends Component {
             <EuiFormRow label="Host">
               <EuiFieldText
                 onChange={e => this.onChangeEdit(e, 'url')}
-                placeholder="http://localhost"
+                placeholder="https://localhost"
               />
             </EuiFormRow>
           </EuiFlexItem>
           <EuiFlexItem>
-            <EuiFormRow label="Port">
+            <EuiFormRow label="Porta">
               <EuiFieldNumber
                 max={99999}
                 onChange={e => this.onChangeEdit(e, 'port')}
@@ -80,14 +80,14 @@ export class AddApi extends Component {
           </EuiFlexItem>
 
           <EuiFlexItem grow={false}>
-            <EuiFormRow label="Actions">
+            <EuiFormRow label="Ações">
               <EuiButton
                 aria-label="Save"
                 iconType="save"
                 color="primary"
                 onClick={() => this.props.saveSettings({ ...this.state })}
               >
-                Save
+                Salvar
               </EuiButton>
             </EuiFormRow>
           </EuiFlexItem>

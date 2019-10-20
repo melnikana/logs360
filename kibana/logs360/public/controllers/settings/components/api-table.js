@@ -65,18 +65,18 @@ export class ApiTable extends Component {
       itemIdToExpandedRowMap[item._id] = (
         <EuiFlexGroup>
           <EuiFlexItem>
-            <EuiFormRow label="Username">
+            <EuiFormRow label="Usuario">
               <EuiFieldText
                 onChange={e => this.onChangeEdit(e, 'user')}
-                placeholder="foo"
+                placeholder="Usuario de API"
               />
             </EuiFormRow>
           </EuiFlexItem>
           <EuiFlexItem>
-            <EuiFormRow label="Password">
+            <EuiFormRow label="Senha">
               <EuiFieldPassword
                 onChange={e => this.onChangeEdit(e, 'password')}
-                placeholder="bar"
+                placeholder="Senha"
               />
             </EuiFormRow>
           </EuiFlexItem>
@@ -84,12 +84,12 @@ export class ApiTable extends Component {
             <EuiFormRow label="Host">
               <EuiFieldText
                 onChange={e => this.onChangeEdit(e, 'url')}
-                placeholder="http://localhost"
+                placeholder="https://localhost"
               />
             </EuiFormRow>
           </EuiFlexItem>
           <EuiFlexItem>
-            <EuiFormRow label="Port">
+            <EuiFormRow label="Porta">
               <EuiFieldNumber
                 max={99999}
                 onChange={e => this.onChangeEdit(e, 'port')}
@@ -101,7 +101,7 @@ export class ApiTable extends Component {
           <EuiFlexItem grow={false}>
             <EuiFormRow label="Actions">
               <EuiButton
-                aria-label="Update"
+                aria-label="Atualizar"
                 iconType="save"
                 color="primary"
                 onClick={() =>
@@ -110,7 +110,7 @@ export class ApiTable extends Component {
                     .then(result => result !== -1 && this.toggleDetails(item))
                 }
               >
-                Save
+                Salvar
               </EuiButton>
             </EuiFormRow>
           </EuiFlexItem>
@@ -161,14 +161,14 @@ export class ApiTable extends Component {
         render: item => (
           <EuiFlexGroup>
             <EuiFlexItem grow={false}>
-              <EuiToolTip position="bottom" content={<p>Set as default</p>}>
+              <EuiToolTip position="bottom" content={<p>Definir como padrão</p>}>
                 <EuiButtonIcon
                   iconType={
                     item._id === this.state.currentDefault
                       ? 'starFilled'
                       : 'starEmpty'
                   }
-                  aria-label="Set as default"
+                  aria-label="Definir como padrão"
                   onClick={() => {
                     const currentDefault = this.props.setDefault(item);
                     this.setState({
@@ -179,9 +179,9 @@ export class ApiTable extends Component {
               </EuiToolTip>
             </EuiFlexItem>
             <EuiFlexItem grow={false}>
-              <EuiToolTip position="bottom" content={<p>Check connection</p>}>
+              <EuiToolTip position="bottom" content={<p>Verifique a conexão</p>}>
                 <EuiButtonIcon
-                  aria-label="Check connection"
+                  aria-label="Verifique a conexão"
                   iconType="refresh"
                   onClick={() => this.props.checkManager(item)}
                   color="success"
@@ -189,9 +189,9 @@ export class ApiTable extends Component {
               </EuiToolTip>
             </EuiFlexItem>
             <EuiFlexItem grow={false}>
-              <EuiToolTip position="bottom" content={<p>Remove</p>}>
+              <EuiToolTip position="bottom" content={<p>Remover</p>}>
                 <EuiButtonIcon
-                  aria-label="Remove manager"
+                  aria-label="Remover"
                   iconType="trash"
                   onClick={() =>
                     this.props.removeManager(item).then(apiEntries =>
@@ -213,13 +213,13 @@ export class ApiTable extends Component {
         width: '40px',
         isExpander: true,
         render: item => (
-          <EuiToolTip position="bottom" content={<p>Edit</p>}>
+          <EuiToolTip position="bottom" content={<p>Editar</p>}>
             <EuiButtonIcon
               onClick={() => this.toggleDetails(item)}
               aria-label={
                 itemIdToExpandedRowMap[item.id]
-                  ? 'Collapse edition'
-                  : 'Expand edition'
+                  ? 'Reduzir edição'
+                  : 'Expandir edição'
               }
               iconType={
                 itemIdToExpandedRowMap[item.id] ? 'arrowUp' : 'arrowDown'

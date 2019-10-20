@@ -29,7 +29,7 @@ export class Stats extends Component {
           <EuiFlexItem>
             <EuiStat
               title={this.props.total}
-              description="Total agents"
+              description="Total de agentes"
               titleColor="primary"
               textAlign="center"
             />
@@ -37,7 +37,7 @@ export class Stats extends Component {
           <EuiFlexItem>
             <EuiStat
               title={this.props.active}
-              description="Active agents"
+              description="Agentes ativos"
               titleColor="secondary"
               textAlign="center"
             />
@@ -45,7 +45,7 @@ export class Stats extends Component {
           <EuiFlexItem>
             <EuiStat
               title={this.props.disconnected}
-              description="Disconnected agents"
+              description="Agentes desconectados"
               titleColor="danger"
               textAlign="center"
             />
@@ -53,7 +53,7 @@ export class Stats extends Component {
           <EuiFlexItem>
             <EuiStat
               title={this.props.neverConnected}
-              description="Never connected agents"
+              description="Agentes nunca conectados"
               titleColor="subdued"
               textAlign="center"
             />
