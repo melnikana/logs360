@@ -230,7 +230,7 @@ export function RulesController(
    */
   $scope.downloadCsv = async () => {
     try {
-      errorHandler.info('Your download should begin automatically...', 'CSV');
+      errorHandler.info('Seu download deve começar automaticamente...', 'CSV');
       const currentApi = JSON.parse(appState.getCurrentAPI()).id;
       const output = await csvReq.fetch(
         '/rules',
@@ -372,7 +372,7 @@ export function RulesController(
       })
       .catch(() =>
         errorHandler.handle(
-          `Error fetching rule: ${incomingRule} from the Wazuh API`
+          `Regra de busca de erro: ${incomingRule} da API Logs360`
         )
       );
   }

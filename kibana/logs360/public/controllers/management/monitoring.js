@@ -216,7 +216,7 @@ export function ClusterController(
       }
     } catch (error) {
       errorHandler.handle(
-        'An error occurred while creating custom filters for visualizations',
+        'Ocorreu um erro ao criar filtros personalizados para visualizações',
         'Cluster',
         true
       );

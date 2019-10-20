@@ -211,13 +211,13 @@ export class ManagementController {
       await this.configHandler.restartManager();
       this.isRestarting = false;
       this.$scope.$applyAsync();
-      this.errorHandler.info('Restarting manager.');
+      this.errorHandler.info('Reiniciando o Gerenciador.');
     } catch (error) {
       this.isRestarting = false;
       this.$scope.$applyAsync();
       this.errorHandler.handle(
         error.message || error,
-        'Error restarting manager'
+        'Erro ao reiniciar o gerenciador'
       );
     }
   }
@@ -230,14 +230,14 @@ export class ManagementController {
       this.isRestarting = false;
       this.$scope.$applyAsync();
       this.errorHandler.info(
-        'Restarting cluster, it will take up to 30 seconds.'
+        'Reiniciando o cluster, levará até 30 segundos.'
       );
     } catch (error) {
       this.isRestarting = false;
       this.$scope.$applyAsync();
       this.errorHandler.handle(
         error.message || error,
-        'Error restarting cluster'
+        'Erro ao reiniciar o cluster'
       );
     }
   }

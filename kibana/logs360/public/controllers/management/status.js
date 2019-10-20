@@ -111,7 +111,7 @@ export class StatusController {
         clusterStatus.enabled === 'yes' &&
         clusterStatus.running === 'no'
       ) {
-        this.clusterError = `Cluster is enabled but it's not running, please check your cluster health.`;
+        this.clusterError = `O cluster está ativado, mas não está em execução. Verifique a integridade do cluster.`;
       } else {
         const daemons = await this.apiReq.request('GET', '/manager/status', {});
         this.daemons = this.objToArr(daemons.data.data);
