@@ -12,97 +12,97 @@
 export const AgentConfiguration = {
   configurations: [
     {
-      title: 'Main configurations',
+      title: 'Configurações principais',
       sections: [
         {
-          subtitle: 'Global configuration',
-          desc: 'Logging settings that apply to the agent',
+          subtitle: 'Configuração global',
+          desc: 'Configurações de log que se aplicam ao agente',
           config: [{ component: 'com', configuration: 'logging' }],
           labels: [
             {
-              plain: 'Write internal logs in plain text',
-              json: 'Write internal logs in JSON format',
-              server: 'List of managers to connect'
+              plain: 'Grave logs internos em texto sem formatação',
+              json: 'Grave logs internos no formato JSON',
+              server: 'Lista de consoles para conectar'
             }
           ]
         },
         {
-          subtitle: 'Communication',
+          subtitle: 'Comunicação',
           docuLink:
             'https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/client.html',
-          desc: 'Settings related to the connection with the manager',
+          desc: 'Configurações relacionadas à conexão com o console',
           config: [{ component: 'agent', configuration: 'client' }],
           labels: [
             {
-              crypto_method: 'Method used to encrypt communications',
+              crypto_method: 'Método usado para criptografar comunicações',
               auto_restart:
-                'Auto-restart the agent when receiving valid configuration from manager',
+                'Reinicie automaticamente o agente ao receber uma configuração válida do gerenciador',
               notify_time:
-                'Time (in seconds) between agent checkings to the manager',
+                'Tempo (em segundos) entre as verificações do agente e o console',
               'time-reconnect':
-                'Time (in seconds) before attempting to reconnect',
-              server: 'List of managers to connect',
-              'config-profile': 'Configuration profiles',
-              remote_conf: 'Remote configuration is enabled'
+                'Tempo (em segundos) antes de tentar reconectar',
+              server: 'Lista de consoles para conectar',
+              'config-profile': 'Perfis de configuração',
+              remote_conf: 'A configuração remota está ativada'
             }
           ]
         },
         {
-          subtitle: 'Anti-flooding settings',
+          subtitle: 'Configurações anti-flooding',
           docuLink:
             'https://documentation.wazuh.com/current/user-manual/capabilities/antiflooding.html',
-          desc: 'Agent bucket parameters to avoid event flooding',
+          desc: 'Parâmetros do bucket do agente para evitar eventos flooding',
           config: [{ component: 'agent', configuration: 'buffer' }],
           labels: [
             {
-              disabled: 'Buffer enabled',
-              queue_size: 'Queue size',
-              events_per_second: 'Events per second'
+              disabled: 'Buffer ativado',
+              queue_size: 'Tamanho da fila',
+              events_per_second: 'Eventos por segundo'
             }
           ]
         },
         {
-          subtitle: 'Labels',
+          subtitle: 'Identificadores',
           docuLink:
             'https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/labels.html',
-          desc: 'User-defined information about the agent included in alerts',
+          desc: 'Informações definidas pelo usuário sobre o agente incluídas nos alertas',
           config: [{ component: 'agent', configuration: 'labels' }]
         }
       ]
     },
     {
-      title: 'Auditing and policy monitoring',
+      title: 'Auditoria e monitoramento de políticas',
       sections: [
         {
-          subtitle: 'Policy monitoring',
+          subtitle: 'Monitoramento de políticas',
           docuLink:
             'https://documentation.wazuh.com/current/pci-dss/policy-monitoring.html',
           desc:
-            'Configuration to ensure compliance with security policies, standards and hardening guides',
+            'Configuração para garantir a conformidade com políticas de segurança, padrões e guias de proteção',
           config: [{ component: 'syscheck', configuration: 'rootcheck' }],
           wodle: [{ name: 'sca' }],
           labels: [
             {
-              disabled: 'Policy monitoring service enabled',
-              base_directory: 'Base directory',
-              rootkit_files: 'Rootkit files database path',
-              rootkit_trojans: 'Rootkit trojans database path',
-              scanall: 'Scan the entire system',
-              skip_nfs: 'Skip scan on CIFS/NFS mounts',
-              frequency: 'Frequency (in seconds) to run the scan',
-              check_dev: 'Check /dev path',
-              check_files: 'Check files',
-              check_if: 'Check network interfaces',
-              check_pids: 'Check processes IDs',
-              check_ports: 'Check network ports',
-              check_sys: 'Check anomalous system objects',
-              check_trojans: 'Check trojans',
-              check_unixaudit: 'Check UNIX audit',
-              system_audit: 'UNIX audit files paths',
-              enabled: 'Security configuration assessment enabled',
-              scan_on_start: 'Scan on start',
-              interval: 'Interval',
-              policies: 'Policies'
+              disabled: 'Serviço de monitoramento de políticas ativado',
+              base_directory: 'Diretório base',
+              rootkit_files: 'Caminho do banco de dados de arquivos Rootkit',
+              rootkit_trojans: 'Caminho do banco de dados de trojans Rootkit',
+              scanall: 'Digitalizar todo o sistema',
+              skip_nfs: 'Ignorar varredura em montagens CIFS/NFS',
+              frequency: 'Frequência (em segundos) para executar a verificação',
+              check_dev: 'Verifique o caminho/dev',
+              check_files: 'Checar arquivos',
+              check_if: 'Verifique as interfaces de rede',
+              check_pids: 'Verifique os IDs dos processos',
+              check_ports: 'Verifique as portas de rede',
+              check_sys: 'Verificar objetos anômalos do sistema',
+              check_trojans: 'Verifique trojans',
+              check_unixaudit: 'Verifique a auditoria UNIX',
+              system_audit: 'Caminhos de arquivos de auditoria UNIX',
+              enabled: 'Avaliação da configuração de segurança ativada',
+              scan_on_start: 'Digitalizar no início',
+              interval: 'Intervalo',
+              policies: 'Políticas'
             }
           ],
           tabs: ['General', 'Security configuration assessment']
@@ -112,13 +112,13 @@ export const AgentConfiguration = {
           docuLink:
             'https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/wodle-openscap.html',
           desc:
-            'Configuration assessment and automation of compliance monitoring using SCAP checks',
+            'Avaliação de configuração e automação do monitoramento de conformidade usando verificações SCAP',
           wodle: [{ name: 'open-scap' }],
           labels: [
             {
-              content: 'Evaluations',
-              disabled: 'OpenSCAP integration enabled',
-              'scan-on-start': 'Scan on start',
+              content: 'Avaliações',
+              disabled: 'Integração OpenSCAP ativada',
+              'scan-on-start': 'Digitalizar no início',
               interval: 'Interval between scan executions',
               timeout: 'Timeout (in seconds) for scan executions'
             }
@@ -133,11 +133,11 @@ export const AgentConfiguration = {
           labels: [
             {
               disabled: 'CIS-CAT integration enabled',
-              'scan-on-start': 'Scan on start',
-              interval: 'Interval between scan executions',
-              java_path: 'Path to Java executable directory',
-              ciscat_path: 'Path to CIS-CAT executable directory',
-              timeout: 'Timeout (in seconds) for scan executions',
+              'scan-on-start': 'Digitalizar no início',
+              interval: 'Intervalo entre execuções de varredura',
+              java_path: 'Caminho para o diretório executável Java',
+              ciscat_path: 'Caminho para o diretório executável CIS-CAT',
+              timeout: 'Tempo limite (em segundos) para execuções de varredura',
               content: 'Benchmarks'
             }
           ]
@@ -145,44 +145,44 @@ export const AgentConfiguration = {
       ]
     },
     {
-      title: 'System threats and incident response',
+      title: 'Ameaças do sistema e resposta a incidentes',
       sections: [
         {
           subtitle: 'Osquery',
           docuLink:
             'https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/wodle-osquery.html',
           desc:
-            'Expose an operating system as a high-performance relational database',
+            'Expor um sistema operacional como um banco de dados relacional de alto desempenho',
           wodle: [{ name: 'osquery' }],
           labels: [
             {
-              disabled: 'Osquery integration enabled',
-              run_daemon: 'Auto-run the Osquery daemon',
-              add_labels: 'Use defined labels as decorators',
-              log_path: 'Path to the Osquery results log file',
-              config_path: 'Path to the Osquery configuration file'
+              disabled: 'Integração com o Osquery ativada',
+              run_daemon: 'Executar automaticamente o daemon Osquery',
+              add_labels: 'Use etiquetas definidas como decoradores',
+              log_path: 'Caminho para o arquivo de log de resultados do Osquery',
+              config_path: 'Caminho para o arquivo de configuração do Osquery'
             }
           ]
         },
         {
-          subtitle: 'Inventory data',
+          subtitle: 'Dados de inventário',
           docuLink:
             'https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/wodle-syscollector.html',
           desc:
-            'Gather relevant information about system OS, hardware, networking and packages',
+            'Reunir informações relevantes sobre sistema operacional, hardware, rede e pacotes do sistema',
           wodle: [{ name: 'syscollector' }],
           labels: [
             {
-              disabled: 'Syscollector integration enabled',
-              'scan-on-start': 'Scan on start',
-              interval: 'Interval between system scans',
-              network: 'Scan network interfaces',
-              os: 'Scan operating system info',
-              hardware: 'Scan hardware info',
-              packages: 'Scan installed packages',
-              ports: 'Scan listening network ports',
-              ports_all: 'Scan all network ports',
-              processes: 'Scan current processes'
+              disabled: 'Integração com Syscollector ativada',
+              'scan-on-start': 'Digitalizar no início',
+              interval: 'Intervalo entre varreduras do sistema',
+              network: 'Digitalizar interfaces de rede',
+              os: 'Verificar informações do sistema operacional',
+              hardware: 'Verificar informações de hardware',
+              packages: 'Verificar pacotes instalados',
+              ports: 'Digitalizar portas de rede de escuta',
+              ports_all: 'Digitalizar todas as portas de rede',
+              processes: 'Digitalizar processos atuais'
             }
           ]
         },
@@ -194,109 +194,109 @@ export const AgentConfiguration = {
           config: [{ component: 'com', configuration: 'active-response' }],
           labels: [
             {
-              disabled: 'Active response enabled',
-              ca_store: 'Use the following list of root CA certificates',
-              ca_verification: 'Validate WPKs using root CA certificate'
+              disabled: 'Resposta ativa ativada',
+              ca_store: 'Use a seguinte lista de certificados de CA raiz',
+              ca_verification: 'Validar WPKs usando certificado CA raiz'
             }
           ]
         },
         {
-          subtitle: 'Commands',
+          subtitle: 'Comandos',
           docuLink:
             'https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/wodle-command.html',
-          desc: 'Configuration options of the Command wodle',
+          desc: 'Opções de configuração do wodle de comando',
           wodle: [{ name: 'command' }],
           labels: [
             {
-              disabled: 'Command enabled',
-              run_on_start: 'Run on start',
-              ignore_output: 'Ignore command output',
-              skip_verification: 'Ignore checksum verification',
-              interval: 'Interval between executions',
-              tag: 'Command name',
-              command: 'Command to execute',
-              verify_md5: 'Verify MD5 sum',
-              verify_sha1: 'Verify SHA1 sum',
-              verify_sha256: 'Verify SHA256 sum'
+              disabled: 'Comando ativado',
+              run_on_start: 'Executar no início',
+              ignore_output: 'Ignorar saída do comando',
+              skip_verification: 'Ignorar verificação de soma de verificação',
+              interval: 'Intervalo entre execuções',
+              tag: 'Nome do comando',
+              command: 'Comando para executar',
+              verify_md5: 'Verificar soma MD5',
+              verify_sha1: 'Verificar soma SHA1',
+              verify_sha256: 'Verificar soma SHA256'
             }
           ]
         },
         {
-          subtitle: 'Docker listener',
+          subtitle: 'Ouvinte do Docker',
           docuLink:
             'https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/wodle-docker.html',
           desc:
-            'Monitor and collect the activity from Docker containers such as creation, running, starting, stopping or pausing events',
+            'Monitore e colete a atividade dos contêineres do Docker, como criação, execução, inicialização, parada ou pausa de eventos',
           wodle: [{ name: 'docker-listener' }],
           labels: [
             {
-              disabled: 'Docker listener enabled',
+              disabled: 'Ouvinte do Docker ativado',
               run_on_start:
-                'Run the listener immediately when service is started',
-              interval: 'Waiting time to rerun the listener in case it fails',
-              attempts: 'Number of attempts to execute the listener'
+                'Execute o ouvinte imediatamente quando o serviço for iniciado',
+              interval: 'Tempo de espera para executar novamente o ouvinte, caso ele falhe',
+              attempts: 'Número de tentativas para executar o ouvinte'
             }
           ]
         }
       ]
     },
     {
-      title: 'Log data analysis',
+      title: 'Análise de dados de log',
       sections: [
         {
-          subtitle: 'Log collection',
+          subtitle: 'Coleção de logs',
           docuLink:
             'https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/index.html',
           desc:
-            'Log analysis from text files, Windows events or syslog outputs',
+            'Análise de log de arquivos de texto, eventos do Windows ou saídas de syslog',
           config: [
             {
-              component: 'logcollector',
-              configuration: 'localfile',
+              component: 'coletor de log',
+              configuration: 'arquivo local',
               filterBy: 'logformat'
             },
             { component: 'logcollector', configuration: 'socket' }
           ],
           labels: [
             {
-              logformat: 'Log format',
-              log_format: 'Log format',
-              alias: 'Command alias',
-              ignore_binaries: 'Ignore binaries',
-              target: 'Redirect output to this socket',
-              frequency: 'Interval between command executions',
-              file: 'Log location',
-              location: 'Log location',
-              socket: 'Output sockets',
+              logformat: 'Formato de log',
+              log_format: 'Formato de log',
+              alias: 'Alias de comando',
+              ignore_binaries: 'Ignorar binários',
+              target: 'Redirecionar a saída para este soquete',
+              frequency: 'Intervalo entre execuções de comando',
+              file: 'Local do log',
+              location: 'Local do log',
+              socket: 'Soquetes de saída',
               syslog: 'Syslog',
-              command: 'Command',
-              full_command: 'Full command',
+              command: 'Comando',
+              full_command: 'Comando completo',
               audit: 'Audit'
             }
           ],
           options: { hideHeader: true }
         },
         {
-          subtitle: 'Integrity monitoring',
+          subtitle: 'Monitoramento de integridade',
           docuLink:
             'https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/syscheck.html',
           desc:
-            'Identify changes in content, permissions, ownership, and attributes of files',
+            'Identifique alterações no conteúdo, permissões, propriedade e atributos dos arquivos',
           config: [
             { component: 'syscheck', configuration: 'syscheck', matrix: true }
           ],
           tabs: ['General', 'Who data'],
           labels: [
             {
-              disabled: 'Integrity monitoring enabled',
-              frequency: 'Interval (in seconds) to run the integrity scan',
-              skip_nfs: 'Skip scan on CIFS/NFS mounts',
-              scan_on_start: 'Scan on start',
-              directories: 'Monitored directories',
-              nodiff: 'No diff directories',
-              ignore: 'Ignored files and directories',
-              restart_audit: 'Restart audit',
-              startup_healthcheck: 'Startup healthcheck'
+              disabled: 'Monitoramento de integridade ativado',
+              frequency: 'Intervalo (em segundos) para executar a verificação de integridade',
+              skip_nfs: 'Ignorar varredura em montagens CIFS/NFS',
+              scan_on_start: 'Digitalizar no início',
+              directories: 'Diretórios monitorados',
+              nodiff: 'Nenhum diretório diff',
+              ignore: 'Arquivos e diretórios ignorados',
+              restart_audit: 'Reiniciar auditoria',
+              startup_healthcheck: 'Verificação de saúde de inicialização'
             }
           ],
           opts: {
