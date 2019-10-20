@@ -141,11 +141,11 @@ export class ExportConfiguration extends Component {
         />
         <EuiSpacer size="s" />
         <EuiButtonEmpty size="xs" onClick={() => this.selectAll(true)}>
-          Select all
+          Selecionar todos
         </EuiButtonEmpty>
         <EuiSpacer size="s" />
         <EuiButtonEmpty size="xs" onClick={() => this.selectAll(false)}>
-          Unselect all
+        Desmarque todos
         </EuiButtonEmpty>
         <EuiSpacer size="m" />
         <EuiButton
@@ -156,7 +156,7 @@ export class ExportConfiguration extends Component {
           }}
           fill
         >
-          Generate PDF report
+        Gerar relatório em PDF
         </EuiButton>
       </EuiPopover>
     );

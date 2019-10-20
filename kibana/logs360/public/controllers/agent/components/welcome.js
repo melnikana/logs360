@@ -85,7 +85,7 @@ export class WelcomeScreen extends Component {
         return (
           <EuiFormRow key={extension}>
             <EuiSwitch
-              label={`${TabDescription[extension].title} extension`}
+              label={`${TabDescription[extension].title} extensões`}
               checked={this.state.extensions[extension]}
               onChange={() => this.toggleExtension(extension)}
             />
@@ -98,7 +98,7 @@ export class WelcomeScreen extends Component {
         id={popoverName}
         button={
           <EuiButtonIcon
-            aria-label="Extensions"
+            aria-label="Extensões"
             iconType="eye"
             onClick={() => this.onButtonClick(popoverName)}
           />
@@ -116,7 +116,7 @@ export class WelcomeScreen extends Component {
       <div>
         <EuiFlexGroup>
           <EuiFlexItem>
-            <EuiPanel betaBadgeLabel="Security Information Management">
+            <EuiPanel betaBadgeLabel="Gerenciamento de informações de segurança">
               <EuiSpacer size="l" />
               <EuiFlexGrid columns={2}>
                 {this.buildTabCard('general', 'dashboardApp')}
@@ -127,7 +127,7 @@ export class WelcomeScreen extends Component {
             </EuiPanel>
           </EuiFlexItem>
           <EuiFlexItem>
-            <EuiPanel betaBadgeLabel="Auditing and Policy Monitoring">
+            <EuiPanel betaBadgeLabel="Auditoria e Monitoramento de Políticas">
               <EuiFlexGroup gutterSize="xs">
                 <EuiFlexItem />
                 <EuiFlexItem grow={false}>
@@ -155,7 +155,7 @@ export class WelcomeScreen extends Component {
         <EuiSpacer size="xl" />
         <EuiFlexGroup>
           <EuiFlexItem>
-            <EuiPanel betaBadgeLabel="Threat Detection and Response">
+            <EuiPanel betaBadgeLabel="Detecção e resposta a ameaças">
               <EuiFlexGroup gutterSize="xs">
                 <EuiFlexItem />
                 <EuiFlexItem grow={false}>
@@ -178,8 +178,8 @@ export class WelcomeScreen extends Component {
                       <EuiCallOut
                         title={
                           <p>
-                            Click the <EuiIcon type="eye" /> icon to show thread
-                            detection and response extensions.
+                            Clique no <EuiIcon type="eye" /> ícone para mostrar
+                             extensões de detecção e resposta de encadeamento.
                           </p>
                         }
                         color="success"
@@ -224,8 +224,8 @@ export class WelcomeScreen extends Component {
                       <EuiCallOut
                         title={
                           <p>
-                            Click the <EuiIcon type="eye" /> icon to show
-                            regulatory compliance extensions.
+                            Clique no <EuiIcon type="eye" /> ícone para mostrar
+                            extensões de conformidade regulamentar.
                           </p>
                         }
                         color="success"
