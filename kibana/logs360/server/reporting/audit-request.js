@@ -150,7 +150,7 @@ export class AuditRequest {
             id: bucket['4'].buckets[0].key,
             syscall:
               AuditMap[bucket['4'].buckets[0].key] ||
-              'Warning: Unknown system call'
+              'Aviso: chamada desconhecida do sistema'
           };
           result.push({
             agent,
