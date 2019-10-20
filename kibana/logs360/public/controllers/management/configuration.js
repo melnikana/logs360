@@ -216,7 +216,7 @@ export class ConfigurationController {
       }
       DynamicHeight.dynamicHeight('d-height', 50);
     } catch (error) {
-      this.errorHandler.handle(error, 'Set configuration path');
+      this.errorHandler.handle(error, 'Definir caminho de configuração');
     }
 
     this.configurationHandler.switchConfigTab(

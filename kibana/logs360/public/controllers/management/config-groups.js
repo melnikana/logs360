@@ -41,7 +41,7 @@ export class ConfigurationGroupsController {
       const xml = ((data || {}).data || {}).data || false;
 
       if (!xml) {
-        throw new Error('Could not fetch agent.conf file');
+        throw new Error('Não foi possível buscar o arquivo agent.conf');
       }
       return xml;
     } catch (error) {
@@ -71,7 +71,7 @@ export class ConfigurationGroupsController {
         this.$scope.$broadcast('fetchedFile', { data: this.$scope.fetchedXML });
       } catch (error) {
         this.$scope.fetchedXML = null;
-        this.errorHandler.handle(error, 'Fetch file error');
+        this.errorHandler.handle(error, 'Erro ao buscar arquivo');
       }
     };
     this.$scope.closeEditingFile = () => {
@@ -100,7 +100,7 @@ export class ConfigurationGroupsController {
       try {
         this.$scope.addingGroup = false;
         await this.groupHandler.createGroup(name);
-        this.errorHandler.info(`Group ${name} has been created`);
+        this.errorHandler.info(`O grupo ${name} foi criado`);
       } catch (error) {
         this.errorHandler.handle(error.message || error);
       }

@@ -43,7 +43,7 @@ export function GroupsController(
    */
   $scope.downloadCsv = async data_path => {
     try {
-      errorHandler.info('Your download should begin automatically...', 'CSV');
+      errorHandler.info('Seu download deve começar automaticamente...', 'CSV');
       const currentApi = JSON.parse(appState.getCurrentAPI()).id;
       const output = await csvReq.fetch(
         data_path,
@@ -277,7 +277,7 @@ export function GroupsController(
       const xml = ((data || {}).data || {}).data || false;
 
       if (!xml) {
-        throw new Error('Could not fetch agent.conf file');
+        throw new Error('Não foi possível buscar o arquivo agent.conf');
       }
       return xml;
     } catch (error) {
@@ -294,7 +294,7 @@ export function GroupsController(
       $scope.$broadcast('fetchedFile', { data: $scope.fetchedXML });
     } catch (error) {
       $scope.fetchedXML = null;
-      errorHandler.handle(error, 'Fetch file error');
+      errorHandler.handle(error, 'Erro ao buscar arquivo');
     }
     $scope.$applyAsync();
   };
@@ -331,7 +331,7 @@ export function GroupsController(
         try {
           await loadAllAgents(searchTerm, start);
         } catch (error) {
-          errorHandler.handle(error, 'Error fetching all available agents');
+          errorHandler.handle(error, 'Erro ao buscar todos os agentes disponíveis');
         }
       }
     } else {
@@ -378,7 +378,7 @@ export function GroupsController(
         $scope.selectedAgents.loadedAll = true;
       }
     } catch (error) {
-      errorHandler.handle(error, 'Error fetching group agents');
+      errorHandler.handle(error, 'Erro ao obter agentes do grupo');
     }
     $scope.selectedAgents.loaded = true;
   };
@@ -430,7 +430,7 @@ export function GroupsController(
         }
       }
     } catch (error) {
-      errorHandler.handle(error, 'Error fetching all available agents');
+      errorHandler.handle(error, 'Erro ao buscar todos os agentes disponíveis');
     }
   };
 
@@ -460,7 +460,7 @@ export function GroupsController(
         $scope.multipleSelectorLoading = false;
       }
     } catch (error) {
-      errorHandler.handle(error, 'Error adding agents');
+      errorHandler.handle(error, 'Erro ao adicionar agentes');
     }
     $scope.$applyAsync();
     return;
@@ -547,12 +547,12 @@ export function GroupsController(
         }));
         $scope.failedErrors = groupBy(failedErrors, 'message') || false;
         errorHandler.info(
-          `Group has been updated but an error has occurred with ${failedIds.length} agents`,
+          `O grupo foi atualizado, mas ocorreu um erro com ${failedIds.length} agentes`,
           '',
           true
         );
       } else {
-        errorHandler.info('Group has been updated');
+        errorHandler.info('O grupo foi atualizado');
       }
       $scope.addMultipleAgents(false);
       $scope.multipleSelectorLoading = false;
@@ -561,7 +561,7 @@ export function GroupsController(
       });
     } catch (err) {
       $scope.multipleSelectorLoading = false;
-      errorHandler.handle(err, 'Error applying changes');
+      errorHandler.handle(err, 'Erro ao aplicar alterações');
     }
     $scope.$applyAsync();
     return;

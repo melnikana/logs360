@@ -139,7 +139,7 @@ export class EditionController {
     } catch (error) {
       const doNotShow =
         typeof error === 'string' &&
-        error.includes('Wazuh API error') &&
+        error.includes('Erro API Logs360') &&
         error.includes('3022');
       this.fetchedXML = null;
       !doNotShow && this.errorHandler.handle(error.message || error);
@@ -169,7 +169,7 @@ export class EditionController {
       let xml = ((data || {}).data || {}).data || false;
 
       if (!xml) {
-        throw new Error('Could not fetch configuration file');
+        throw new Error('Não foi possível buscar o arquivo de configuração');
       }
 
       xml = xml.replace(/..xml.+\?>/, '');
