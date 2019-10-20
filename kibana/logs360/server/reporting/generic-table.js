@@ -20,7 +20,7 @@
  */
 export default (document, items, columns, keys, title, givenRows = false) => {
   if (!document || !columns || !columns.length) {
-    throw new Error('Missing parameters when building table');
+    throw new Error('Parâmetros ausentes ao criar tabela');
   }
 
   if (title) {
@@ -30,7 +30,7 @@ export default (document, items, columns, keys, title, givenRows = false) => {
 
   if (!items || !items.length) {
     document.content.push({
-      text: 'No results match your search criteria',
+      text: 'Nenhum resultado corresponde aos seus critérios de pesquisa',
       style: 'standard'
     });
     return;
