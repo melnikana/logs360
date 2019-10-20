@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Load the Agent controllers and React components.
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Load the Agent controllers and React components.
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@ import { ExportConfiguration } from './components/export-configuration';
 import { WelcomeScreen } from './components/welcome';
 import { Stats } from './components/stats';
 
-const app = uiModules.get('app/wazuh', []);
+const app = uiModules.get('app/logs360', []);
 
 app
   .controller('agentsController', AgentsController)

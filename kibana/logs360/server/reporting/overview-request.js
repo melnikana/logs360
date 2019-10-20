@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Specific methods to fetch Wazuh overview data from Elasticsearch
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Specific methods to fetch Wazuh overview data from Elasticsearch
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,7 +28,7 @@ export class OverviewRequest {
    * @param {String} filters E.g: cluster.name: wazuh AND rule.groups: vulnerability
    * @returns {Array<String>} E.g:['000','130','300']
    */
-  async topLevel15(gte, lte, filters, pattern = 'wazuh-alerts-3.x-*') {
+  async topLevel15(gte, lte, filters, pattern = 'logs360-alerts-1.x-*') {
     try {
       const base = {};
 

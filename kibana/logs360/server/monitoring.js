@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Module for agent info fetching functions
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Module for agent info fetching functions
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -35,7 +35,7 @@ export class Monitoring {
     this.FREQUENCY = 900;
     this.CRON_FREQ = '0 1 * * * *';
     this.CREATION = 'd';
-    this.index_pattern = 'wazuh-monitoring-3.x-*';
+    this.index_pattern = 'logs360-monitoring-1.x-*';
     this.index_prefix = 'wazuh-monitoring-3.x-';
     this.wzWrapper = new ElasticWrapper(server);
     this.agentsArray = [];
@@ -547,7 +547,7 @@ export class Monitoring {
           currentTemplate['wazuh-agent'].index_patterns;
       } catch (error) {
         // Init with the default index pattern
-        monitoringTemplate.index_patterns = ['wazuh-monitoring-3.x-*'];
+        monitoringTemplate.index_patterns = ['logs360-monitoring-1.x-*'];
       }
 
       // Check if the user is using a custom pattern
@@ -600,7 +600,7 @@ export class Monitoring {
         !this.quiet &&
           log(
             'monitoring:init',
-            'Checking if wazuh-monitoring-3.x-* index pattern exists...',
+            'Checking if logs360-monitoring-1.x-* index pattern exists...',
             'debug'
           );
 
@@ -615,7 +615,7 @@ export class Monitoring {
         await this.wzWrapper.updateMonitoringIndexPatternKnownFields(patternId);
       } catch (error) {
         const didNotFindMsg =
-          "Didn't find wazuh-monitoring-3.x-* index pattern for Kibana. Proceeding to create it...";
+          "Didn't find logs360-monitoring-1.x-* index pattern for Kibana. Proceeding to create it...";
         !this.quiet && log('monitoring:init', didNotFindMsg, 'info');
         !this.quiet && this.server.log(monitoringErrorLogColors, didNotFindMsg);
         return this.createWazuhMonitoring();

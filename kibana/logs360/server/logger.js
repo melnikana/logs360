@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Module for logging functions
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Module for logging functions
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -37,7 +37,7 @@ const initLogger = () => {
       new winston.transports.File({
         filename: path.join(
           __dirname,
-          '../../../optimize/wazuh-logs/wazuhapp.log'
+          '../../../optimize/logs360-logs/logs360App.log'
         )
       })
     ]
@@ -54,7 +54,7 @@ const initLogger = () => {
       new winston.transports.File({
         filename: path.join(
           __dirname,
-          '../../../optimize/wazuh-logs/wazuhapp-plain.log'
+          '../../../optimize/logs360-logs/logs360App.log'
         )
       })
     ]
@@ -69,8 +69,8 @@ const initLogger = () => {
  */
 const initDirectory = async () => {
   try {
-    if (!fs.existsSync(path.join(__dirname, '../../../optimize/wazuh-logs'))) {
-      fs.mkdirSync(path.join(__dirname, '../../../optimize/wazuh-logs'));
+    if (!fs.existsSync(path.join(__dirname, '../../../optimize/logs360-logs'))) {
+      fs.mkdirSync(path.join(__dirname, '../../../optimize/logs360-logs'));
     }
     if (
       typeof wazuhlogger === 'undefined' ||
@@ -109,18 +109,18 @@ const checkFiles = () => {
   if (allowed) {
     if (
       getFilesizeInMegaBytes(
-        path.join(__dirname, '../../../optimize/wazuh-logs/wazuhapp.log')
+        path.join(__dirname, '../../../optimize/logs360-logs/logs360App.log')
       ) >= 100
     ) {
       fs.renameSync(
-        path.join(__dirname, '../../../optimize/wazuh-logs/wazuhapp.log'),
+        path.join(__dirname, '../../../optimize/logs360-logs/logs360App.log'),
         path.join(
           __dirname,
-          `../../../optimize/wazuh-logs/wazuhapp.${new Date().getTime()}.log`
+          `../../../optimize/logs360-logs/logs360App.${new Date().getTime()}.log`
         )
       );
       fs.writeFileSync(
-        path.join(__dirname, '../../../optimize/wazuh-logs/wazuhapp.log'),
+        path.join(__dirname, '../../../optimize/logs360-logs/logs360App.log'),
         JSON.stringify({
           date: new Date(),
           level: 'info',
@@ -131,14 +131,14 @@ const checkFiles = () => {
     }
     if (
       getFilesizeInMegaBytes(
-        path.join(__dirname, '../../../optimize/wazuh-logs/wazuhapp-plain.log')
+        path.join(__dirname, '../../../optimize/logs360-logs/logs360App.log')
       ) >= 100
     ) {
       fs.renameSync(
-        path.join(__dirname, '../../../optimize/wazuh-logs/wazuhapp-plain.log'),
+        path.join(__dirname, '../../../optimize/logs360-logs/logs360App.log'),
         path.join(
           __dirname,
-          `../../../optimize/wazuh-logs/wazuhapp-plain.${new Date().getTime()}.log`
+          `../../../optimize/logs360-logs/logs360App-plain.${new Date().getTime()}.log`
         )
       );
     }

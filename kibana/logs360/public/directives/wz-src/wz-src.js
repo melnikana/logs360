@@ -1,6 +1,6 @@
 /*
- * Wazuh app - kbn-src sustitution directive
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - kbn-src sustitution directive
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -11,7 +11,7 @@
  */
 import { uiModules } from 'ui/modules';
 import chrome from 'ui/chrome';
-const app = uiModules.get('app/wazuh', []);
+const app = uiModules.get('app/logs360', []);
 
 app.directive('wzSrc', function() {
   return {

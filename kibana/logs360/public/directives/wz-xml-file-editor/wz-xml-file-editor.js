@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Wazuh XML file editor
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Logs360 XML file editor
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@ import { uiModules } from 'ui/modules';
 import chrome from 'ui/chrome';
 import { DynamicHeight } from '../../utils/dynamic-height';
 
-const app = uiModules.get('app/wazuh', []);
+const app = uiModules.get('app/logs360', []);
 
 app.directive('wzXmlFileEditor', function() {
   return {

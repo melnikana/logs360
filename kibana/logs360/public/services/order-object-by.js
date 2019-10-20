@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Order object by filter module
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Order object by filter module
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * Copyright (C) 2015 Fabricio Quagliariello.
  * Source code available under the MIT License.
@@ -16,7 +16,7 @@
 'use strict';
 import { uiModules } from 'ui/modules';
 
-const app = uiModules.get('app/wazuh', []);
+const app = uiModules.get('app/logs360', []);
 
 app.filter('orderObjectBy', function() {
   return function(items, field, reverse) {

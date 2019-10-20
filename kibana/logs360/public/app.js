@@ -1,6 +1,6 @@
 /*
- * Wazuh app - File for app requirements and set up
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - File for app requirements and set up
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -58,15 +58,15 @@ import 'angular-cookies/angular-cookies';
 
 import 'ui/autoload/all';
 
-// Wazuh
+// Logs360
 import './kibana-integrations';
 import './services';
 import './controllers';
 import './factories';
 import './directives';
 
-// Set up Wazuh app
-const app = uiModules.get('app/wazuh', ['ngCookies', 'ngMaterial', 'chart.js']);
+// Set up Logs360 app
+const app = uiModules.get('app/logs360', ['ngCookies', 'ngMaterial', 'chart.js']);
 
 app.config([
   '$compileProvider',
@@ -94,10 +94,10 @@ app.run(function($rootScope, $route, $location, appState, $window) {
     reloaded: false,
     discoverPrevious: false,
     discoverSections: [
-      '/wazuh-discover/',
+      '/logs360-discover/',
       '/overview/',
       '/agents',
-      '/wazuh-dev'
+      '/logs360-dev'
     ]
   });
 
@@ -135,11 +135,11 @@ app.run(function($rootScope, $route, $location, appState, $window) {
             $window.history.pushState(
               {
                 page: chrome.addBasePath(
-                  'wazuh#' + navigation.discoverPrevious + '/'
+                  '#logs360' + navigation.discoverPrevious + '/'
                 )
               },
               '',
-              chrome.addBasePath('wazuh#' + navigation.discoverPrevious + '/')
+              chrome.addBasePath('logs360#' + navigation.discoverPrevious + '/')
             );
           } else if (
             navigation.currLocation === navigation.discoverSections[2]
@@ -151,16 +151,16 @@ app.run(function($rootScope, $route, $location, appState, $window) {
               $window.history.pushState(
                 {
                   page: chrome.addBasePath(
-                    'wazuh#' + navigation.discoverPrevious
+                    'logs360#' + navigation.discoverPrevious
                   )
                 },
                 '',
-                chrome.addBasePath('wazuh#' + navigation.discoverPrevious)
+                chrome.addBasePath('logs360#' + navigation.discoverPrevious)
               );
               $window.history.pushState(
                 {
                   page: chrome.addBasePath(
-                    'wazuh#' +
+                    'logs360#' +
                       navigation.discoverPrevious +
                       '?agent=' +
                       $location.search().agent
@@ -168,7 +168,7 @@ app.run(function($rootScope, $route, $location, appState, $window) {
                 },
                 '',
                 chrome.addBasePath(
-                  'wazuh#' +
+                  'logs360#' +
                     navigation.discoverPrevious +
                     '?agent=' +
                     $location.search().agent
@@ -178,11 +178,11 @@ app.run(function($rootScope, $route, $location, appState, $window) {
               $window.history.pushState(
                 {
                   page: chrome.addBasePath(
-                    'wazuh#' + navigation.discoverPrevious
+                    'logs360#' + navigation.discoverPrevious
                   )
                 },
                 '',
-                chrome.addBasePath('wazuh#' + navigation.discoverPrevious)
+                chrome.addBasePath('logs360#' + navigation.discoverPrevious)
               );
             }
           } else if (
@@ -191,27 +191,27 @@ app.run(function($rootScope, $route, $location, appState, $window) {
           ) {
             $window.history.pushState(
               {
-                page: chrome.addBasePath('wazuh#' + navigation.discoverPrevious)
+                page: chrome.addBasePath('logs360#' + navigation.discoverPrevious)
               },
               '',
-              chrome.addBasePath('wazuh#' + navigation.discoverPrevious)
+              chrome.addBasePath('logs360#' + navigation.discoverPrevious)
             );
           }
           $window.history.pushState(
-            { page: chrome.addBasePath('wazuh#' + $location.$$url) },
+            { page: chrome.addBasePath('logs360#' + $location.$$url) },
             '',
-            chrome.addBasePath('wazuh#' + $location.$$url)
+            chrome.addBasePath('logs360#' + $location.$$url)
           );
         } else if ($location.search().tabView === 'cluster-monitoring') {
           $window.history.pushState(
-            { page: chrome.addBasePath('wazuh#/manager/') },
+            { page: chrome.addBasePath('logs360#/manager/') },
             '',
-            chrome.addBasePath('wazuh#/manager/')
+            chrome.addBasePath('logs360#/manager/')
           );
           $window.history.pushState(
-            { page: 'wazuh#' + $location.$$url },
+            { page: 'logs360#' + $location.$$url },
             '',
-            chrome.addBasePath('wazuh#' + $location.$$url)
+            chrome.addBasePath('logs360#' + $location.$$url)
           );
         }
       }

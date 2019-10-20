@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Stylesheets loader
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Stylesheets loader
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,7 +29,7 @@ const IS_DARK_THEME = chrome.getUiSettingsClient().get('theme:darkMode');
 if (IS_DARK_THEME) {
   let newSS = document.createElement('link');
   newSS.rel = 'stylesheet';
-  newSS.href = '../plugins/wazuh/less/dark_theme/wz_theme_dark.css';
+  newSS.href = '../plugins/logs360/less/dark_theme/wz_theme_dark.css';
   document.getElementsByTagName('head')[0].appendChild(newSS);
 }
 /* eslint-enable no-undef */

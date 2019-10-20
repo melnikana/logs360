@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Module for Wazuh-API-Elastic routes
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Module for Logs360-API-Elastic routes
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ export function WazuhApiElasticRoutes(server) {
     }
   });
 
-  // Get Wazuh-API entries list (Multimanager) from elasticsearch index
+  // Get Logs360-API entries list (Multimanager) from elasticsearch index
   server.route({
     method: 'GET',
     path: '/elastic/apis',
@@ -41,7 +41,7 @@ export function WazuhApiElasticRoutes(server) {
     }
   });
 
-  // Delete Wazuh-API entry (multimanager) from elasticsearch index
+  // Delete Logs360-API entry (multimanager) from elasticsearch index
   server.route({
     method: 'DELETE',
     path: '/elastic/apis/{id}',

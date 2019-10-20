@@ -1,9 +1,9 @@
 "use strict";
 /*
  * Author: Elasticsearch B.V.
- * Updated by Wazuh, Inc.
+ * Updated by Logs360, Inc.
  *
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

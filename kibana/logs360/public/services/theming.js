@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Kibana theming configuration file
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Kibana theming configuration file
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -11,7 +11,7 @@
  */
 import { uiModules } from 'ui/modules';
 
-uiModules.get('app/wazuh', []).config(function($mdThemingProvider) {
+uiModules.get('app/logs360', []).config(function($mdThemingProvider) {
   let kibanaWhiteBlack = {
     '50': '#ffffff',
     '100': '#ffffff',

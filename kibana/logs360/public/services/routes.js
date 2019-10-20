@@ -1,6 +1,6 @@
 /*
- * Wazuh app - File for routes definition
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - File for routes definition
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -168,7 +168,7 @@ routes
     template: overviewTemplate,
     resolve: { enableWzMenu, nestedResolve, ip, savedSearch }
   })
-  .when('/wazuh-discover/', {
+  .when('/logs360-discover/', {
     template: discoverTemplate,
     resolve: { enableWzMenu, nestedResolve, ip, savedSearch }
   })
@@ -188,7 +188,7 @@ routes
     redirectTo: function() {},
     resolve: { wzKibana }
   })
-  .when('/wazuh-dev', {
+  .when('/logs360-dev', {
     template: devToolsTemplate,
     resolve: { enableWzMenu, nestedResolve }
   })

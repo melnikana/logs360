@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Class for Wazuh reporting controller
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Class for Wazuh reporting controller
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,7 +38,7 @@ import {
   OverviewVisualizations
 } from '../integration-files/visualizations';
 
-const REPORTING_PATH = '../../../../optimize/wazuh-reporting';
+const REPORTING_PATH = '../../../../optimize/logs360-reporting';
 
 export class WazuhReportingCtrl {
   /**
@@ -124,7 +124,7 @@ export class WazuhReportingCtrl {
             width: 190
           },
           {
-            text: 'info@wazuh.com\nhttps://wazuh.com',
+            text: 'info@wazuh.com\nhttps://logs360.com.br',
             alignment: 'right',
             margin: [0, 0, 40, 0],
             color: '#1EA5C8'
@@ -737,7 +737,7 @@ export class WazuhReportingCtrl {
     from,
     to,
     filters,
-    pattern = 'wazuh-alerts-3.x-*',
+    pattern = 'logs360-alerts-1.x-*',
     agent = null
   ) {
     try {

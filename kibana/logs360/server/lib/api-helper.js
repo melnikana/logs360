@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Useful functions to handle API entries
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Useful functions to handle API entries
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@ export async function fetchAllAgents(api, maxSize, payload, options) {
         agents = agents.concat(response.body.data.items);
         payload.offset += payload.limit;
       } else {
-        throw new Error('Can not access Wazuh API');
+        throw new Error('Nao foi possivel acessar Logs360API');
       }
     }
     return agents;

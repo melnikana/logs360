@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Replace Wazuh name string by logo
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Replace Wazuh name string by logo
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@ export const changeWazuhNavLogo = () => {
       clearInterval(interval);
     }
     $('.euiBreadcrumb').html(
-      '<img src="/plugins/wazuh/img/logo.svg" class="navBarLogo" alt="">'
+      '<img src="/plugins/logs360/img/logo.svg" class="navBarLogo" alt="">'
     );
   }, 100);
 };

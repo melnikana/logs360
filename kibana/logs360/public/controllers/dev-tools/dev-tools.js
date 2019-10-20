@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Dev tools controller
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Dev tools controller
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -599,11 +599,11 @@ export class DevToolsController {
         }
       }
 
-      (firstTime || !desiredGroup) && this.apiOutputBox.setValue('Welcome!');
+      (firstTime || !desiredGroup) && this.apiOutputBox.setValue('Bem Vindo!');
     } catch (error) {
       if ((error || {}).status === -1) {
         return this.apiOutputBox.setValue(
-          'Wazuh API is not reachable. Reason: timeout.'
+          'Logs360 API nao esta acessivel. Reason: timeout.'
         );
       } else {
         const parsedError = this.errorHandler.handle(error, null, null, true);

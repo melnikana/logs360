@@ -1,8 +1,8 @@
 /*
  * Author: Elasticsearch B.V.
- * Updated by Wazuh, Inc.
+ * Updated by Logs360, Inc.
  *
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@ import { uiModules } from 'ui/modules';
 // Debounce service, angularized version of lodash debounce
 // borrowed heavily from https://github.com/shahata/angular-debounce
 
-const module = uiModules.get('app/wazuh');
+const module = uiModules.get('app/logs360');
 
 module.service('debounce', [
   '$timeout',

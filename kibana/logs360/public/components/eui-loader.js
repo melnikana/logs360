@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Wrap EUI components with ng-react and the Wazuh app
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Wrap EUI components with ng-react and the Logs360 app
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,7 +26,7 @@ import {
 import { BasicTable } from '../directives/wz-table-eui/components/table';
 import { Tabs } from '../directives/wz-tabs-eui/components/tabs';
 
-const app = uiModules.get('app/wazuh', ['react']);
+const app = uiModules.get('app/logs360', ['react']);
 
 app
   .value('EuiIcon', EuiIcon)

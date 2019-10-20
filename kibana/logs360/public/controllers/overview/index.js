@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Load all the Overview controllers and related React components.
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Load all the Overview controllers and related React components.
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@ import { Stats } from './components/stats';
 import { AlertsStats } from './components/alerts-stats';
 import { RequirementCard } from './components/requirement-card';
 
-const app = uiModules.get('app/wazuh', ['react']);
+const app = uiModules.get('app/logs360', ['react']);
 
 app
   .controller('overviewController', OverviewController)

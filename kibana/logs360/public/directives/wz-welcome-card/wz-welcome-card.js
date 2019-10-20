@@ -4,8 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 /*
- * Wazuh app - Wazuh welcome card directive
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Logs360 welcome card directive
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const wz_welcome_card_html_1 = __importDefault(require("./wz-welcome-card.html"));
 // @ts-ignore
 const modules_1 = require("ui/modules");
-const app = modules_1.uiModules.get('app/wazuh', []);
+const app = modules_1.uiModules.get('app/logs360', []);
 class WzWelcomeCard {
     constructor(appState) {
         this.restrict = 'E';

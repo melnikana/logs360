@@ -1,6 +1,6 @@
 /*
- * Wazuh app - Resolve function to parse configuration file
- * Copyright (C) 2015-2019 Wazuh, Inc.
+ * Logs360 app - Resolve function to parse configuration file
+ * Copyright (C) 2019 Logs360, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,7 +13,7 @@
 export async function getWzConfig($q, genericReq, wazuhConfig) {
   // Remember to keep this values equal to default config.yml values
   const defaultConfig = {
-    pattern: 'wazuh-alerts-3.x-*',
+    pattern: 'logs360-alerts-1.x-*',
     'checks.pattern': true,
     'checks.template': true,
     'checks.api': true,
@@ -40,7 +40,7 @@ export async function getWzConfig($q, genericReq, wazuhConfig) {
     'wazuh.monitoring.shards': 2,
     'wazuh.monitoring.replicas': 0,
     'wazuh.monitoring.creation': 'd',
-    'wazuh.monitoring.pattern': 'wazuh-monitoring-3.x-*',
+    'wazuh.monitoring.pattern': 'logs360-monitoring-1.x-*',
     admin: true,
     'logs.level': 'info'
   };
