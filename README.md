@@ -19,6 +19,6 @@ Visualize e analise Logs360 alertas armazenados no Elasticsearch usando nosso pl
 ## Requisitos
 
 - Logs360 HIDS 3.10.2
-- LOgs360 RESTful API 3.10.2
+- Logs360 RESTful API 3.10.2
 - Kibana 7.3.2
 - Elasticsearch 7.3.2
