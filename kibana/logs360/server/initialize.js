@@ -355,7 +355,7 @@ export function Initialize(server) {
 
   const getTemplateByName = async () => {
     try {
-      await wzWrapper.getTemplateByName('wazuh-kibana');
+      await wzWrapper.getTemplateByName('Logs360-kibana');
       log(
         'initialize:checkKibanaStatus',
         `No need to create the ${wzWrapper.WZ_KIBANA_INDEX} template, already exists.`,
@@ -401,7 +401,7 @@ export function Initialize(server) {
     } catch (error) {
       log(
         'initialize:checkStatus',
-        'Waiting for elasticsearch plugin to be ready...',
+        'Aguardando o plug-in elasticsearch estar pronto...',
         'debug'
       );
       setTimeout(() => checkStatus(), 3000);
