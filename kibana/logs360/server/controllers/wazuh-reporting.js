@@ -473,7 +473,7 @@ export class WazuhReportingCtrl {
           });
           if (section === 'groupConfig' && !Object.keys(isAgents).length) {
             this.dd.content.push({
-              text: 'There are still no agents in this group.',
+              text: 'Ainda não há agentes neste grupo.',
               style: { fontSize: 12, color: '#000' },
               margin: [0, 10, 0, 0]
             });
@@ -743,7 +743,7 @@ export class WazuhReportingCtrl {
     try {
       if (section === 'agents' && !agent) {
         throw new Error(
-          'Reporting for specific agent needs an agent ID in order to work properly'
+          'Os relatórios para um agente específico precisam de um ID do agente para funcionar corretamente'
         );
       }
 
@@ -785,24 +785,24 @@ export class WazuhReportingCtrl {
           pattern
         );
 
-        this.dd.content.push({ text: 'Summary', style: 'h2' });
+        this.dd.content.push({ text: 'Resumo', style: 'h2' });
         this.dd.content.push('\n');
         const ulcustom = [];
         if (critical)
           ulcustom.push(
-            `${critical} of ${totalAgents} agents have critical vulnerabilities.`
+            `${critical} de ${totalAgents} agentes têm vulnerabilidades críticas.`
           );
         if (high)
           ulcustom.push(
-            `${high} of ${totalAgents} agents have high vulnerabilities.`
+            `${high} de ${totalAgents} agentes têm altas vulnerabilidades.`
           );
         if (medium)
           ulcustom.push(
-            `${medium} of ${totalAgents} agents have medium vulnerabilities.`
+            `${medium} de ${totalAgents} agentes têm vulnerabilidades médias.`
           );
         if (low)
           ulcustom.push(
-            `${low} of ${totalAgents} agents have low vulnerabilities.`
+            `${low} de ${totalAgents} agentes têm baixas vulnerabilidades.`
           );
 
         this.dd.content.push({
@@ -841,7 +841,7 @@ export class WazuhReportingCtrl {
 
         if (criticalRank && criticalRank.length) {
           this.dd.content.push({
-            text: 'Top 3 agents with critical severity vulnerabilities',
+            text: 'Top 3 agentes com vulnerabilidades críticas de gravidade',
             style: 'h3'
           });
           this.dd.content.push('\n');
@@ -851,7 +851,7 @@ export class WazuhReportingCtrl {
 
         if (highRank && highRank.length) {
           this.dd.content.push({
-            text: 'Top 3 agents with high severity vulnerabilities',
+            text: 'Top 3 agentes com vulnerabilidades de alta gravidade',
             style: 'h3'
           });
           this.dd.content.push('\n');
@@ -861,7 +861,7 @@ export class WazuhReportingCtrl {
 
         if (mediumRank && mediumRank.length) {
           this.dd.content.push({
-            text: 'Top 3 agents with medium severity vulnerabilities',
+            text: 'Top 3 agentes com vulnerabilidades de gravidade média',
             style: 'h3'
           });
           this.dd.content.push('\n');
@@ -871,7 +871,7 @@ export class WazuhReportingCtrl {
 
         if (lowRank && lowRank.length) {
           this.dd.content.push({
-            text: 'Top 3 agents with low severity vulnerabilities',
+            text: 'Top 3 agentes com vulnerabilidades de baixa gravidade',
             style: 'h3'
           });
           this.dd.content.push('\n');
@@ -909,7 +909,7 @@ export class WazuhReportingCtrl {
         );
         if (level15Rank.length) {
           this.dd.content.push({
-            text: 'Top 3 agents with level 15 alerts',
+            text: 'Top 3 agentes com alertas de nível 15',
             style: 'h2'
           });
           await this.buildAgentsTable(level15Rank, apiId);
@@ -925,13 +925,13 @@ export class WazuhReportingCtrl {
         );
         if (top5RootkitsRank && top5RootkitsRank.length) {
           this.dd.content.push({
-            text: 'Most common rootkits found among your agents',
+            text: 'Rootkits mais comuns encontrados entre seus agentes',
             style: 'h2'
           });
           this.dd.content.push('\n');
           this.dd.content.push({
             text:
-              'Rootkits are a set of software tools that enable an unauthorized user to gain control of a computer system without being detected.',
+              'Os rootkits são um conjunto de ferramentas de software que permitem que um usuário não autorizado obtenha o controle de um sistema de computador sem ser detectado.',
             style: 'standard'
           });
           this.dd.content.push('\n');
@@ -954,12 +954,12 @@ export class WazuhReportingCtrl {
         );
         hiddenPids &&
           this.dd.content.push({
-            text: `${hiddenPids} of ${totalAgents} agents have hidden processes`,
+            text: `${hiddenPids} de ${totalAgents} agentes têm processos ocultos`,
             style: 'h3'
           });
         !hiddenPids &&
           this.dd.content.push({
-            text: `No agents have hidden processes`,
+            text: `Nenhum agente possui processos ocultos`,
             style: 'h3'
           });
         this.dd.content.push('\n');
@@ -972,12 +972,12 @@ export class WazuhReportingCtrl {
         );
         hiddenPorts &&
           this.dd.content.push({
-            text: `${hiddenPorts} of ${totalAgents} agents have hidden ports`,
+            text: `${hiddenPorts} de ${totalAgents} agentes têm portas ocultas`,
             style: 'h3'
           });
         !hiddenPorts &&
           this.dd.content.push({
-            text: `No agents have hidden ports`,
+            text: `agentes têm portas ocultas`,
             style: 'h3'
           });
         this.dd.content.push('\n');
@@ -991,7 +991,7 @@ export class WazuhReportingCtrl {
           pattern
         );
         this.dd.content.push({
-          text: 'Most common PCI DSS requirements alerts found',
+          text: 'Encontrados os alertas de requisitos mais comuns do PCI DSS',
           style: 'h2'
         });
         this.dd.content.push('\n');
@@ -1036,7 +1036,7 @@ export class WazuhReportingCtrl {
           pattern
         );
         this.dd.content.push({
-          text: 'Most common GDPR requirements alerts found',
+          text: 'Encontrados os alertas mais comuns de requisitos de GDPR',
           style: 'h2'
         });
         this.dd.content.push('\n');
@@ -1083,7 +1083,7 @@ export class WazuhReportingCtrl {
         );
         if (auditAgentsNonSuccess && auditAgentsNonSuccess.length) {
           this.dd.content.push({
-            text: 'Agents with high number of failed sudo commands',
+            text: 'Agentes com alto número de comandos sudo com falha',
             style: 'h2'
           });
           await this.buildAgentsTable(auditAgentsNonSuccess, apiId);
@@ -1096,7 +1096,7 @@ export class WazuhReportingCtrl {
         );
         if (auditAgentsFailedSyscall && auditAgentsFailedSyscall.length) {
           this.dd.content.push({
-            text: 'Most common failing syscalls',
+            text: 'Os syscalls com falha mais comuns',
             style: 'h2'
           });
           this.dd.content.push('\n');
@@ -1124,7 +1124,7 @@ export class WazuhReportingCtrl {
           this.dd.content.push({ text: 'Top 3 FIM rules', style: 'h2' });
           this.dd.content.push('\n');
           this.dd.content.push({
-            text: 'Top 3 rules that are generating most alerts.',
+            text: 'As três principais regras que estão gerando mais alertas.',
             style: 'standard'
           });
           this.dd.content.push('\n');
@@ -1147,13 +1147,13 @@ export class WazuhReportingCtrl {
 
         if (agents && agents.length) {
           this.dd.content.push({
-            text: 'Agents with suspicious FIM activity',
+            text: 'Agentes com atividade suspeita de FIM',
             style: 'h2'
           });
           this.dd.content.push('\n');
           this.dd.content.push({
             text:
-              'Top 3 agents that have most FIM alerts from level 7 to level 15. Take care about them.',
+              'Top 3 agentes que possuem a maioria dos alertas FIM do nível 7 ao nível 15. Tome cuidado com eles.',
             style: 'standard'
           });
           this.dd.content.push('\n');
@@ -1185,17 +1185,17 @@ export class WazuhReportingCtrl {
         if (lastScan && lastScan.data) {
           if (lastScan.data.start && lastScan.data.end) {
             this.dd.content.push({
-              text: `Last policy monitoring scan was executed from ${lastScan.data.start} to ${lastScan.data.end}.`,
+              text: `A última verificação de monitoramento de política foi executada a partir de ${lastScan.data.start} para ${lastScan.data.end}.`,
               style: 'standard'
             });
           } else if (lastScan.data.start) {
             this.dd.content.push({
-              text: `Policy monitoring scan is currently in progress for this agent (started on ${lastScan.data.start}).`,
+              text: `No momento, a verificação de monitoramento de políticas está em andamento para este agente (started on ${lastScan.data.start}).`,
               style: 'standard'
             });
           } else {
             this.dd.content.push({
-              text: `Policy monitoring scan is currently in progress for this agent.`,
+              text: `No momento, a verificação de monitoramento de políticas está em andamento para este agente.`,
               style: 'standard'
             });
           }
@@ -1208,14 +1208,14 @@ export class WazuhReportingCtrl {
             database.data.items,
             ['Date', 'Status', 'Event'],
             ['readDay', 'status', 'event'],
-            'Last entries from policy monitoring scan'
+            'Últimas entradas da verificação de monitoramento de políticas'
           );
           this.dd.content.push('\n');
         }
 
         if (((pci || {}).data || {}).items) {
           this.dd.content.push({
-            text: 'Fired rules due to PCI requirements',
+            text: 'Regras acionadas devido a requisitos de PCI',
             style: 'h2',
             pageBreak: 'before'
           });
@@ -1262,7 +1262,7 @@ export class WazuhReportingCtrl {
           this.dd.content.push('\n');
           this.dd.content.push({
             text:
-              'Rootkits are a set of software tools that enable an unauthorized user to gain control of a computer system without being detected.',
+              'Rootkits são um conjunto de ferramentas de software que permitem que um usuário não autorizado obtenha o controle de um sistema de computador sem ser detectado.',
             style: 'standard'
           });
           this.dd.content.push('\n');
@@ -1308,15 +1308,15 @@ export class WazuhReportingCtrl {
         if (lastScan && lastScan.data) {
           if (lastScan.data.start && lastScan.data.end) {
             this.dd.content.push({
-              text: `Last file integrity monitoring scan was executed from ${lastScan.data.start} to ${lastScan.data.end}.`
+              text: `A última verificação de monitoramento de integridade de arquivo foi executada a partir de ${lastScan.data.start} para ${lastScan.data.end}.`
             });
           } else if (lastScan.data.start) {
             this.dd.content.push({
-              text: `File integrity monitoring scan is currently in progress for this agent (started on ${lastScan.data.start}).`
+              text: `No momento, a verificação de monitoramento de integridade de arquivos está em andamento para este agente (started on ${lastScan.data.start}).`
             });
           } else {
             this.dd.content.push({
-              text: `File integrity monitoring scan is currently in progress for this agent.`
+              text: `No momento, a verificação de monitoramento de integridade de arquivos está em andamento para este agente.`
             });
           }
           this.dd.content.push('\n');
@@ -1430,7 +1430,7 @@ export class WazuhReportingCtrl {
         affected.push(...topCriticalPackages, ...topHighPackages);
         if (affected && affected.length) {
           this.dd.content.push({
-            text: 'Vulnerable packages found (last 24 hours)',
+            text: 'Pacotes vulneráveis encontrados (últimas 24 horas)',
             style: 'h2'
           });
           this.dd.content.push('\n');
@@ -1458,7 +1458,7 @@ export class WazuhReportingCtrl {
           this.dd.content.push('\n');
           this.dd.content.push({
             text:
-              'These vulnerabilties are critical, please review your agent. Click on each link to read more about each found vulnerability.',
+              'Essas vulnerabilidades são críticas, revise seu agente. Clique em cada link para ler mais sobre cada vulnerabilidade encontrada.',
             style: 'standard'
           });
           this.dd.content.push('\n');
@@ -1484,11 +1484,11 @@ export class WazuhReportingCtrl {
           pattern
         );
         if (topHighPackages && topHighPackages.length) {
-          this.dd.content.push({ text: 'High severity', style: 'h2' });
+          this.dd.content.push({ text: 'Severidade Alta', style: 'h2' });
           this.dd.content.push('\n');
           this.dd.content.push({
             text:
-              'Click on each link to read more about each found vulnerability.',
+              'Clique em cada link para ler mais sobre cada vulnerabilidade encontrada.',
             style: 'standard'
           });
           this.dd.content.push('\n');
@@ -1651,19 +1651,19 @@ export class WazuhReportingCtrl {
 
         if (!tab)
           throw new Error(
-            'Reporting needs a valid app tab in order to work properly'
+            'Os relatórios precisam de uma guia de aplicativo válida para funcionar corretamente'
           );
         if (!section && !isAgentConfig && !isGroupConfig)
           throw new Error(
-            'Reporting needs a valid app section in order to work properly'
+            'Os relatórios precisam de uma seção de aplicativo válida para funcionar corretamente'
           );
         if (!apiId)
           throw new Error(
-            'Reporting needs a valid Wazuh API ID in order to work properly'
+            'Os relatórios precisam de um ID da API do Wazuh válido para funcionar corretamente'
           );
         if (!name)
           throw new Error(
-            'Reporting needs a valid file name in order to work properly'
+            'Os relatórios precisam de um nome de arquivo válido para funcionar corretamente'
           );
 
         let tables = [];
@@ -1855,7 +1855,7 @@ export class WazuhReportingCtrl {
                       });
                       columns.push('RL');
                       tables.push({
-                        title: 'Monitored directories',
+                        title: 'Diretórios monitorados',
                         type: 'table',
                         columns,
                         rows
@@ -1876,7 +1876,7 @@ export class WazuhReportingCtrl {
               }
             } else {
               this.dd.content.push({
-                text: 'A configuration for this group has not yet been set up.',
+                text: 'Uma configuração para este grupo ainda não foi configurada.',
                 style: { fontSize: 12, color: '#000' },
                 margin: [0, 10, 0, 15]
               });
@@ -2076,7 +2076,7 @@ export class WazuhReportingCtrl {
                             });
                             columns.push('RL');
                             tables.push({
-                              title: 'Monitored directories',
+                              title: 'Diretórios monitorados',
                               type: 'table',
                               columns,
                               rows
@@ -2110,9 +2110,9 @@ export class WazuhReportingCtrl {
                       // Print no configured module and link to the documentation
                       this.dd.content.push({
                         text: [
-                          'This module is not configured. Please take a look on how to configure it in ',
+                          'Este módulo não está configurado. Por favor, dê uma olhada em como configurá-lo no ',
                           {
-                            text: `${section.subtitle.toLowerCase()} configuration.`,
+                            text: `${section.subtitle.toLowerCase()} configuração.`,
                             link: section.docuLink,
                             style: { fontSize: 12, color: '#1a0dab' }
                           }
@@ -2144,7 +2144,7 @@ export class WazuhReportingCtrl {
               !req.payload.filters[1].meta.value
             ) {
               throw new Error(
-                'Syscollector reporting needs a valid agent in order to work properly'
+                'Os relatórios do Syscollector precisam de um agente válido para funcionar corretamente'
               );
             }
             const agent = await this.apiRequest.makeGenericRequest(
