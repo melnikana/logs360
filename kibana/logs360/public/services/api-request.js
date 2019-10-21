@@ -31,11 +31,11 @@ export class ApiRequest {
   async request(method, path, body) {
     try {
       if (!method || !path || !body) {
-        throw new Error('Missing parameters');
+        throw new Error('Parâmetros ausentes');
       }
 
       if (!this.appState.getCurrentAPI()) {
-        throw new Error('No API selected.');
+        throw new Error('Nenhuma API selecionada.');
       }
 
       const { id } = JSON.parse(this.appState.getCurrentAPI());

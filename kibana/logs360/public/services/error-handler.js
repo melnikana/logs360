@@ -34,8 +34,8 @@ export class ErrorHandler {
         origin.includes('/api/csv') ||
         origin.includes('/api/agents-unique');
       return isFromAPI
-        ? 'Wazuh API is not reachable. Reason: timeout.'
-        : 'Server did not respond';
+        ? 'API Logs360 não está acessível. Razão: tempo excedido.'
+        : 'O servidor não respondeu';
     }
     if ((((error || {}).data || {}).errorData || {}).message)
       return error.data.errorData.message;
@@ -97,7 +97,7 @@ export class ErrorHandler {
     const messageIsString = typeof message === 'string';
 
     if (messageIsString && message.includes('ERROR3099')) {
-      this.$rootScope.wazuhNotReadyYet = 'Wazuh not ready yet.';
+      this.$rootScope.wazuhNotReadyYet = 'Logs360 ainda não está pronto.';
       this.$rootScope.$applyAsync();
       this.checkDaemonsStatus.makePing();
       return;
