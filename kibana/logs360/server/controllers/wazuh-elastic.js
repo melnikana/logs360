@@ -42,7 +42,7 @@ export class WazuhElasticCtrl {
     try {
       if (!req.params || !req.params.pattern) {
         throw new Error(
-          'An index pattern is needed for checking the Elasticsearch template existance'
+          'É necessário um padrão de índice para verificar a existência do modelo Elasticsearch'
         );
       }
 
@@ -50,7 +50,7 @@ export class WazuhElasticCtrl {
 
       if (!data || typeof data !== 'string') {
         throw new Error(
-          'An unknown error occurred when fetching templates from Elasticseach'
+          'Ocorreu um erro desconhecido ao buscar modelos do Elasticsearch'
         );
       }
 
@@ -87,7 +87,7 @@ export class WazuhElasticCtrl {
       });
       log(
         'wazuh-elastic:getTemplate',
-        `Template is valid: ${
+        `O modelo é válido: ${
           isIncluded && Array.isArray(isIncluded) && isIncluded.length
             ? 'yes'
             : 'no'
@@ -98,17 +98,17 @@ export class WazuhElasticCtrl {
         ? {
             statusCode: 200,
             status: true,
-            data: `Template found for ${req.params.pattern}`
+            data: `Modelo encontrado para ${req.params.pattern}`
           }
         : {
             statusCode: 200,
             status: false,
-            data: `No template found for ${req.params.pattern}`
+            data: `Nenhum modelo encontrado para ${req.params.pattern}`
           };
     } catch (error) {
       log('wazuh-elastic:getTemplate', error.message || error);
       return ErrorResponse(
-        `Could not retrieve templates from Elasticsearch due to ${error.message ||
+        `Não foi possível recuperar modelos do Elasticsearch devido a ${error.message ||
           error}`,
         4002,
         500,
@@ -132,21 +132,21 @@ export class WazuhElasticCtrl {
       );
       log(
         'wazuh-elastic:checkPattern',
-        `Index pattern found: ${filtered.length >= 1 ? 'yes' : 'no'}`,
+        `Padrão de índice encontrado: ${filtered.length >= 1 ? 'yes' : 'no'}`,
         'debug'
       );
       return filtered.length >= 1
-        ? { statusCode: 200, status: true, data: 'Index pattern found' }
+        ? { statusCode: 200, status: true, data: 'Padrão de índice encontrado' }
         : {
             statusCode: 500,
             status: false,
             error: 10020,
-            message: 'Index pattern not found'
+            message: 'Padrão de índice não encontrado'
           };
     } catch (error) {
       log('wazuh-elastic:checkPattern', error.message || error);
       return ErrorResponse(
-        `Something went wrong retrieving index-patterns from Elasticsearch due to ${error.message ||
+        `Ocorreu um erro ao recuperar padrões de índice do Elasticsearch devido a ${error.message ||
           error}`,
         4003,
         500,
@@ -239,7 +239,7 @@ export class WazuhElasticCtrl {
     } catch (error) {
       log('wazuh-elastic:getSetupInfo', error.message || error);
       return ErrorResponse(
-        `Could not get data from elasticsearch due to ${error.message ||
+        `Não foi possível obter dados do elasticsearch devido a ${error.message ||
           error}`,
         4005,
         500,
@@ -344,7 +344,7 @@ export class WazuhElasticCtrl {
       }
 
       if ((((data || {}).hits || {}).hits || []).length === 0) {
-        throw new Error('There are no index patterns');
+        throw new Error('Não há padrões de índice');
       }
 
       if (((data || {}).hits || {}).hits) {
@@ -370,7 +370,7 @@ export class WazuhElasticCtrl {
       }
 
       throw new Error(
-        "The Elasticsearch request didn't fetch the expected data"
+        "A solicitação do Elasticsearch não buscou os dados esperados"
       );
     } catch (error) {
       log('wazuh-elastic:getList', error.message || error);
@@ -411,12 +411,12 @@ export class WazuhElasticCtrl {
         (config || {})['wazuh.monitoring.pattern'] || 'logs360-monitoring-1.x-*';
       log(
         'wazuh-elastic:buildVisualizationsRaw',
-        `Building ${app_objects.length} visualizations`,
+        `Construção ${app_objects.length} visualizações`,
         'debug'
       );
       log(
         'wazuh-elastic:buildVisualizationsRaw',
-        `Index pattern ID: ${id}`,
+        `ID do padrão de índice: ${id}`,
         'debug'
       );
       const visArray = [];
@@ -571,7 +571,7 @@ export class WazuhElasticCtrl {
           !req.params.tab.includes('overview-') &&
           !req.params.tab.includes('agents-'))
       ) {
-        throw new Error('Missing parameters creating visualizations');
+        throw new Error('Parâmetros ausentes criando visualizações');
       }
 
       const tabPrefix = req.params.tab.includes('overview')
@@ -622,7 +622,7 @@ export class WazuhElasticCtrl {
         !req.payload.nodes.name ||
         (req.params.tab && !req.params.tab.includes('cluster-'))
       ) {
-        throw new Error('Missing parameters creating visualizations');
+        throw new Error('Parâmetros ausentes criando visualizações');
       }
 
       const file = ClusterVisualizations['monitoring'];
@@ -664,7 +664,7 @@ export class WazuhElasticCtrl {
    */
   async refreshIndex(req, reply) {
     try {
-      if (!req.params.pattern) throw new Error('Missing parameters');
+      if (!req.params.pattern) throw new Error('Parâmetros ausentes');
       log(
         'wazuh-elastic:refreshIndex',
         `Index pattern: ${req.params.pattern}`,

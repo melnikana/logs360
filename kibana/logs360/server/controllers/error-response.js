@@ -35,7 +35,7 @@ export function ErrorResponse(
   if (code) {
     const isString = typeof message === 'string';
     if (isString && message === 'socket hang up' && code === 3005) {
-      filteredMessage = 'Wrong protocol being used to connect to the Wazuh API';
+      filteredMessage = 'Protocolo incorreto sendo usado para conectar-se à API Logs360';
     } else if (
       isString &&
       (message.includes('ENOTFOUND') ||
@@ -44,25 +44,25 @@ export function ErrorResponse(
         message.includes('EAI_AGAIN')) &&
       code === 3005
     ) {
-      filteredMessage = 'Wrong URL being used to connect to the Wazuh API';
+      filteredMessage = 'URL errado sendo usado para conectar-se à API Logs360';
     } else if (isString && message.includes('ECONNREFUSED') && code === 3005) {
-      filteredMessage = 'Wrong port being used to connect to the Wazuh API';
+      filteredMessage = 'Porta incorreta sendo usada para conectar-se à API Logs360';
     } else if (
       isString &&
-      message.toLowerCase().includes('not found') &&
+      message.toLowerCase().includes('não encontrado') &&
       code === 3002
     ) {
-      filteredMessage = 'It seems the selected API was deleted.';
+      filteredMessage = 'Parece que a API selecionada foi excluída.';
     } else if (
       isString &&
       message.includes('ENOENT') &&
-      message.toLowerCase().includes('no such file or directory') &&
+      message.toLowerCase().includes('Não existe tal arquivo ou diretório') &&
       message.toLowerCase().includes('data') &&
       code === 5029
     ) {
-      filteredMessage = 'Reporting was aborted';
+      filteredMessage = 'Os relatórios foram abortados';
     } else if (isString && code === 5029) {
-      filteredMessage = `Reporting was aborted (${message})`;
+      filteredMessage = `Os relatórios foram abortados (${message})`;
     }
   }
 

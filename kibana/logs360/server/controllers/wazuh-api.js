@@ -57,10 +57,10 @@ export class WazuhApiCtrl {
 
       // Check Elasticsearch API errors
       if (api.error_code) {
-        throw new Error('Could not find Wazuh API entry on Elasticsearch.');
+        throw new Error('Não foi possível encontrar a entrada da API Logs360 no Elasticsearch.');
       }
 
-      log('wazuh-api:checkStoredAPI', `${req.payload} exists`, 'debug');
+      log('wazuh-api:checkStoredAPI', `${req.payload} existe`, 'debug');
 
       // Build credentials object for making a Wazuh API request
       const credInfo = ApiHelper.buildOptionsObject(api);
@@ -183,19 +183,19 @@ export class WazuhApiCtrl {
    */
   validateCheckApiParams(payload) {
     if (!('user' in payload)) {
-      return 'Missing param: API USER';
+      return 'Parâmetro ausente: USUÁRIO DA API';
     }
 
     if (!('password' in payload) && !('id' in payload)) {
-      return 'Missing param: API PASSWORD';
+      return 'Parâmetro ausente: SENHA DA API API';
     }
 
     if (!('url' in payload)) {
-      return 'Missing param: API URL';
+      return 'Parâmetro ausente: URL da API';
     }
 
     if (!('port' in payload)) {
-      return 'Missing param: API PORT';
+      return 'Parâmetro ausente: API PORT';
     }
 
     if (!payload.url.includes('https://') && !payload.url.includes('http://')) {
@@ -316,14 +316,14 @@ export class WazuhApiCtrl {
 
       const tmpMsg =
         ((response || {}).body || {}).message ||
-        'Unexpected error checking the Wazuh API';
+        'Erro inesperado ao verificar a API Logs360';
 
       throw new Error(tmpMsg);
     } catch (error) {
       log('wazuh-api:checkAPI', error.message || error);
       if (error.code === 'EPROTO') {
         return ErrorResponse(
-          'Wrong protocol being used to connect to the Wazuh API',
+          'Protocolo incorreto sendo usado para conectar-se à API Logs360',
           3005,
           500,
           reply
@@ -354,19 +354,19 @@ export class WazuhApiCtrl {
         if (api.error_code > 1) {
           log(
             'wazuh-api:getPciRequirement',
-            'Elasticsearch unexpected error or cannot connect'
+            'Erro inesperado do Elasticsearch ou não pode se conectar'
           );
           // Can not connect to elasticsearch
           return ErrorResponse(
-            'Elasticsearch unexpected error or cannot connect',
+            'Erro inesperado do Elasticsearch ou não pode se conectar',
             3007,
             400,
             reply
           );
         } else if (api.error_code > 0) {
-          log('wazuh-api:getPciRequirement', 'Credentials do not exist');
+          log('wazuh-api:getPciRequirement', 'Credenciais não existem');
           // Credentials not found
-          return ErrorResponse('Credentials do not exist', 3008, 400, reply);
+          return ErrorResponse('Credenciais não existem', 3008, 400, reply);
         }
 
         const response = await needle(
@@ -386,10 +386,10 @@ export class WazuhApiCtrl {
         } else {
           log(
             'wazuh-api:getPciRequirement',
-            'An error occurred trying to parse PCI DSS requirements'
+            'Ocorreu um erro ao tentar analisar os requisitos do PCI DSS'
           );
           return ErrorResponse(
-            'An error occurred trying to parse PCI DSS requirements',
+            'Ocorreu um erro ao tentar analisar os requisitos do PCI DSS',
             3009,
             400,
             reply
@@ -463,19 +463,19 @@ export class WazuhApiCtrl {
         if (api.error_code > 1) {
           log(
             'wazuh-api:getGdprRequirement',
-            'Elasticsearch unexpected error or cannot connect'
+            'Erro inesperado do Elasticsearch ou não pode se conectar'
           );
           // Can not connect to elasticsearch
           return ErrorResponse(
-            'Elasticsearch unexpected error or cannot connect',
+            'Erro inesperado do Elasticsearch ou não pode se conectar',
             3024,
             400,
             reply
           );
         } else if (api.error_code > 0) {
-          log('wazuh-api:getGdprRequirement', 'Credentials do not exist');
+          log('wazuh-api:getGdprRequirement', 'Credenciais não existem');
           // Credentials not found
-          return ErrorResponse('Credentials do not exist', 3025, 400, reply);
+          return ErrorResponse('Credenciais não existem', 3025, 400, reply);
         }
 
         const response = await needle(
@@ -495,10 +495,10 @@ export class WazuhApiCtrl {
         } else {
           log(
             'wazuh-api:getGdprRequirement',
-            'An error occurred trying to parse GDPR requirements'
+            'Ocorreu um erro ao tentar analisar os requisitos de GDPR'
           );
           return ErrorResponse(
-            'An error occurred trying to parse GDPR requirements',
+            'Ocorreu um erro ao tentar analisar os requisitos de GDPR',
             3026,
             400,
             reply
@@ -536,7 +536,7 @@ export class WazuhApiCtrl {
     isDown &&
       log(
         'wazuh-api:makeRequest',
-        'Wazuh API is online but Wazuh is not ready yet'
+        'A API do Logs360 está online, mas o Logs360 ainda não está pronto'
       );
 
     return isDown;
@@ -563,19 +563,19 @@ export class WazuhApiCtrl {
         if (api.error_code > 1) {
           log(
             'wazuh-api:getHipaaRequirement',
-            'Elasticsearch unexpected error or cannot connect'
+            'Erro inesperado do Elasticsearch ou não pode conectar-se'
           );
           // Can not connect to elasticsearch
           return ErrorResponse(
-            'Elasticsearch unexpected error or cannot connect',
+            'Erro inesperado do Elasticsearch ou não pode conectar-se',
             3007,
             400,
             reply
           );
         } else if (api.error_code > 0) {
-          log('wazuh-api:getHipaaRequirement', 'Credentials do not exist');
+          log('wazuh-api:getHipaaRequirement', 'Credenciais não existem');
           // Credentials not found
-          return ErrorResponse('Credentials do not exist', 3008, 400, reply);
+          return ErrorResponse('Credenciais não existem', 3008, 400, reply);
         }
 
         const response = await needle(
@@ -595,10 +595,10 @@ export class WazuhApiCtrl {
         } else {
           log(
             'wazuh-api:getPciRequirement',
-            'An error occurred trying to parse HIPAA requirements'
+            'Ocorreu um erro ao tentar analisar os requisitos HIPAA'
           );
           return ErrorResponse(
-            'An error occurred trying to parse HIPAA requirements',
+            'Ocorreu um erro ao tentar analisar os requisitos HIPAA',
             3009,
             400,
             reply
@@ -645,19 +645,19 @@ export class WazuhApiCtrl {
         if (api.error_code > 1) {
           log(
             'wazuh-api:getNistRequirement',
-            'Elasticsearch unexpected error or cannot connect'
+            'Erro inesperado do Elasticsearch ou não pode conectar-se'
           );
           // Can not connect to elasticsearch
           return ErrorResponse(
-            'Elasticsearch unexpected error or cannot connect',
+            'Erro inesperado do Elasticsearch ou não pode conectar-se',
             3007,
             400,
             reply
           );
         } else if (api.error_code > 0) {
-          log('wazuh-api:getNistRequirement', 'Credentials do not exist');
+          log('wazuh-api:getNistRequirement', 'Credenciais não existem');
           // Credentials not found
-          return ErrorResponse('Credentials do not exist', 3008, 400, reply);
+          return ErrorResponse('Credenciais não existem', 3008, 400, reply);
         }
 
         const response = await needle(
@@ -677,10 +677,10 @@ export class WazuhApiCtrl {
         } else {
           log(
             'wazuh-api:getNistRequirement',
-            'An error occurred trying to parse NIST 800-53 requirements'
+            'Ocorreu um erro ao tentar analisar os requisitos do NIST 800-53'
           );
           return ErrorResponse(
-            'An error occurred trying to parse NIST 800-53 requirements',
+            'Ocorreu um erro ao tentar analisar os requisitos do NIST 800-53',
             3009,
             400,
             reply
@@ -736,14 +736,14 @@ export class WazuhApiCtrl {
 
       const isValid = execd && modulesd && wazuhdb && clusterd;
 
-      isValid && log('wazuh-api:checkDaemons', `Wazuh is ready`, 'debug');
+      isValid && log('wazuh-api:checkDaemons', `Logs360 está pronto`, 'debug');
 
       if (path === '/ping') {
         return { isValid };
       }
 
       if (!isValid) {
-        throw new Error('Wazuh not ready yet');
+        throw new Error('Logs360 ainda não está pronto');
       }
     } catch (error) {
       log('wazuh-api:checkDaemons', error.message || error);
@@ -798,18 +798,18 @@ export class WazuhApiCtrl {
       }
 
       if (api.error_code > 1) {
-        log('wazuh-api:makeRequest', 'Could not connect with Elasticsearch');
+        log('wazuh-api:makeRequest', 'Não foi possível conectar-se ao Elasticsearch');
         //Can not connect to elasticsearch
         return ErrorResponse(
-          'Could not connect with Elasticsearch',
+          'Não foi possível conectar-se ao Elasticsearch',
           3011,
           404,
           reply
         );
       } else if (api.error_code > 0) {
-        log('wazuh-api:makeRequest', 'Credentials do not exist');
+        log('wazuh-api:makeRequest', 'Credenciais não existem');
         //Credentials not found
-        return ErrorResponse('Credentials do not exist', 3012, 404, reply);
+        return ErrorResponse('Credenciais não existem', 3012, 404, reply);
       }
 
       if (!data) {
@@ -866,7 +866,7 @@ export class WazuhApiCtrl {
           if (!isDown) {
             log(
               'wazuh-api:makeRequest',
-              'Wazuh API is online but Wazuh is not ready yet'
+              'A API do Logs360 está online, mas o Logs360 ainda não está pronto'
             );
             return ErrorResponse('ERROR3099', 3099, 500, reply);
           }
@@ -919,7 +919,7 @@ export class WazuhApiCtrl {
 
       throw responseError && responseBody.message
         ? { message: responseBody.message, code: responseError }
-        : new Error('Unexpected error fetching data from the Wazuh API');
+        : new Error('Erro inesperado ao obter dados da API Logs360');
     } catch (error) {
       log('wazuh-api:makeRequest', error.message || error);
       if (devTools) {
@@ -930,7 +930,7 @@ export class WazuhApiCtrl {
         }
         return ErrorResponse(
           error.message || error,
-          error.code ? `Wazuh API error: ${error.code}` : 3013,
+          error.code ? `Erro na API do Logs360: ${error.code}` : 3013,
           500,
           reply
         );
@@ -951,10 +951,10 @@ export class WazuhApiCtrl {
 
       if (api.error_code > 1) {
         //Can not connect to elasticsearch
-        throw new Error('Could not connect with elasticsearch');
+        throw new Error('Não foi possível conectar-se ao Elasticsearch');
       } else if (api.error_code > 0) {
         //Credentials not found
-        throw new Error('Credentials does not exists');
+        throw new Error('Credenciais não existem');
       }
 
       if (!data) {
@@ -981,7 +981,7 @@ export class WazuhApiCtrl {
       throw ((response || {}).body || {}).error &&
       ((response || {}).body || {}).message
         ? { message: response.body.message, code: response.body.error }
-        : new Error('Unexpected error fetching data from the Wazuh API');
+        : new Error('Erro inesperado ao obter dados da API Logs360');
     } catch (error) {
       log('wazuh-api:makeGenericRequest', error.message || error);
       return Promise.reject(error);
@@ -1003,9 +1003,9 @@ export class WazuhApiCtrl {
     );
 
     if (!req.payload.method) {
-      return ErrorResponse('Missing param: method', 3015, 400, reply);
+      return ErrorResponse('Parâmetro ausente: método', 3015, 400, reply);
     } else if (!req.payload.path) {
-      return ErrorResponse('Missing param: path', 3016, 400, reply);
+      return ErrorResponse('Parâmetro ausente: Caminho', 3016, 400, reply);
     } else {
       if (req.payload.method !== 'GET' && !adminMode) {
         log('wazuh-api:requestApi', 'Forbidden action, allowed methods: GET');
@@ -1075,8 +1075,8 @@ export class WazuhApiCtrl {
   async csv(req, reply) {
     try {
       if (!req.payload || !req.payload.path)
-        throw new Error('Field path is required');
-      if (!req.payload.id) throw new Error('Field id is required');
+        throw new Error('O caminho do campo é obrigatório');
+      if (!req.payload.id) throw new Error('O ID do campo é obrigatório');
 
       const filters = Array.isArray(((req || {}).payload || {}).filters)
         ? req.payload.filters
@@ -1092,7 +1092,7 @@ export class WazuhApiCtrl {
         tmpPath = tmpPath[0] === '/' ? tmpPath.substr(1) : tmpPath;
       }
 
-      if (!tmpPath) throw new Error('An error occurred parsing path field');
+      if (!tmpPath) throw new Error('Ocorreu um erro ao analisar o campo do caminho');
 
       log('wazuh-api:csv', `Report ${tmpPath}`, 'debug');
       // Real limit, regardless the user query
@@ -1202,9 +1202,9 @@ export class WazuhApiCtrl {
         output.body.data &&
         !output.body.data.totalItems
       ) {
-        throw new Error('No results');
+        throw new Error('Nenhum resultado');
       } else {
-        throw new Error('An error occurred fetching data from the Wazuh API');
+        throw new Error('Ocorreu um erro ao obter dados da API Logs360');
       }
     } catch (error) {
       log('wazuh-api:csv', error.message || error);
@@ -1221,7 +1221,7 @@ export class WazuhApiCtrl {
   async getAgentsFieldsUniqueCount(req, reply) {
     try {
       if (!req.params || !req.params.api)
-        throw new Error('Field api is required');
+        throw new Error('A API do campo é obrigatória');
 
       const config = await this.wzWrapper.getWazuhConfigurationById(
         req.params.api
@@ -1323,7 +1323,7 @@ export class WazuhApiCtrl {
       if (source.installationDate && source.lastRestart) {
         log(
           'wazuh-api:getTimeStamp',
-          `Installation date: ${source.installationDate}. Last restart: ${source.lastRestart}`,
+          `Data de instalação: ${source.installationDate}. Última reinicialização: ${source.lastRestart}`,
           'debug'
         );
         return {
@@ -1331,12 +1331,12 @@ export class WazuhApiCtrl {
           lastRestart: source.lastRestart
         };
       } else {
-        throw new Error('Could not fetch wazuh-version registry');
+        throw new Error('Não foi possível buscar o registro da versão Logs360');
       }
     } catch (error) {
       log('wazuh-api:getTimeStamp', error.message || error);
       return ErrorResponse(
-        error.message || 'Could not fetch wazuh-version registry',
+        error.message || 'Não foi possível buscar o registro da versão Logs360',
         4001,
         500,
         reply
@@ -1359,7 +1359,7 @@ export class WazuhApiCtrl {
     } catch (error) {
       log('wazuh-api:getSetupInfo', error.message || error);
       return ErrorResponse(
-        `Could not get data from wazuh-version registry due to ${error.message ||
+        `Não foi possível obter dados do registro da versão Logs360 devido a ${error.message ||
           error}`,
         4005,
         500,
@@ -1377,7 +1377,7 @@ export class WazuhApiCtrl {
   async getSyscollector(req, reply) {
     try {
       if (!req.params || !req.headers.id || !req.params.agent) {
-        throw new Error('Agent ID and API ID are required');
+        throw new Error('O ID do agente e o ID da API são obrigatórios');
       }
 
       const { agent } = req.params;

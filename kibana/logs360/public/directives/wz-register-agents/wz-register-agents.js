@@ -39,18 +39,18 @@ class WzRegisterAgents {
             /* Linux */
             steps: [
               {
-                title: 'Add the agent to the manager'
+                title: 'Adicione o agente ao console'
               },
               {
-                title: 'Import the key to the agent',
+                title: 'Importar a chave para o agente',
                 code: '/var/ossec/bin/manage_agents -i '
               },
               {
                 title:
-                  'Edit the Wazuh agent configuration to add the Wazuh manager IP'
+                  'Edite a configuração do agente Logs360 para adicionar o IP do Console Logs360'
               },
               {
-                title: 'Restart the agent'
+                title: 'Reinicie o agente'
               }
             ]
           },
@@ -58,7 +58,7 @@ class WzRegisterAgents {
             /* Windows */
             steps: [
               {
-                title: 'Register the agent'
+                title: 'Registrar o agente'
               }
             ]
           },
@@ -66,14 +66,14 @@ class WzRegisterAgents {
             /* OSX */
             steps: [
               {
-                title: 'Register the agent'
+                title: 'Registrar o agente'
               },
               {
                 title:
-                  'Edit the Wazuh agent configuration to add the Wazuh manager IP'
+                  'Edite a configuração do agente Logs360 para adicionar o IP do gerenciador do Logs360'
               },
               {
-                title: 'Restart the agent',
+                title: 'Reiniciar o agente',
                 code: '/Library/Ossec/bin/ossec-control restart'
               }
             ]
@@ -108,7 +108,7 @@ class WzRegisterAgents {
               .steps[0].agentIP
         });
         if (!(((data || {}).data || {}).data || {}).key) {
-          throw new Error('No agent key received');
+          throw new Error('Nenhuma chave de agente recebida');
         } else {
           $scope.registerObj.systems[
             $scope.registerObj.selectedSystem
@@ -140,7 +140,7 @@ class WzRegisterAgents {
         );
         const result = ((data || {}).data || {}).data || false;
         if (!result) {
-          throw new Error('Unexpected error restarting agent');
+          throw new Error('Erro inesperado ao reiniciar o agente');
         }
         errorHandler.info(
           `Success. Agent ${$scope.registerObj.systems[$scope.registerObj.selectedSystem].steps[0].agentName} has been registered.`

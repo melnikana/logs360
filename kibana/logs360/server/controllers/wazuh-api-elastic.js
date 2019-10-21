@@ -87,17 +87,17 @@ export class WazuhApiElasticCtrl {
   validateData(payload) {
     // Validate user
     if (!userRegEx.test(payload.user)) {
-      return { code: 2006, message: 'Invalid user field' };
+      return { code: 2006, message: 'Campo de usuário inválido' };
     }
 
     // Validate password
     if (!passRegEx.test(payload.password)) {
-      return { code: 2007, message: 'Invalid password field' };
+      return { code: 2007, message: 'Campo de senha inválido' };
     }
 
     // Validate url
     if (!urlRegEx.test(payload.url) && !urlRegExIP.test(payload.url)) {
-      return { code: 2008, message: 'Invalid url field' };
+      return { code: 2008, message: 'Campo de URL inválido' };
     }
 
     // Validate port
@@ -107,7 +107,7 @@ export class WazuhApiElasticCtrl {
       validatePort <= 0 ||
       validatePort >= 99999
     ) {
-      return { code: 2009, message: 'Invalid port field' };
+      return { code: 2009, message: 'Campo de porta inválido' };
     }
 
     return false;
@@ -159,7 +159,7 @@ export class WazuhApiElasticCtrl {
       );
       log(
         'wazuh-api-elastic:saveAPI',
-        `${req.payload.user}:*****@${req.payload.url}:${req.payload.port} entry saved successfully`,
+        `${req.payload.user}:*****@${req.payload.url}:${req.payload.port} entrada salva com sucesso`,
         'debug'
       );
 
@@ -167,7 +167,7 @@ export class WazuhApiElasticCtrl {
     } catch (error) {
       log('wazuh-api-elastic:saveAPI', error.message || error);
       return ErrorResponse(
-        `Could not save data in elasticsearch due to ${error.message || error}`,
+        `Não foi possível salvar os dados no elasticsearch devido a ${error.message || error}`,
         2011,
         500,
         reply
@@ -188,14 +188,14 @@ export class WazuhApiElasticCtrl {
       });
       log(
         'wazuh-api-elastic:updateAPIHostname',
-        `API entry ${req.params.id} hostname updated`,
+        `Entrada de API ${req.params.id} nome do host atualizado`,
         'debug'
       );
       return { statusCode: 200, message: 'ok' };
     } catch (error) {
       log('wazuh-api-elastic:updateAPIHostname', error.message || error);
       return ErrorResponse(
-        `Could not save data in elasticsearch due to ${error.message || error}`,
+        `Não foi possível salvar os dados no elasticsearch devido a ${error.message || error}`,
         2012,
         500,
         reply
@@ -218,7 +218,7 @@ export class WazuhApiElasticCtrl {
         !('port' in req.payload)
       ) {
         log('wazuh-api-elastic:updateFullAPI', 'Missing paramaters');
-        return ErrorResponse('Missing parameters', 2013, 400, reply);
+        return ErrorResponse('Parâmetros ausentes', 2013, 400, reply);
       }
 
       const valid = this.validateData(req.payload);
@@ -231,14 +231,14 @@ export class WazuhApiElasticCtrl {
       });
       log(
         'wazuh-api-elastic:updateFullApi',
-        `API entry ${req.payload.id} updated`,
+        `Entrada de API ${req.payload.id} atualizada`,
         'debug'
       );
       return { statusCode: 200, message: 'ok' };
     } catch (error) {
       log('wazuh-api-elastic:updateFullAPI', error.message || error);
       return ErrorResponse(
-        `Could not save data in elasticsearch due to ${error.message || error}`,
+        `Não foi possível salvar os dados no elasticsearch devido a ${error.message || error}`,
         2014,
         500,
         reply
