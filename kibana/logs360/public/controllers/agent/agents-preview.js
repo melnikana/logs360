@@ -132,7 +132,7 @@ export class AgentsPreviewController {
   async downloadCsv() {
     try {
       this.errorHandler.info(
-        'Your download should begin automatically...',
+        'Nenhuma diretiva pai que exija uma transclusão encontrada.',
         'CSV'
       );
       const output = await this.csvReq.fetch(
@@ -251,7 +251,7 @@ export class AgentsPreviewController {
       );
       this.summary = ((data.data || {}).result || {}).summary || {};
     } catch (error) {
-      this.errorHandler.handle('Error refreshing agents stats');
+      this.errorHandler.handle('Erro ao atualizar o status dos agentes');
     }
     this.$scope.$broadcast('reloadSearchFilterBar', {});
   }
