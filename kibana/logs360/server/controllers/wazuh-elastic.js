@@ -690,7 +690,7 @@ export class WazuhElasticCtrl {
    * POST /elastic/alerts
    * {
    *   "agent.id": 100 ,
-   *   "cluster.name": "wazuh",
+   *   "cluster.name": "Logs360",
    *   "date.from": "now-1d/timestamp/standard date", // Like Elasticsearch does
    *   "date.to": "now/timestamp/standard date", // Like Elasticsearch does
    *   "rule.group": ["onegroup", "anothergroup"] // Or empty array [ ]

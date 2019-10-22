@@ -191,7 +191,7 @@ export function Initialize(server) {
 
       const result = await wzWrapper.checkIfIndexExists('.wazuh');
 
-      const shardConfiguration = BuildBody(configurationFile, 'wazuh');
+      const shardConfiguration = BuildBody(configurationFile, 'Logs360');
 
       if (!result) {
         try {
@@ -408,6 +408,6 @@ export function Initialize(server) {
     }
   };
 
-  // Check Kibana index and if it is prepared, start the initialization of Wazuh App.
+  // Check Kibana index and if it is prepared, start the initialization of Logs360 App.
   checkStatus();
 }

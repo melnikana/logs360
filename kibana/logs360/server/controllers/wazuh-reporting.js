@@ -136,7 +136,7 @@ export class WazuhReportingCtrl {
         return {
           columns: [
             {
-              text: 'Copyright © 2019 Wazuh, Inc.',
+              text: 'Copyright © 2019 Logs360, Inc.',
               color: '#1EA5C8',
               margin: [40, 40, 0, 0]
             },
@@ -1659,7 +1659,7 @@ export class WazuhReportingCtrl {
           );
         if (!apiId)
           throw new Error(
-            'Os relatórios precisam de um ID da API do Wazuh válido para funcionar corretamente'
+            'Os relatórios precisam de um ID da API do Logs360 válido para funcionar corretamente'
           );
         if (!name)
           throw new Error(

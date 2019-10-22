@@ -801,7 +801,7 @@ export class ElasticWrapper {
       const data = await this.elasticRequest.callWithInternalUser(
         'indices.putTemplate',
         {
-          name: 'wazuh-kibana',
+          name: 'logs360-kibana',
           order: 0,
           create: true,
           body: template
