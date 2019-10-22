@@ -250,7 +250,7 @@ export class AgentsController {
         } else if (result) {
           this.errorHandler.info(result.msg);
         } else {
-          throw new Error('Unexpected error upgrading agent');
+          throw new Error('Agente de atualização de erro inesperado');
         }
         this.$scope.restartingAgent = false;
       } catch (error) {
@@ -268,7 +268,7 @@ export class AgentsController {
       this.$scope.getAgent();
     } catch (e) {
       this.errorHandler.handle(
-        'Unexpected exception loading controller',
+        'Controlador de carregamento de exceção inesperado',
         'Agents'
       );
     }
@@ -300,7 +300,7 @@ export class AgentsController {
           this.$location.search('configSubTab', true);
         }
       } catch (error) {
-        this.errorHandler.handle(error, 'Set configuration path');
+        this.errorHandler.handle(error, 'Definir caminho de configuração');
       }
       this.configurationHandler.switchConfigTab(
         configurationTab,
@@ -343,7 +343,7 @@ export class AgentsController {
               false
             );
           } catch (error) {
-            this.errorHandler.handle(error, 'Get configuration path');
+            this.errorHandler.handle(error, 'Obter caminho de configuração');
           }
         } else {
           const configWodle = this.$location.search().configWodle;
