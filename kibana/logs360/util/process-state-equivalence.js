@@ -31,20 +31,20 @@
  *    +    is in the foreground process group
  */
 export default {
-  t: 'tracing stop',
-  P: 'Parked',
-  I: 'Idle',
-  D: 'Uninterruptible sleep (usually IO)',
-  R: 'Running or runnable (on run queue)',
-  S: 'Interruptible sleep (waiting for an event to complete)',
-  T: 'Stopped, either by a job control signal or because it is being traced.',
-  W: 'paging (not valid since the 2.6.xx kernel)',
-  X: 'Dead (should never be seen)',
-  Z: 'Defunct ("zombie") process, terminated but not reaped by its parent.',
-  '<': 'High-priority (not nice to other users)',
-  N: 'Low-priority (nice to other users)',
-  L: 'Has pages locked into memory (for real-time and custom IO)',
-  s: 'Is a session leader',
-  l: 'Is multi-threaded (using CLONE_THREAD, like NPTL pthreads do)',
-  '+': 'Is in the foreground process group'
+  t: 'parada de rastreamento',
+  P: 'Estacionado',
+  I: 'Ocioso',
+  D: 'Sono ininterrupto (geralmente IO)',
+  R: 'Em execução ou executável (na fila de execução)',
+  S: 'Interrupção de sono (aguardando a conclusão de um evento)',
+  T: 'Parado, por um sinal de controle de trabalho ou porque está sendo rastreado.',
+  W: 'paginação (não é válida desde o kernel 2.6.xx)',
+  X: 'Morto (nunca deve ser visto)',
+  Z: 'Processo extinto ("zumbi"), encerrado, mas não colhido pelo pai.',
+  '<': 'Alta prioridade (não é agradável para outros usuários)',
+  N: 'Baixa prioridade (agradável para outros usuários)',
+  L: 'Possui páginas bloqueadas na memória (para personalização em tempo real e personalizada IO)',
+  s: 'É um líder de sessão',
+  l: 'É multiencadeado (usando CLONE_THREAD, como os pthreads NPTL)',
+  '+': 'Está no grupo de processos em primeiro plano'
 };

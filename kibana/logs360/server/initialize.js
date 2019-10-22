@@ -49,7 +49,7 @@ export function Initialize(server) {
     log('initialize', e.message || e);
     server.log(
       initializeErrorLogColors,
-      'Something went wrong while reading the configuration.' + e.message
+      'Ocorreu um erro ao ler a configuração.' + e.message
     );
   }
 
@@ -60,19 +60,19 @@ export function Initialize(server) {
   } catch (error) {
     log(
       'initialize',
-      `Could not check total RAM due to: ${error.message || error}`
+      `Não foi possível verificar a RAM total devido a: ${error.message || error}`
     );
   }
 
   const defaultIndexPattern = pattern || 'logs360-alerts-1.x-*';
 
-  // Save Wazuh App setup
+  // Save Logs360 App setup
   const saveConfiguration = () => {
     try {
       const commonDate = new Date().toISOString();
 
       const configuration = {
-        name: 'Wazuh App',
+        name: 'Logs360 App',
         'app-version': packageJSON.version,
         revision: packageJSON.revision,
         installationDate: commonDate,
@@ -87,14 +87,14 @@ export function Initialize(server) {
         });
         log(
           'initialize:saveConfiguration',
-          'Wazuh configuration registry inserted',
+          'Registro de configuração do Logs360 inserido',
           'debug'
         );
       } catch (error) {
         log('initialize:saveConfiguration', error.message || error);
         server.log(
           initializeErrorLogColors,
-          'Could not create Wazuh configuration registry'
+          'Não foi possível criar o registro de configuração do Logs360'
         );
       }
 
@@ -103,7 +103,7 @@ export function Initialize(server) {
       log('initialize:saveConfiguration', error.message || error);
       server.log(
         initializeErrorLogColors,
-        'Error creating wazuh-version registry'
+        'Erro ao criar o registro da versão Logs360'
       );
     }
   };
@@ -118,7 +118,7 @@ export function Initialize(server) {
     try {
       log(
         'initialize:checkAPIEntriesExtensions',
-        `Checking extensions consistency for all API entries`,
+        `Verificando a consistência das extensões para todas as entradas da API`,
         'debug'
       );
 
@@ -153,19 +153,19 @@ export function Initialize(server) {
             });
             log(
               'initialize:checkAPIEntriesExtensions',
-              `Successfully updated API entry extensions with ID: ${item._id}`,
+              `Extensões de entrada da API atualizadas com sucesso com ID: ${item._id}`,
               'debug'
             );
           } catch (error) {
             log(
               'initialize:checkAPIEntriesExtensions',
-              `Error updating API entry extensions with ID: ${
+              `Erro ao atualizar extensões de entrada da API com o ID: ${
                 item._id
               } due to ${error.message || error}`
             );
             server.log(
               initializeErrorLogColors,
-              `Error updating API entry extensions with ID: ${
+              `Erro ao atualizar extensões de entrada da API com o ID: ${
                 item._id
               } due to ${error.message || error}`
             );
@@ -174,7 +174,7 @@ export function Initialize(server) {
       } else {
         log(
           'initialize:checkAPIEntriesExtensions',
-          'There are no API entries, skipping extensions check',
+          'Não há entradas de API, ignorando a verificação de extensões',
           'debug'
         );
       }
@@ -221,13 +221,13 @@ export function Initialize(server) {
         await wzWrapper.deleteWazuhVersionIndex();
         log(
           'initialize[checkWazuhVersionRegistry]',
-          'Successfully deleted old .wazuh-version index.',
+          'Índice antigo .logs360-versão excluído com sucesso.',
           'debug'
         );
       } catch (error) {
         log(
           'initialize[checkWazuhVersionRegistry]',
-          'No need to delete old .wazuh-version index',
+          'Não é necessário excluir o índice antigo da versão .logs360',
           'debug'
         );
       }
@@ -235,7 +235,7 @@ export function Initialize(server) {
       if (!fs.existsSync(wazuhVersion)) {
         log(
           'initialize[checkWazuhVersionRegistry]',
-          'wazuh-version registry does not exist. Initializing configuration.',
+          'O registro da versão logs360 não existe. Inicializando a configuração.',
           'debug'
         );
 
@@ -345,9 +345,9 @@ export function Initialize(server) {
     } catch (error) {
       return Promise.reject(
         new Error(
-          `Error creating template for ${
+          `Erro ao criar modelo para ${
             wzWrapper.WZ_KIBANA_INDEX
-          } due to ${error.message || error}`
+          } devido a ${error.message || error}`
         )
       );
     }
@@ -358,7 +358,7 @@ export function Initialize(server) {
       await wzWrapper.getTemplateByName('Logs360-kibana');
       log(
         'initialize:checkKibanaStatus',
-        `No need to create the ${wzWrapper.WZ_KIBANA_INDEX} template, already exists.`,
+        `Não há necessidade de criar o ${wzWrapper.WZ_KIBANA_INDEX} modelo, já existe.`,
         'debug'
       );
       await createEmptyKibanaIndex();

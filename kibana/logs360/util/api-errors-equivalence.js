@@ -11,6 +11,6 @@
  */
 
 export const ApiErrorEquivalence = {
-  1113: 'Invalid configuration syntax',
-  1114: 'Invalid element in configuration'
+  1113: 'Sintaxe de configuração inválida',
+  1114: 'Elemento inválido na configuração'
 };
