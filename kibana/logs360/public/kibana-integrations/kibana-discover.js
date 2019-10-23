@@ -232,11 +232,11 @@ function discoverController(
 
   const pageTitleSuffix =
     savedSearch.id && savedSearch.title ? `: ${savedSearch.title}` : '';
-  docTitle.change(`Wazuh${pageTitleSuffix}`);
+  docTitle.change(`Logs360${pageTitleSuffix}`);
   const discoverBreadcrumbsTitle = i18n.translate(
     'kbn.discover.discoverBreadcrumbTitle',
     {
-      defaultMessage: 'Wazuh'
+      defaultMessage: 'Logs360'
     }
   );
 
