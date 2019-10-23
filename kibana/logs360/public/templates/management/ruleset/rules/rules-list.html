@@ -14,7 +14,7 @@
 
         <button type="submit" aria-label="Search" class="euiFlexItem euiFlexItem--flexGrowZero height-35 kuiButton kuiButton--secondary wz-margin-left-8"
             ng-click="search(custom_search)">
-            Search
+            Pesquisar
         </button>
     </div>
 
@@ -69,7 +69,7 @@
                 <a ng-if="adminMode" ng-click="mctrl.switchFilesSubTab('rules')">Gerenciar arquivos de regras</a>
                 <span flex></span>
                 <wz-kbn-switch class="md-primary wz-no-top-bottom-margin" switch-model="mctrl.showingLocalRules"
-                    switch-text="Custom rules" switch-change="switchLocalRules()"></wz-kbn-switch>
+                    switch-text="Regras personalizadas" switch-change="switchLocalRules()"></wz-kbn-switch>
             </md-card-actions>
             <md-card-content class="wz-padding-bottom-0">
                 <wz-table lens="mctrl.showingLocalRules" custom-columns="true" flex ng-if="mctrl.showingLocalRules" path="'/rules'" keys="[{value: 'id', width: '85px'},{value:'description', width: 'auto'},{value:'groups',nosortable:true, width: '250px'},{value:'pci',nosortable:true, width: '170px'},{value:'gdpr',nosortable:true,width: '170px'}, {value:'hipaa',nosortable:true,width: '170px'}, {value:'nist-800-53',nosortable:true,width: '170px'}, {value: 'level', width: '100px'}, {value:'file',width: '200px'}, {value:'path', width: 'auto'}]"
