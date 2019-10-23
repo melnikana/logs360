@@ -20,9 +20,9 @@ export class CSVRequest {
 
   /**
    * It fetchs data from /api/csv route using the below parameters.
-   * @param {string} path Wazuh API route
+   * @param {string} path API Logs360 route
    * @param {number|string} id Elasticsearch document ID
-   * @param {*} filters Array of Wazuh API filters. Optional
+   * @param {*} filters Array of API Logs360 filters. Optional
    */
   async fetch(path, id, filters = null) {
     try {

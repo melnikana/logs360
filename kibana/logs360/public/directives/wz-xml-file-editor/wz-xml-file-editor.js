@@ -105,7 +105,7 @@ app.directive('wzXmlFileEditor', function() {
             $scope.xmlError = false;
           }
         } catch (error) {
-          errorHandler.handle(error, 'Error validating XML');
+          errorHandler.handle(error, 'Erro ao validar XML');
         }
         checkingXmlError = false;
         $scope.$applyAsync();
@@ -226,7 +226,7 @@ app.directive('wzXmlFileEditor', function() {
       const saveFile = async params => {
         let close = true;
         const warnMsg =
-          'File has been updated, but there are errors in the configuration';
+          'O arquivo foi atualizado, mas há erros na configuração';
         try {
           const text = $scope.xmlCodeBox.getValue();
           const xml = replaceIllegalXML(text);
@@ -238,7 +238,7 @@ app.directive('wzXmlFileEditor', function() {
             } catch (err) {
               params.showRestartManager = 'warn';
             }
-            const msg = 'Success. Group has been updated';
+            const msg = 'Sucesso. O grupo foi atualizado';
             params.showRestartManager
               ? params.showRestartManager !== 'warn'
                 ? showRestartMessage(msg, params.showRestartManager)
@@ -256,7 +256,7 @@ app.directive('wzXmlFileEditor', function() {
             } catch (err) {
               params.showRestartManager = 'warn';
             }
-            const msg = 'Success. Rules updated';
+            const msg = 'Sucesso. Regras atualizadas';
             params.showRestartManager
               ? params.showRestartManager !== 'warn'
                 ? showRestartMessage(msg, params.showRestartManager)
@@ -274,7 +274,7 @@ app.directive('wzXmlFileEditor', function() {
             } catch (err) {
               params.showRestartManager = 'warn';
             }
-            const msg = 'Success. Decoders has been updated';
+            const msg = 'Sucesso. Decodificadores foi atualizado';
             params.showRestartManager
               ? params.showRestartManager !== 'warn'
                 ? showRestartMessage(msg, params.showRestartManager)
@@ -288,7 +288,7 @@ app.directive('wzXmlFileEditor', function() {
             } catch (err) {
               params.showRestartManager = 'warn';
             }
-            const msg = `Success. Node (${params.node}) configuration has been updated`;
+            const msg = `Sucesso. A configuração do nó (${params.node}) foi atualizada`;
             params.showRestartManager
               ? params.showRestartManager !== 'warn'
                 ? showRestartMessage(msg, params.node)
@@ -301,7 +301,7 @@ app.directive('wzXmlFileEditor', function() {
             } catch (err) {
               params.showRestartManager = 'warn';
             }
-            const msg = 'Success. Manager configuration has been updated';
+            const msg = 'Sucesso. A configuração do gerente foi atualizada';
             params.showRestartManager
               ? params.showRestartManager !== 'warn'
                 ? showRestartMessage(msg, params.showRestartManager)
@@ -313,7 +313,7 @@ app.directive('wzXmlFileEditor', function() {
         } catch (error) {
           $scope.savingParam();
           if ((error || '').includes('Logs360 API error: 1905')) {
-            $scope.configError = ['File name already exists'];
+            $scope.configError = ['O nome do arquivo já existe'];
             $scope.$emit('showSaveAndOverwrite', {});
           } else {
             errorHandler.handle(error, 'Error');

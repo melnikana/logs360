@@ -5661,7 +5661,7 @@
               : n(i)
             : new Date(i.getTime());
       return (
-        (a = a && 'Invalid Date' == '' + a ? s : a),
+        (a = a && 'Data invalida' == '' + a ? s : a),
         a &&
           (a.setHours(0),
           a.setMinutes(0),

@@ -425,7 +425,7 @@ export class ElasticWrapper {
   }
 
   /**
-   * Search for the Wazuh API configuration document using its own id (usually it's a timestamp)
+   * Search for the API Logs360 configuration document using its own id (usually it's a timestamp)
    * @param {*} id Eg: 12396176723
    */
   async getWazuhConfigurationById(id) {
@@ -462,7 +462,7 @@ export class ElasticWrapper {
   }
 
   /**
-   * Get the Wazuh API entries stored on .wazuh index
+   * Get the API Logs360 entries stored on .wazuh index
    */
   async getWazuhAPIEntries() {
     try {
@@ -479,7 +479,7 @@ export class ElasticWrapper {
   }
 
   /**
-   * Usually used to save a new Wazuh API entry
+   * Usually used to save a new API Logs360 entry
    * @param {*} doc
    * @param {*} req
    */
@@ -504,7 +504,7 @@ export class ElasticWrapper {
   /**
    * Updates the a document from the .wazuh index using id and doc content
    * @param {*} req. Optional parameter to pass an incoming request (X-Pack related)
-   * @param {*} id. Wazuh API entry ID (Elasticsearch ID)
+   * @param {*} id. API Logs360 entry ID (Elasticsearch ID)
    * @param {*} doc. The content to be used for updating the document.
    */
   async updateWazuhIndexDocument(req, id, doc) {
@@ -532,7 +532,7 @@ export class ElasticWrapper {
   }
 
   /**
-   * Delete a Wazuh API entry using incoming request
+   * Delete a API Logs360 entry using incoming request
    * @param {*} req
    */
   async deleteWazuhAPIEntriesWithRequest(req) {

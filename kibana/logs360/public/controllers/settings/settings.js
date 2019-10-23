@@ -138,7 +138,7 @@ export class SettingsController {
   }
 
   /**
-   * Remove a Wazuh API entry
+   * Remove a API Logs360 entry
    * @param {*} item
    */
   async removeManager(item) {

@@ -127,7 +127,7 @@ class FilterBarUI extends react_2.Component {
         const button = (react_2.default.createElement(eui_1.EuiButtonEmpty, { size: "xs", onClick: this.onOpenAddFilterPopover, "data-test-subj": "addFilter" },
             "+",
             ' ',
-            react_2.default.createElement(react_1.FormattedMessage, { id: "common.ui.filterBar.addFilterButtonLabel", defaultMessage: "Add filter" })));
+            react_2.default.createElement(react_1.FormattedMessage, { id: "common.ui.filterBar.addFilterButtonLabel", defaultMessage: "Add Filtro" })));
         return (react_2.default.createElement(eui_1.EuiFlexItem, { grow: false },
             react_2.default.createElement(eui_1.EuiPopover, { id: "addFilterPopover", button: button, isOpen: this.state.isAddFilterPopoverOpen, closePopover: this.onCloseAddFilterPopover, anchorPosition: "downLeft", withTitle: true, panelPaddingSize: "none", ownFocus: true },
                 react_2.default.createElement(eui_1.EuiFlexItem, { grow: false },

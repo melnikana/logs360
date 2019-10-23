@@ -31,7 +31,7 @@ export function settingsWizard(
       if (parseInt(data.data.error) === 2) {
         !disableErrors &&
           errorHandler.handle(
-            'Please set up Wazuh API credentials.',
+            'Please set up API Logs360 credentials.',
             false,
             true
           );
@@ -62,7 +62,7 @@ export function settingsWizard(
         ) {
           !disableErrors &&
             errorHandler.handle(
-              'Wrong Wazuh API credentials, please add a new API and/or modify the existing one'
+              'Wrong API Logs360 credentials, please add a new API and/or modify the existing one'
             );
           if (!$location.path().includes('/settings')) {
             $location.search('_a', null);
@@ -158,7 +158,7 @@ export function settingsWizard(
         .catch(() => {
           appState.removeCurrentAPI();
           setUpCredentials(
-            'Wazuh App: Please set up Wazuh API credentials.',
+            'Wazuh App: Please set up API Logs360 credentials.',
             false
           );
         });
@@ -209,7 +209,7 @@ export function settingsWizard(
               callCheckStored();
             } else {
               setUpCredentials(
-                'Wazuh App: Please set up Wazuh API credentials.'
+                'Wazuh App: Please set up API Logs360 credentials.'
               );
             }
           })
@@ -246,14 +246,14 @@ export function settingsWizard(
                 );
               } else {
                 setUpCredentials(
-                  'Wazuh App: Please set up Wazuh API credentials.',
+                  'Wazuh App: Please set up API Logs360 credentials.',
                   false
                 );
               }
             }
           })
           .catch(() => {
-            setUpCredentials('Wazuh App: Please set up Wazuh API credentials.');
+            setUpCredentials('Wazuh App: Please set up API Logs360 credentials.');
           });
       }
     }

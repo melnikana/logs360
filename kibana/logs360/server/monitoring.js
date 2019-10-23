@@ -110,7 +110,7 @@ export class Monitoring {
 
   /**
    * Check status and get agent status array
-   * @param {Object} api Wazuh API entry from Elasticsearch.
+   * @param {Object} api API Logs360 entry from Elasticsearch.
    * @param {Number} maxSize Fetching agent purposes.
    */
   async checkStatus(api, maxSize) {
@@ -155,7 +155,7 @@ export class Monitoring {
 
   /**
    * Check API status twice and get agents total items
-   * @param {Object} api Wazuh API entry from Elasticsearch.
+   * @param {Object} api API Logs360 entry from Elasticsearch.
    */
   async checkAndSaveStatus(api) {
     try {
@@ -204,7 +204,7 @@ export class Monitoring {
         const msg = ((response || {}).body || {}).message || false;
         const extraLog =
           msg ||
-          'Wazuh API credentials not found or are not correct. Open the app in your browser and configure it to start monitoring agents.';
+          'API Logs360 credentials not found or are not correct. Open the app in your browser and configure it to start monitoring agents.';
 
         !this.quiet && log('monitoring:checkAndSaveStatus', extraLog);
         !this.quiet && this.server.log(monitoringErrorLogColors, extraLog);
@@ -219,8 +219,8 @@ export class Monitoring {
   }
 
   /**
-   * Iterates over all the Wazuh API entries, then it sends each API entry to the fetching function.
-   * @param {Array<Object>} apiEntries List of Wazuh API entries from Elasticsearch.
+   * Iterates over all the API Logs360 entries, then it sends each API entry to the fetching function.
+   * @param {Array<Object>} apiEntries List of API Logs360 entries from Elasticsearch.
    */
   async loadCredentials(apiEntries) {
     try {
@@ -283,7 +283,7 @@ export class Monitoring {
       !this.quiet &&
         log(
           'monitoring:getConfig',
-          'There are no Wazuh API entries yet',
+          'Ainda não há entradas da API Logs360',
           'debug'
         );
       return {

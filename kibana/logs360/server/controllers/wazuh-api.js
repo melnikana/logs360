@@ -62,7 +62,7 @@ export class WazuhApiCtrl {
 
       log('wazuh-api:checkStoredAPI', `${req.payload} existe`, 'debug');
 
-      // Build credentials object for making a Wazuh API request
+      // Build credentials object for making a API Logs360 request
       const credInfo = ApiHelper.buildOptionsObject(api);
 
       // Fetch needed information about the cluster and the manager itself
@@ -78,14 +78,14 @@ export class WazuhApiCtrl {
         return ErrorResponse('ERROR3099', 3099, 500, reply);
       }
 
-      // Store error and data fields from the Wazuh API into different variables
+      // Store error and data fields from the API Logs360 into different variables
       const { body } = response;
       const { error, data, message } = body;
 
       // Check if the response has no errors (error code is zero and there is data)
       const validResponse = parseInt(error) === 0 && data;
 
-      // If we have a valid response from the Wazuh API
+      // If we have a valid response from the API Logs360
       if (validResponse) {
         const { name, cluster } = data;
         // Clear and update cluster information before being sent back to frontend
@@ -103,7 +103,7 @@ export class WazuhApiCtrl {
           doc: { cluster_info: api.cluster_info }
         });
 
-        // Hide Wazuh API password
+        // Hide API Logs360 password
         const copied = {...api};
         copied.secret = '****';
 
@@ -114,7 +114,7 @@ export class WazuhApiCtrl {
         };
       }
 
-      // If we have an invalid response from the Wazuh API
+      // If we have an invalid response from the API Logs360
       throw new Error(message || `${api.url}:${api.port} is unreachable`);
     } catch (error) {
       log('wazuh-api:checkStoredAPI', error.message || error);
@@ -218,7 +218,7 @@ export class WazuhApiCtrl {
       const notValid = this.validateCheckApiParams(req.payload);
       if (notValid) return ErrorResponse(notValid, 3003, 500, reply);
       log('wazuh-api:checkAPI', `${req.payload.id} is valid`, 'debug');
-      // Check if a Wazuh API id is given (already stored API)
+      // Check if a API Logs360 id is given (already stored API)
       if (req.payload && req.payload.id && !req.payload.password) {
         const data = await this.wzWrapper.getWazuhConfigurationById(
           req.payload.id
@@ -253,7 +253,7 @@ export class WazuhApiCtrl {
 
       // Check wrong credentials
       if (parseInt(response.statusCode) === 401) {
-        log('wazuh-api:checkAPI', `Wrong Wazuh API credentials used`);
+        log('wazuh-api:checkAPI', `Wrong API Logs360 credentials used`);
         return ErrorResponse('Wrong credentials', 3004, 500, reply);
       }
       log(
@@ -282,7 +282,7 @@ export class WazuhApiCtrl {
           if (!response.body.error) {
             log(
               'wazuh-api:checkStoredAPI',
-              `Wazuh API response is valid`,
+              `API Logs360 response is valid`,
               'debug'
             );
             if (response.body.data.enabled === 'yes') {
@@ -709,7 +709,7 @@ export class WazuhApiCtrl {
   /**
    * Check main Wazuh daemons status
    * @param {*} api API entry stored in .wazuh
-   * @param {*} path Optional. Wazuh API target path.
+   * @param {*} path Optional. API Logs360 target path.
    */
   async checkDaemons(api, path) {
     try {
@@ -765,7 +765,7 @@ export class WazuhApiCtrl {
    * Since we allow the user to write the request using both comma-separated and array as well,
    * we need to check if it should be transformed or not.
    * @param {*} method The request method
-   * @param {*} path The Wazuh API path
+   * @param {*} path The API Logs360 path
    */
   shouldKeepArrayAsIt(method, path) {
     // Methods that we must respect a do not transform them
@@ -780,7 +780,7 @@ export class WazuhApiCtrl {
   }
 
   /**
-   * This performs a request over Wazuh API and returns its response
+   * This performs a request over API Logs360 and returns its response
    * @param {String} method Method: GET, PUT, POST, DELETE
    * @param {String} path API route
    * @param {Object} data data and params to perform the request
@@ -1067,7 +1067,7 @@ export class WazuhApiCtrl {
   }
 
   /**
-   * Get full data on CSV format from a list Wazuh API endpoint
+   * Get full data on CSV format from a list API Logs360 endpoint
    * @param {Object} req
    * @param {Object} res
    * @returns {Object} csv or ErrorResponse

@@ -53,7 +53,7 @@ export class WazuhApiElasticCtrl {
       }
       log(
         'wazuh-api-elastic:getAPIEntries',
-        `${result.length} Wazuh API entries`,
+        `${result.length} API Logs360 entries`,
         'debug'
       );
       return result;
