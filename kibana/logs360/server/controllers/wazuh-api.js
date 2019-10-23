@@ -1285,7 +1285,7 @@ export class WazuhApiCtrl {
         Object.assign(result.summary, {
           agentsCountActive: summary.Active - 1,
           agentsCountDisconnected: summary.Disconnected,
-          agentsCountNeverConnected: summary['Never connected'],
+          agentsCountNeverConnected: summary['Nunca conectado'],
           agentsCountTotal: summary.Total - 1,
           agentsCoverity:
             summary.Total - 1

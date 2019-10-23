@@ -52,7 +52,7 @@ export const KeyEquivalence = {
   dateAdd: 'Data de registro',
   manager_host: 'Gerente',
   manager: 'Gerente',
-  lastKeepAlive: 'Última manter vivo',
+  lastKeepAlive: 'Última atividade',
   os: 'OS',
   path: 'Caminho',
   details: 'Detalhes',

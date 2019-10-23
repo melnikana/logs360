@@ -2,7 +2,7 @@
 
     <div layout="row" class="euiFlexGroup euiFlexGroup--alignItemsCenter euiFormControlLayout__childrenWrapper md-padding-h ng-scope wz-margin-top-16"
         ng-if="!mctrl.filesSubTab">
-        <input placeholder="Filter rules..." ng-model="custom_search" type="text" class="euiFieldSearch euiFieldSearch--fullWidth euiFlexItem height-35 ng-empty ng-pristine ng-touched ng-valid"
+        <input placeholder="Filtro de regras..." ng-model="custom_search" type="text" class="euiFieldSearch euiFieldSearch--fullWidth euiFlexItem height-35 ng-empty ng-pristine ng-touched ng-valid"
             aria-invalid="false" wz-enter="search(custom_search)" id="search-input-rules">
         <wz-add-filter-chip id-input="search-input-rules" options="[{label: 'File', value: 'file'}, {label: 'Path', value: 'path', hide: mctrl.showingLocalRules}, {label: 'Level', value: 'level'}, 
         {label: 'Group', value: 'group'}, {label: 'PCI control', value: 'pci'}, {label: 'GDPR', value: 'gdpr'}, {label: 'HIPAA', value: 'hipaa'}, {label: 'NIST-800-53', value: 'nist-800-53'}]" />

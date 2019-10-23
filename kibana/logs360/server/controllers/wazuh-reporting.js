@@ -699,13 +699,13 @@ export class WazuhReportingCtrl {
         rows,
         [
           'ID',
-          'Name',
+          'Nome',
           'IP',
-          'Version',
-          'Manager',
-          'OS',
-          'Registration date',
-          'Last keep alive'
+          'Versão',
+          'Gerente',
+          'SO',
+          'Data de registro',
+          'Última atividade'
         ],
         null,
         null,

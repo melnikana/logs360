@@ -187,9 +187,9 @@ export class AgentsController {
       agentStatus === 'Active' ? 'teal' : 'red';
 
     this.$scope.formatAgentStatus = agentStatus => {
-      return ['Active', 'Disconnected'].includes(agentStatus)
+      return ['Ativo', 'Desconectado'].includes(agentStatus)
         ? agentStatus
-        : 'Never connected';
+        : 'Nunca conectado';
     };
     this.$scope.getAgent = async newAgentId => this.getAgent(newAgentId);
     this.$scope.goGroups = (agent, group) => this.goGroups(agent, group);

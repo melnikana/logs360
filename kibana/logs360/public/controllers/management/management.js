@@ -155,9 +155,9 @@ export class ManagementController {
       clickAction: tab => this.setRulesTab(tab),
       selectedTab: this.rulesetTab || 'rules',
       tabs: [
-        { id: 'rules', name: 'Rules' },
-        { id: 'decoders', name: 'Decoders' },
-        { id: 'cdblists', name: 'Lists' }
+        { id: 'rules', name: 'Regras' },
+        { id: 'decoders', name: 'Decodificadores' },
+        { id: 'cdblists', name: 'Listas' }
       ]
     };
 
@@ -168,7 +168,7 @@ export class ManagementController {
         { id: 'status', name: 'Status' },
         { id: 'logs', name: 'Logs' },
         { id: 'monitoring', name: 'Cluster' },
-        { id: 'reporting', name: 'Reporting' }
+        { id: 'reporting', name: 'Comunicando' }
       ]
     };
   }

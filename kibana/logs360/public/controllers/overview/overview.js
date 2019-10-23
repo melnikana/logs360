@@ -356,7 +356,7 @@ export class OverviewController {
         const total = result.Total - 1;
         this.agentsCountActive = active;
         this.agentsCountDisconnected = result.Disconnected;
-        this.agentsCountNeverConnected = result['Never connected'];
+        this.agentsCountNeverConnected = result['Nunca conectado'];
         this.agentsCountTotal = total;
         this.agentsCoverity = total ? (active / total) * 100 : 0;
       } else {

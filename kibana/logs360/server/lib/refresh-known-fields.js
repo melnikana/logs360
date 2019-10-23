@@ -125,7 +125,7 @@ export async function checkKnownFields(
       !quiet &&
         log(
           'initialize:checkKnownFields',
-          `Refreshing known fields for "index-pattern:${item.title}"`,
+          `Atualizando campos conhecidos para "index-pattern:${item.title}"`,
           'debug'
         );
       const prefix = item.namespace
