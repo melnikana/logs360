@@ -33,7 +33,7 @@
     <div layout="row" class="wz-margin-top-16">
         <md-card flex class="wz-md-card _md flex md-margin-h" ng-if="!dctrl.editingFile && !mctrl.filesSubTab">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions wz-card-actions-top">
-                <a ng-if="adminMode" ng-click="mctrl.switchFilesSubTab('decoders')">Manage decoders files</a>
+                <a ng-if="adminMode" ng-click="mctrl.switchFilesSubTab('decoders')">Gerenciar arquivos de decodificadores</a>
                 <span flex></span>
                 <wz-kbn-switch class="md-primary wz-no-top-bottom-margin" switch-model="dctrl.showingLocalDecoders"
                     switch-text="Custom decoders" switch-change="dctrl.switchLocalDecoders()"></wz-kbn-switch>
@@ -51,7 +51,7 @@
                 <button type="button" ng-click="dctrl.downloadCsv()" class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--small">
                     <span class="euiButtonEmpty__content">
                         <react-component name="EuiIcon" props="{type:'importAction'}" />
-                        <span class="euiButtonEmpty__text">Formatted</span>
+                        <span class="euiButtonEmpty__text">Formatado</span>
                     </span>
                 </button>
             </md-card-actions>

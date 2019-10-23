@@ -5,7 +5,7 @@
         <div layout="row" layout-align="start center">
             <div layout="row" layout-padding>
                 <div>
-                    <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome')">Management</span>
+                    <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome')">Gerenciamento</span>
                     <span> / </span>
                     <span>{{ mctrl.tabNames[tab] }}</span>
                 </div>
@@ -65,14 +65,14 @@
         <div layout="row" layout-align="start center" ng-if="!loading">
             <div layout="row" layout-padding>
                 <div ng-if="!showConfig && !showNodes">
-                    <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome')">Management</span>
+                    <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome')">Gerenciamento</span>
                     <span> / </span>
                     <span>{{ mctrl.tabNames[mctrl.tab] }}</span>
                     <span> / </span>
                     <span>{{ currentAPI }}</span>
                 </div>
                 <div ng-if="showConfig">
-                    <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome')">Management</span>
+                    <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome')">Gerenciamento</span>
                     <span> / </span>
                     <span class="wz-text-link cursor-pointer" ng-click="goBack()">{{ mctrl.tabNames[mctrl.tab] }}</span>
                     <span> / </span>
@@ -80,7 +80,7 @@
                     <span> / Overview</span>
                 </div>
                 <div ng-if="showNodes && !currentNode">
-                    <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome')">Management</span>
+                    <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome')">Gerenciamento</span>
                     <span> / </span>
                     <span class="wz-text-link cursor-pointer" ng-click="goBack()">{{ mctrl.tabNames[mctrl.tab] }}</span>
                     <span> / </span>
@@ -89,7 +89,7 @@
                     <span>Nodes</span>
                 </div>
                 <div ng-if="currentNode">
-                    <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome')">Management</span>
+                    <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome')">Gerenciamento</span>
                     <span> / </span>
                     <span class="wz-text-link cursor-pointer" ng-click="goBack()">{{ mctrl.tabNames[mctrl.tab] }}</span>
                     <span> / </span>

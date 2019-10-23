@@ -147,10 +147,10 @@ app.directive('wzTable', function() {
       const fetch = async (options = {}) => {
         try {
           if ((instance.filters || []).length) {
-            $scope.customEmptyResults = 'No results match your search criteria';
+            $scope.customEmptyResults = 'Nenhum resultado corresponde aos seus critérios de pesquisa';
           } else {
             $scope.customEmptyResults =
-              $scope.emptyResults || 'Empty results for this table.';
+              $scope.emptyResults || 'Nenhum resultado para esta tabela.';
           }
 
           if (!options.skipFetching) {
@@ -185,7 +185,7 @@ app.directive('wzTable', function() {
             error.status === -1 &&
             error.xhrStatus === 'abort'
           ) {
-            return Promise.reject('Request took too long, aborted');
+            return Promise.reject('A solicitação demorou muito, foi interrompida');
           }
           return Promise.reject(error);
         }
@@ -438,7 +438,7 @@ app.directive('wzTable', function() {
       $scope.confirmRemoveGroup = async group => {
         try {
           await groupHandler.removeGroup(group);
-          errorHandler.info(`Group ${group} has been removed`);
+          errorHandler.info(`O grupo ${group} foi removido`);
         } catch (error) {
           errorHandler.handle(error.message || error);
         }
@@ -449,7 +449,7 @@ app.directive('wzTable', function() {
       $scope.confirmRemoveFile = async (file, type) => {
         try {
           await rulesetHandler.deleteFile(file, type);
-          errorHandler.info(`File ${file.file || file.name} has been deleted`);
+          errorHandler.info(`Arquivo ${file.file || file.name} foi excluído`);
         } catch (error) {
           errorHandler.handle(error.message || error);
         }
@@ -461,7 +461,7 @@ app.directive('wzTable', function() {
         if (
           $location.search() &&
           $location.search().tab &&
-          $location.search().tab === 'configuration'
+          $location.search().tab === 'configuração'
         ) {
           $scope.clickAction(group);
         } else {
