@@ -97,7 +97,7 @@ app.directive('wzTagFilter', function() {
             $scope.newTag = '';
           }
         } catch (error) {
-          errorHandler.handle(error, 'Error adding filter');
+          errorHandler.handle(error, 'Erro ao adicionar filtro');
         }
       };
 
