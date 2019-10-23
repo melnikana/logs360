@@ -73,27 +73,27 @@
         <react-component flex name="AlertsStats" props="{
                     items: [
                     {
-                        description: 'Total agents',
+                        description: 'Total de agentes',
                         value: ctrl.agentsCountTotal,
                         color: 'primary'
                     },
                     {
-                        description: 'Active',
+                        description: 'Ativo',
                         value: ctrl.agentsCountActive,
                         color: 'secondary'
                     },
                     {
-                        description: 'Disconnected',
+                        description: 'Desconectado',
                         value: ctrl.agentsCountDisconnected,
                         color: 'danger'
                     },
                     {
-                        description: 'Never connected',
+                        description: 'Nunca conectado',
                         value: ctrl.agentsCountNeverConnected,
                         color: 'subdued'
                     },
                     {
-                        description: 'Agents coverage',
+                        description: 'Cobertura de agentes',
                         value: (ctrl.agentsCoverity | number:2) + '%',
                         color: 'accent'
                     }

@@ -78,7 +78,7 @@ export class StatusController {
       const total = stats.Total - 1;
       this.agentsCountActive = active;
       this.agentsCountDisconnected = stats.Disconnected;
-      this.agentsCountNeverConnected = stats['Never connected'];
+      this.agentsCountNeverConnected = stats['Nunca Conectado'];
       this.agentsCountTotal = total;
 
       this.agentsCoverity = total ? (active / total) * 100 : 0;

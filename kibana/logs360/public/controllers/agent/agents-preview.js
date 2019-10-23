@@ -180,7 +180,7 @@ export class AgentsPreviewController {
 
       this.searchBarModel = {
         name: [],
-        status: ['Active', 'Disconnected', 'Never connected'],
+        status: ['Ativo', 'Desconectado', 'Nunca Conectado'],
         group: unique.groups,
         version: unique.versions,
         'os.platform': unique.osPlatforms.map(x => x.platform),
