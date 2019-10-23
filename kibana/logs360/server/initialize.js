@@ -23,7 +23,7 @@ import path from 'path';
 
 export function Initialize(server) {
   const wazuhVersion = path.join(__dirname, '/wazuh-version.json');
-  const blueWazuh = '\u001b[34mwazuh\u001b[39m';
+  const blueWazuh = '\u001b[34mLogs360\u001b[39m';
   const initializeErrorLogColors = [blueWazuh, 'initialize', 'error'];
   // Elastic JS Client
   const wzWrapper = new ElasticWrapper(server);

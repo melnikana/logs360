@@ -525,12 +525,12 @@ export class WazuhElasticCtrl {
 
         if (visState.type && visState.type === 'timelion') {
           let query = '';
-          if (title === 'Wazuh App Cluster Overview') {
+          if (title === 'Logs360 App Cluster Overview') {
             for (const node of nodes) {
               query += `.es(index=${pattern_name},q="cluster.name: ${name} AND cluster.node: ${node.name}").label("${node.name}"),`;
             }
             query = query.substring(0, query.length - 1);
-          } else if (title === 'Wazuh App Cluster Overview Manager') {
+          } else if (title === 'Logs360 App Cluster Overview Manager') {
             query += `.es(index=${pattern_name},q="cluster.name: ${name}").label("${name} cluster")`;
           }
 

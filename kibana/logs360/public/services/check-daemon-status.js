@@ -32,7 +32,7 @@ export class CheckDaemonsStatus {
       this.tries = 10;
     } catch (error) {
       this.tries = 10;
-      this.$rootScope.wazuhNotReadyYet = 'Wazuh could not be recovered.';
+      this.$rootScope.wazuhNotReadyYet = 'Logs360 could not be recovered.';
       this.$rootScope.$applyAsync();
     }
 

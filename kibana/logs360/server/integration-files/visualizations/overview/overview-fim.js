@@ -22,7 +22,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -38,7 +38,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -54,7 +54,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"language":"lucene","query":""},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"language":"lucene","query":""},"filter":[]}'
       }
     }
   },
@@ -70,7 +70,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"language":"lucene","query":""},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"language":"lucene","query":""},"filter":[]}'
       }
     }
   },
@@ -84,7 +84,7 @@ export default [
       description: '',
       version: 1,
       kibanaSavedObjectMeta: {
-        searchSourceJSON: `{ "index":"wazuh-alerts", "filter":[], "query":{"query":"","language":"lucene"} }`
+        searchSourceJSON: `{ "index":"logs360-alerts", "filter":[], "query":{"query":"","language":"lucene"} }`
       }
     },
     _type: 'visualization'
@@ -102,7 +102,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[{"meta":{"index":"wazuh-alerts","negate":false,"disabled":false,"alias":null,"type":"phrase","key":"rule.groups","value":"syscheck","params":{"query":"syscheck","type":"phrase"}},"query":{"match":{"rule.groups":{"query":"syscheck","type":"phrase"}}},"$state":{"store":"appState"}}]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[{"meta":{"index":"logs360-alerts","negate":false,"disabled":false,"alias":null,"type":"phrase","key":"rule.groups","value":"syscheck","params":{"query":"syscheck","type":"phrase"}},"query":{"match":{"rule.groups":{"query":"syscheck","type":"phrase"}}},"$state":{"store":"appState"}}]}'
       }
     }
   },
@@ -119,7 +119,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
+          '{"index":"logs360-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
       }
     }
   }

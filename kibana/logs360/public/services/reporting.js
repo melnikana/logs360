@@ -76,7 +76,7 @@ export class ReportingService {
       );
 
       const array = await this.vis2png.checkArray(idArray);
-      const name = `wazuh-${
+      const name = `logs360-${
         isAgents ? 'agents' : 'overview'
       }-${tab}-${(Date.now() / 1000) | 0}.pdf`;
 
@@ -102,7 +102,7 @@ export class ReportingService {
       this.$rootScope.reportStatus = false;
       this.$rootScope.$applyAsync();
       this.errorHandler.info(
-        'Success. Go to Wazuh > Management > Reporting',
+        'Success. Go to Logs360 > Management > Reporting',
         'Reporting'
       );
 
@@ -148,7 +148,7 @@ export class ReportingService {
       this.$rootScope.reportStatus = false;
       this.$rootScope.$applyAsync();
       this.errorHandler.info(
-        'Success. Go to Wazuh > Management > Reporting',
+        'Success. Go to Logs360 > Management > Reporting',
         'Reporting'
       );
 

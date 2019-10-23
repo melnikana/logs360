@@ -124,7 +124,7 @@ export class WazuhReportingCtrl {
             width: 190
           },
           {
-            text: 'info@wazuh.com\nhttps://logs360.com.br',
+            text: 'info@lgos360.com\nhttps://logs360.com.br',
             alignment: 'right',
             margin: [0, 0, 40, 0],
             color: '#1EA5C8'

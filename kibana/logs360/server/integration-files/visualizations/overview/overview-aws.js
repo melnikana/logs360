@@ -23,7 +23,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -40,7 +40,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -56,7 +56,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -72,7 +72,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -88,7 +88,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -104,7 +104,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -120,7 +120,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -136,7 +136,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },*/
@@ -152,7 +152,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   }

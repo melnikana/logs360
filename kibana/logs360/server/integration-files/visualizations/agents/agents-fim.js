@@ -21,7 +21,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
+          '{"index":"logs360-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
       }
     },
     _type: 'visualization'
@@ -37,7 +37,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
+          '{"index":"logs360-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
       }
     },
     _type: 'visualization'
@@ -53,7 +53,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
+          '{"index":"logs360-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
       }
     },
     _type: 'visualization'
@@ -69,11 +69,11 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON: `{
-                    "index":"wazuh-alerts",
+                    "index":"logs360-alerts",
                     "filter":[
                         {
                             "meta": {
-                              "index": "wazuh-alerts",
+                              "index": "logs360-alerts",
                               "type": "phrases",
                               "key": "syscheck.event",
                               "value": "added, readded",
@@ -124,11 +124,11 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON: `{
-                    "index":"wazuh-alerts",
+                    "index":"logs360-alerts",
                     "filter":[
                         {
                             "meta": {
-                              "index": "wazuh-alerts",
+                              "index": "logs360-alerts",
                               "negate": false,
                               "disabled": false,
                               "alias": null,
@@ -170,11 +170,11 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON: `{
-                    "index":"wazuh-alerts",
+                    "index":"logs360-alerts",
                     "filter":[
                         {
                             "meta": {
-                              "index": "wazuh-alerts",
+                              "index": "logs360-alerts",
                               "negate": false,
                               "disabled": false,
                               "alias": null,
@@ -218,7 +218,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
+          '{"index":"logs360-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
       }
     }
   }

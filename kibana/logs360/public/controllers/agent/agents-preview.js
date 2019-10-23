@@ -265,7 +265,7 @@ export class AgentsPreviewController {
 
 
   /**
-   * Returns the Wazuh version as x.y.z
+   * Returns the LOgs360 version as x.y.z
    */
   async getWazuhVersion() {
     try {

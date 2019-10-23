@@ -22,7 +22,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
+          '{"index":"logs360-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
       }
     }
   },
@@ -38,7 +38,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -53,7 +53,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
+          '{"index":"logs360-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
       }
     },
     _type: 'visualization'
@@ -71,7 +71,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
+          '{"index":"logs360-alerts","filter":[],"query":{"query":"","language":"lucene"}}'
       }
     }
   }

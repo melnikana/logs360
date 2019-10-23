@@ -23,7 +23,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -39,7 +39,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[{"meta":{"index":"wazuh-alerts","negate":false,"disabled":false,"alias":null,"type":"phrase","key":"data.osquery.action","value":"added","params":{"query":"added","type":"phrase"}},"query":{"match":{"data.osquery.action":{"query":"added","type":"phrase"}}},"$state":{"store":"appState"}}]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[{"meta":{"index":"logs360-alerts","negate":false,"disabled":false,"alias":null,"type":"phrase","key":"data.osquery.action","value":"added","params":{"query":"added","type":"phrase"}},"query":{"match":{"data.osquery.action":{"query":"added","type":"phrase"}}},"$state":{"store":"appState"}}]}'
       }
     }
   },
@@ -55,7 +55,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[{"meta":{"index":"wazuh-alerts","negate":false,"disabled":false,"alias":null,"type":"phrase","key":"data.osquery.action","value":"removed","params":{"query":"removed","type":"phrase"}},"query":{"match":{"data.osquery.action":{"query":"removed","type":"phrase"}}},"$state":{"store":"appState"}}]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[{"meta":{"index":"logs360-alerts","negate":false,"disabled":false,"alias":null,"type":"phrase","key":"data.osquery.action","value":"removed","params":{"query":"removed","type":"phrase"}},"query":{"match":{"data.osquery.action":{"query":"removed","type":"phrase"}}},"$state":{"store":"appState"}}]}'
       }
     }
   },
@@ -71,7 +71,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -87,7 +87,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -103,7 +103,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -119,7 +119,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -135,7 +135,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   },
@@ -152,7 +152,7 @@ export default [
       version: 1,
       kibanaSavedObjectMeta: {
         searchSourceJSON:
-          '{"index":"wazuh-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
+          '{"index":"logs360-alerts","query":{"query":"","language":"lucene"},"filter":[]}'
       }
     }
   }

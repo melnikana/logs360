@@ -21,7 +21,7 @@ import { indexDate } from './lib/index-date';
 import { BuildBody } from './lib/replicas-shards-helper';
 import * as ApiHelper from './lib/api-helper';
 
-const blueWazuh = '\u001b[34mwazuh\u001b[39m';
+const blueWazuh = '\u001b[34mLogs360\u001b[39m';
 const monitoringErrorLogColors = [blueWazuh, 'monitoring', 'error'];
 
 export class Monitoring {
@@ -36,7 +36,7 @@ export class Monitoring {
     this.CRON_FREQ = '0 1 * * * *';
     this.CREATION = 'd';
     this.index_pattern = 'logs360-monitoring-1.x-*';
-    this.index_prefix = 'wazuh-monitoring-3.x-';
+    this.index_prefix = 'logs360-monitoring-3.x-';
     this.wzWrapper = new ElasticWrapper(server);
     this.agentsArray = [];
     this.quiet = quiet;
@@ -345,7 +345,7 @@ export class Monitoring {
 
   /**
    * Creating wazuh-monitoring index
-   * @param {String} datedIndex The name for the index (e.g. daily: wazuh-monitoring-3.x-YYYY.MM.DD)
+   * @param {String} datedIndex The name for the index (e.g. daily: logs360-monitoring-3.x-YYYY.MM.DD)
    * @param {String} clusterName Wazuh cluster name.
    */
   async createIndex(datedIndex, clusterName) {
@@ -401,7 +401,7 @@ export class Monitoring {
 
   /**
    * Inserting one document per agent into Elastic. Bulk.
-   * @param {String} datedIndex The name for the index (e.g. daily: wazuh-monitoring-3.x-YYYY.MM.DD)
+   * @param {String} datedIndex The name for the index (e.g. daily: logs360-monitoring-3.x-YYYY.MM.DD)
    * @param {String} clusterName Wazuh cluster name.
    */
   async insertDocument(datedIndex, clusterName) {

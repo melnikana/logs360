@@ -151,7 +151,7 @@ app.directive('wzListManage', function() {
           }
           $scope.doingSaving = false;
           if (
-            (error.message || error || '').includes('Wazuh API error: 1905')
+            (error.message || error || '').includes('Logs360 API error: 1905')
           ) {
             $scope.overwriteError = true;
             errorHandler.handle('File name already exists');

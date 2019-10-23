@@ -312,7 +312,7 @@ app.directive('wzXmlFileEditor', function() {
           if (close) $scope.closeFn({ reload: true });
         } catch (error) {
           $scope.savingParam();
-          if ((error || '').includes('Wazuh API error: 1905')) {
+          if ((error || '').includes('Logs360 API error: 1905')) {
             $scope.configError = ['File name already exists'];
             $scope.$emit('showSaveAndOverwrite', {});
           } else {
