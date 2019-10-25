@@ -68,12 +68,12 @@ export const TabDescription = {
   aws: {
     title: 'Amazon AWS',
     description:
-      'Security events related to your Amazon AWS services, collected directly via AWS API.'
+      'Eventos de segurança relacionados aos seus serviços Amazon AWS, coletados diretamente por meio da API da AWS..'
   },
   virustotal: {
     title: 'VirusTotal',
     description:
-      'Alerts resulting from VirusTotal analysis of suspicious files via an integration with their API.'
+      'Alertas resultantes da análise VirusTotal de arquivos suspeitos por meio de uma integração com sua API.'
   },
   syscollector: {
     title: 'Dados de inventário',
