@@ -33,6 +33,7 @@ import discoverTemplate from '../templates/discover/discover.pug';
 import settingsTemplate from '../templates/settings/settings.pug';
 import blankScreenTemplate from '../templates/error-handler/blank-screen.html';
 import devToolsTemplate from '../templates/dev-tools/dev-tools.html';
+import LojaAPPS from '../templates/logs360/loja.html';
 
 const assignPreviousLocation = ($rootScope, $location) => {
   const path = $location.path();
@@ -190,6 +191,10 @@ routes
   })
   .when('/logs360-dev', {
     template: devToolsTemplate,
+    resolve: { enableWzMenu, nestedResolve }
+  })
+  .when('/logs360-loja', {
+    template: LojaAPPS,
     resolve: { enableWzMenu, nestedResolve }
   })
   .when('/blank-screen', {

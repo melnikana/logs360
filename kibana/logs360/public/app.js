@@ -97,7 +97,8 @@ app.run(function($rootScope, $route, $location, appState, $window) {
       '/logs360-discover/',
       '/overview/',
       '/agents',
-      '/logs360-dev'
+      '/logs360-dev',
+      '/logs360-loja'
     ]
   });
 
