@@ -24,6 +24,7 @@ export const TabNames = {
   hipaa: 'HIPAA',
   nist: 'NIST 800-53',
   aws: 'Amazon AWS',
+  office360: 'Office365',
   virustotal: 'VirusTotal',
   configuration: 'Configuração',
   syscollector: 'Dados de inventário',

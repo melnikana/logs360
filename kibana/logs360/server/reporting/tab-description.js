@@ -70,6 +70,11 @@ export const TabDescription = {
     description:
       'Eventos de segurança relacionados aos seus serviços Amazon AWS, coletados diretamente por meio da API da AWS..'
   },
+  office365: {
+    title: 'Office365',
+    description:
+      'Eventos de segurança relacionados aos seus serviços Amazon AWS, coletados diretamente por meio da API da AWS..'
+  },
   virustotal: {
     title: 'VirusTotal',
     description:
