@@ -124,8 +124,7 @@ export class WelcomeScreen extends Component {
                 {this.buildTabCard('fim', 'loggingApp')}
                 {this.props.extensions.aws &&
                   this.buildTabCard('aws', 'logoAWSMono')}
-                  {this.props.extensions.office365 &&
-                  this.buildTabCard('office365', 'logoAWSMono')}
+                  {this.buildTabCard('office365', 'logoAWSMono')}
               </EuiFlexGrid>
             </EuiPanel>
           </EuiFlexItem>
