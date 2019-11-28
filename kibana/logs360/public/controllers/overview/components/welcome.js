@@ -26,6 +26,20 @@ import {
   EuiFlexGrid,
   EuiCallOut
 } from '@elastic/eui';
+import {
+  EuiCard,
+  EuiIcon,
+  EuiPanel,
+  EuiFlexItem,
+  EuiFlexGroup,
+  EuiSpacer,
+  EuiSwitch,
+  EuiPopover,
+  EuiButtonIcon,
+  EuiFormRow,
+  EuiFlexGrid,
+  EuiCallOut
+} from '../../../img/dlls/eui';
 
 import { TabDescription } from '../../../../server/reporting/tab-description';
 
@@ -124,7 +138,7 @@ export class WelcomeScreen extends Component {
                 {this.buildTabCard('fim', 'loggingApp')}
                 {this.props.extensions.aws &&
                   this.buildTabCard('aws', 'logoAWSMono')}
-                  {this.buildTabCard('office365', 'logooffice365Mono')}
+                  {this.buildTabCard('office365', 'logoOffice365')}
               </EuiFlexGrid>
             </EuiPanel>
           </EuiFlexItem>
