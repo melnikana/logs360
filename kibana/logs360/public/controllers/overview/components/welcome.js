@@ -26,20 +26,7 @@ import {
   EuiFlexGrid,
   EuiCallOut
 } from '@elastic/eui';
-import {
-  EuiCard,
-  EuiIcon,
-  EuiPanel,
-  EuiFlexItem,
-  EuiFlexGroup,
-  EuiSpacer,
-  EuiSwitch,
-  EuiPopover,
-  EuiButtonIcon,
-  EuiFormRow,
-  EuiFlexGrid,
-  EuiCallOut
-} from '../../../img/dlls/eui';
+
 
 import { TabDescription } from '../../../../server/reporting/tab-description';
 
