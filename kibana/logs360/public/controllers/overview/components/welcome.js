@@ -77,6 +77,20 @@ export class WelcomeScreen extends Component {
     );
   }
 
+  buildCustomCard(tab, icon, modalname) {
+    return (
+      <EuiFlexItem>
+        <EuiCard
+          layout="horizontal"
+          icon={<EuiIcon size="xl" type={icon} />}
+          title={TabDescription[tab].title}
+          onClick={() => this.props.switchTab(tab)}
+          description={TabDescription[tab].description}
+        />
+      </EuiFlexItem>
+    );
+  }
+
   buildPopover(popoverName, extensions) {
     const switches = extensions.map(extension => {
       return (
@@ -119,20 +133,20 @@ export class WelcomeScreen extends Component {
               </EuiFlexGroup>
                 <EuiFlexItem />
               <EuiFlexGrid columns={3}>
-                {this.buildTabCard('windows', 'logoWindows')}
-                {this.buildTabCard('firewall', 'securityAnalyticsApp')}
-                {this.buildTabCard('bd', 'sqlApp')}
-                {this.buildTabCard('webserver', 'indexPatternApp')}
-                {this.buildTabCard('antivirus', 'securityApp')}
-                {this.buildTabCard('email', 'email')}
-                {this.buildTabCard('vpn', 'graphApp')}
-                {this.buildTabCard('azure1', 'logoAzure')}
-                {this.buildTabCard('aws1', 'logoAWS')}
-                {this.buildTabCard('proxy', 'securityAnalyticsApp')}
-                {this.buildTabCard('ftp', 'indexPatternApp')}
-                {this.buildTabCard('docker1', 'logoDocker')}
-                {this.buildTabCard('linux', 'consoleApp')}
-                {this.buildTabCard('costum', 'devToolsApp')}
+                {this.buildCustomCard('windows', 'logoWindows', '')}
+                {this.buildCustomCard('firewall', 'securityAnalyticsApp', '')}
+                {this.buildCustomCard('bd', 'sqlApp', '')}
+                {this.buildCustomCard('webserver', 'indexPatternApp', '')}
+                {this.buildCustomCard('antivirus', 'securityApp', '')}
+                {this.buildCustomCard('email', 'email', '')}
+                {this.buildCustomCard('vpn', 'graphApp', '')}
+                {this.buildCustomCard('azure1', 'logoAzure', '')}
+                {this.buildCustomCard('aws1', 'logoAWS', '')}
+                {this.buildCustomCard('proxy', 'securityAnalyticsApp', '')}
+                {this.buildCustomCard('ftp', 'indexPatternApp', '')}
+                {this.buildCustomCard('docker1', 'logoDocker', '')}
+                {this.buildCustomCard('linux', 'consoleApp', '')}
+                {this.buildCustomCard('costum', 'devToolsApp', '')}
               </EuiFlexGrid>
             </EuiPanel>
           </EuiFlexItem>
