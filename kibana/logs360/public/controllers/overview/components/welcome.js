@@ -111,6 +111,28 @@ export class WelcomeScreen extends Component {
   render() {
     return (
       <div>
+       <EuiFlexGroup>
+          <EuiFlexItem>
+            <EuiPanel betaBadgeLabel="Logs360 Store">
+              <EuiFlexGroup gutterSize="xs">
+              </EuiFlexGroup>
+                <EuiFlexItem />>
+              <EuiFlexGrid columns={2}>
+                {this.buildTabCard('office365', 'logoWindows')}
+                {this.buildTabCard('office365', 'logoMySQL')}
+                {this.buildTabCard('office365', 'logoApache')}
+                {this.buildTabCard('office365', 'logoDocker')}
+                {this.buildTabCard('office365', 'logoWindows')}
+                {this.buildTabCard('office365', 'logoMySQL')}
+                {this.buildTabCard('office365', 'logoApache')}
+                {this.buildTabCard('office365', 'logoDocker')}
+              </EuiFlexGrid>
+            </EuiPanel>
+          </EuiFlexItem>
+          </EuiFlexGroup>
+
+
+
         <EuiFlexGroup>
           <EuiFlexItem>
             <EuiPanel betaBadgeLabel="Gerenciamento de informações de segurança">
@@ -129,22 +151,6 @@ export class WelcomeScreen extends Component {
               </EuiFlexGrid>
             </EuiPanel>
           </EuiFlexItem>
-
-          <EuiFlexItem>
-            <EuiPanel betaBadgeLabel="Auditoria e Monitoramento de Políticas">
-              <EuiFlexGroup gutterSize="xs">
-              </EuiFlexGroup>
-                <EuiFlexItem />>
-              <EuiFlexGrid columns={2}>
-                {this.buildTabCard('office365', 'logoWindows')}
-                {this.buildTabCard('office365', 'logoMySQL')}
-                {this.buildTabCard('office365', 'logoApache')}
-                {this.buildTabCard('office365', 'logoDocker')}
-              </EuiFlexGrid>
-            </EuiPanel>
-          </EuiFlexItem>
-
-
 
           <EuiFlexItem>
             <EuiPanel betaBadgeLabel="Auditoria e Monitoramento de Políticas">
