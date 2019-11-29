@@ -13,7 +13,6 @@ import { FilterHandler } from '../../utils/filter-handler';
 import { generateMetric } from '../../utils/generate-metric';
 import { TabNames } from '../../utils/tab-names';
 import { TabDescription } from '../../../server/reporting/tab-description';
-import { TabStore } from '../../../server/reporting/tab-description';
 
 import {
   metricsGeneral,
@@ -428,6 +427,6 @@ export class OverviewController {
 }
 
 
-TabStore.get('/windows', function(req, res) {
+/* TabStore.get('/windows', function(req, res) {
   res.redirect('../../templates/logs360/loja.html');
-});
+}); */
