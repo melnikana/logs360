@@ -103,7 +103,11 @@ export const TabDescription = {
     title: 'Monitor Docker',
     description:
       'Monitore e colete a atividade dos contêineres do Docker, como criação, execução, inicialização, parada ou pausa de eventos.'
-  },
+  }
+};
+
+
+export const TabStore = {
   windows: {
     title: 'Tudo para windows',
     description:
@@ -173,5 +177,6 @@ export const TabDescription = {
     title: 'Personalize seu pacote',
     description:
       'Personalize seu pacote de acordo como desejado.'
-  },
+  }
+
 };

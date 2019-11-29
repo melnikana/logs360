@@ -122,7 +122,7 @@ export class WelcomeScreen extends Component {
                 {this.buildTabCard('windows', 'logoWindows')}
                 {this.buildTabCard('firewall', 'securityAnalyticsApp')}
                 {this.buildTabCard('bd', 'sqlApp')}
-                {this.buildTabCard('webserver', 'graphApp')}
+                {this.buildTabCard('webserver', 'indexPatternApp')}
                 {this.buildTabCard('antivirus', 'securityApp')}
                 {this.buildTabCard('email', 'email')}
                 {this.buildTabCard('vpn', 'graphApp')}
@@ -154,7 +154,7 @@ export class WelcomeScreen extends Component {
                 {this.buildTabCard('fim', 'loggingApp')}
                 {this.props.extensions.aws &&
                   this.buildTabCard('aws', 'logoAWSMono')}
-                  {this.buildTabCard('office365', 'spacesApp')}
+                  {this.buildTabCard('office365', 'searchProfilerApp')}
               </EuiFlexGrid>
             </EuiPanel>
           </EuiFlexItem>
