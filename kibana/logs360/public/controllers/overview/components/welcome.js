@@ -130,6 +130,24 @@ export class WelcomeScreen extends Component {
             </EuiPanel>
           </EuiFlexItem>
 
+          <EuiFlexGroup>
+          <EuiFlexItem>
+            <EuiPanel betaBadgeLabel="Logs360 Store">
+              <EuiFlexGroup gutterSize="xs">
+                <EuiFlexItem />
+                <EuiFlexItem grow={false}>
+                  {this.buildPopover('popoverSecurity', ['aws'])}
+                </EuiFlexItem>
+              </EuiFlexGroup>
+              <EuiFlexGrid columns={2}>
+                {this.buildTabCard('office365', 'logoWindows')}
+                {this.buildTabCard('office365', 'logoMySQL')}
+                {this.buildTabCard('office365', 'logoApache')}
+                {this.buildTabCard('office365', 'logoDocker')}
+              </EuiFlexGrid>
+            </EuiPanel>
+          </EuiFlexItem>
+
           <EuiFlexItem>
             <EuiPanel betaBadgeLabel="Auditoria e Monitoramento de Políticas">
               <EuiFlexGroup gutterSize="xs">
