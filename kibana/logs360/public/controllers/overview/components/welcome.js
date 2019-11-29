@@ -116,8 +116,8 @@ export class WelcomeScreen extends Component {
             <EuiPanel betaBadgeLabel="Logs360 Store">
               <EuiFlexGroup gutterSize="xs">
               </EuiFlexGroup>
-                <EuiFlexItem />>
-              <EuiFlexGrid columns={2}>
+                <EuiFlexItem />
+              <EuiFlexGrid columns={4}>
                 {this.buildTabCard('office365', 'logoWindows')}
                 {this.buildTabCard('office365', 'logoMySQL')}
                 {this.buildTabCard('office365', 'logoApache')}
