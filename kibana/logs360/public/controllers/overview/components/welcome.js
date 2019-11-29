@@ -114,25 +114,32 @@ export class WelcomeScreen extends Component {
        <EuiFlexGroup>
           <EuiFlexItem>
             <EuiPanel betaBadgeLabel="Logs360 Store">
+            <EuiSpacer size="xl" />
               <EuiFlexGroup gutterSize="xs">
               </EuiFlexGroup>
                 <EuiFlexItem />
-              <EuiFlexGrid columns={4}>
-                {this.buildTabCard('office365', 'logoWindows')}
-                {this.buildTabCard('office365', 'logoMySQL')}
-                {this.buildTabCard('office365', 'logoApache')}
-                {this.buildTabCard('office365', 'logoDocker')}
-                {this.buildTabCard('office365', 'logoWindows')}
-                {this.buildTabCard('office365', 'logoMySQL')}
-                {this.buildTabCard('office365', 'logoApache')}
-                {this.buildTabCard('office365', 'logoDocker')}
+              <EuiFlexGrid columns={3}>
+                {this.buildTabCard('windows', 'logoWindows')}
+                {this.buildTabCard('firewall', 'securityAnalyticsApp')}
+                {this.buildTabCard('bd', 'sqlApp')}
+                {this.buildTabCard('webserver', 'graphApp')}
+                {this.buildTabCard('antivirus', 'securityApp')}
+                {this.buildTabCard('email', 'email')}
+                {this.buildTabCard('vpn', 'graphApp')}
+                {this.buildTabCard('azure1', 'logoAzure')}
+                {this.buildTabCard('aws1', 'logoAWS')}
+                {this.buildTabCard('proxy', 'securityAnalyticsApp')}
+                {this.buildTabCard('ftp', 'indexPatternApp')}
+                {this.buildTabCard('docker1', 'logoDocker')}
+                {this.buildTabCard('linux', 'consoleApp')}
+                {this.buildTabCard('costum', 'devToolsApp')}
               </EuiFlexGrid>
             </EuiPanel>
           </EuiFlexItem>
           </EuiFlexGroup>
 
 
-
+          <EuiSpacer size="xl" />
         <EuiFlexGroup>
           <EuiFlexItem>
             <EuiPanel betaBadgeLabel="Gerenciamento de informações de segurança">
