@@ -100,47 +100,19 @@ export class WelcomeScreen extends Component {
       </EuiFlexItem>
     );
   }
-
-
-  buildCustomCard(tab, icon, modalname) {
-    this.return(
-  <EuiModalFooter>
-  <EuiButtonEmpty onClick={this.closeModal}>Cancel</EuiButtonEmpty>
-
-  <EuiButton onClick={this.closeModal} fill>
-    Save
-  </EuiButton>
-</EuiModalFooter>
-);
-return (
-  <EuiFlexItem>
-  <EuiCard
-    layout="horizontal"
-    icon={<EuiIcon size="xl" type={icon} />}
-    title={TabDescription[tab].title}
-    onClick={this.showWindowsModal}
-    //onClick={() => this.ShowWindowsModal()}
-    description={TabDescription[tab].description}
-  />
-</EuiFlexItem>
-);
-}
-
-
- /* buildCustomCard(tab, icon, modalname) {
+ buildCustomCard(tab, icon, modalname) {
     return (
       <EuiFlexItem>
         <EuiCard
           layout="horizontal"
           icon={<EuiIcon size="xl" type={icon} />}
           title={TabDescription[tab].title}
-          onClick={this.showWindowsModal}
-          //onClick={() => this.ShowWindowsModal()}
+          onClick={() => this.ShowWindowsModal(modalname)}
           description={TabDescription[tab].description}
         />
       </EuiFlexItem>
     );
-  }*/
+  }
 
   buildPopover(popoverName, extensions) {
     const switches = extensions.map(extension => {
@@ -183,9 +155,9 @@ return (
             title="Do this thing"
             onCancel={this.CloseWindowsModal}
             onConfirm={this.CloseWindowsModal}
-            cancelButtonText="No, don't do it"
-            confirmButtonText="Yes, do it"
-            defaultFocusedButton="confirm">
+            cancelButtonText="Cancelar"
+            confirmButtonText="Adiquirir"
+            defaultFocusedButton="Confirmar">
             <p>You&rsquo;re about to do something.</p>
             <p>Are you sure you want to do this?</p>
           </EuiConfirmModal>
