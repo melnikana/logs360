@@ -425,8 +425,3 @@ export class OverviewController {
     this.expandArray[i] = !oldValue;
   }
 }
-
-
-/* TabStore.get('/windows', function(req, res) {
-  res.redirect('../../templates/logs360/loja.html');
-}); */

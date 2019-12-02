@@ -24,20 +24,44 @@ import {
   EuiButtonIcon,
   EuiFormRow,
   EuiFlexGrid,
-  EuiCallOut
+  EuiCallOut,
+  EuiButton,
+  EuiConfirmModal,
+  EuiOverlayMask,
 } from '@elastic/eui';
 
 
 import { TabDescription } from '../../../../server/reporting/tab-description';
 
 export class WelcomeScreen extends Component {
+  
+
+ /* 
+  * Inicio da construção do modal
+  */  
   constructor(props) {
     super(props);
-
+    //Lista todos os modals e se estao visiveis
     this.state = {
-      extensions: this.props.extensions
+      extensions: this.props.extensions,
+      isWindowsModalVisible: false,
+      isAzureModalVisible: false
     };
   }
+
+
+  ShowWindowsModal() {
+    this.setState({ isWindowsModalVisible: true })
+  }
+
+  CloseWindowsModal = () => {
+    this.setState({ isWindowsModalVisible: false })
+  }
+
+
+  /* 
+  * Fim da construção do modal
+  */
 
   onButtonClick(btn) {
     this.setState({
@@ -77,19 +101,46 @@ export class WelcomeScreen extends Component {
     );
   }
 
+
   buildCustomCard(tab, icon, modalname) {
+    this.return(
+  <EuiModalFooter>
+  <EuiButtonEmpty onClick={this.closeModal}>Cancel</EuiButtonEmpty>
+
+  <EuiButton onClick={this.closeModal} fill>
+    Save
+  </EuiButton>
+</EuiModalFooter>
+);
+return (
+  <EuiFlexItem>
+  <EuiCard
+    layout="horizontal"
+    icon={<EuiIcon size="xl" type={icon} />}
+    title={TabDescription[tab].title}
+    onClick={this.showWindowsModal}
+    //onClick={() => this.ShowWindowsModal()}
+    description={TabDescription[tab].description}
+  />
+</EuiFlexItem>
+);
+}
+
+
+ /* buildCustomCard(tab, icon, modalname) {
     return (
       <EuiFlexItem>
         <EuiCard
           layout="horizontal"
           icon={<EuiIcon size="xl" type={icon} />}
           title={TabDescription[tab].title}
-          onClick={() => this.props.switchTab(tab)}
+          onClick={this.showWindowsModal}
+          //onClick={() => this.ShowWindowsModal()}
           description={TabDescription[tab].description}
         />
       </EuiFlexItem>
     );
-  }
+  }*/
 
   buildPopover(popoverName, extensions) {
     const switches = extensions.map(extension => {
@@ -121,8 +172,30 @@ export class WelcomeScreen extends Component {
       </EuiPopover>
     );
   }
-
+/* inicio da pagina modal*/
   render() {
+    let WindowsModal;
+
+    if(this.state.isWindowsModalVisible) {
+      WindowsModal = (
+        <EuiOverlayMask>
+          <EuiConfirmModal
+            title="Do this thing"
+            onCancel={this.CloseWindowsModal}
+            onConfirm={this.CloseWindowsModal}
+            cancelButtonText="No, don't do it"
+            confirmButtonText="Yes, do it"
+            defaultFocusedButton="confirm">
+            <p>You&rsquo;re about to do something.</p>
+            <p>Are you sure you want to do this?</p>
+          </EuiConfirmModal>
+        </EuiOverlayMask>
+      );
+    }
+
+
+/*fim da pagina modal*/    
+
     return (
       <div>
        <EuiFlexGroup>
