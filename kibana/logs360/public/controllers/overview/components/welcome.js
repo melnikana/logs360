@@ -38,7 +38,7 @@ export class WelcomeScreen extends Component {
 
  /* 
   * Inicio da construção do modal
-  */  
+  
   constructor(props) {
     super(props);
     //Lista todos os modals e se estao visiveis
@@ -66,8 +66,7 @@ export class WelcomeScreen extends Component {
 
 
   
-  /* 
-  * Fim da construção do modal
+ Fim da construção do modal
   */
 
   onButtonClick(btn) {
@@ -107,6 +106,8 @@ export class WelcomeScreen extends Component {
       </EuiFlexItem>
     );
   }
+
+  /*
  buildCustomCard(tab, icon, modalname) {
     return (
       <EuiFlexItem>
@@ -119,7 +120,7 @@ export class WelcomeScreen extends Component {
         />
       </EuiFlexItem>
     );
-  }
+  }*/
 
   buildPopover(popoverName, extensions) {
     const switches = extensions.map(extension => {
@@ -151,9 +152,12 @@ export class WelcomeScreen extends Component {
       </EuiPopover>
     );
   }
-/* inicio da pagina modal*/
+/* inicio da pagina modal
   render() {
-    let WindowsModal;
+    let WindowsModal = dialog.open(UserProfileComponent, {
+      height: '400px',
+      width: '600px',
+    });
 
     if(this.state.isWindowsModalVisible) {
       WindowsModal = (
@@ -172,8 +176,8 @@ export class WelcomeScreen extends Component {
       );
     }
 
-/*fim da pagina modal*/    
-
+fim da pagina modal*/    
+render() {
     return (
       <div>
        <EuiFlexGroup>
@@ -184,7 +188,10 @@ export class WelcomeScreen extends Component {
               </EuiFlexGroup>
                 <EuiFlexItem />
               <EuiFlexGrid columns={3}>
+              {' '}
+              <EuiLink color="text" href="http://www.elastic.co" target="_blank">
                 {this.buildCustomCard('windows', 'logoWindows', 'WindowsModal')}
+                </EuiLink>
                 {this.buildCustomCard('firewall', 'securityAnalyticsApp', 'WindowsModal')}
                 {this.buildCustomCard('bd', 'sqlApp', 'WindowsModal')}
                 {this.buildCustomCard('webserver', 'indexPatternApp', 'WindowsModal')}
