@@ -47,8 +47,12 @@ export class WelcomeScreen extends Component {
       isWindowsModalVisible: false,
       isAzureModalVisible: false
     };
+
+    this.CloseWindowsModal = this.CloseWindowsModal.bind(this);
+    this.ShowWindowsModal = this.ShowWindowsModal.bind(this);
   }
 
+  
 
   ShowWindowsModal() {
     this.setState({ isWindowsModalVisible: true })
@@ -110,7 +114,7 @@ export class WelcomeScreen extends Component {
           layout="horizontal"
           icon={<EuiIcon size="xl" type={icon} />}
           title={TabDescription[tab].title}
-          onClick={() => this.ShowWindowsModal(modalname)}
+          onClick={this.ShowWindowsModal}
           description={TabDescription[tab].description}
         />
       </EuiFlexItem>
