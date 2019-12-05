@@ -39,11 +39,12 @@ import {
 
 import { TabDescription } from '../../../../server/reporting/tab-description';
 
+
 export class WelcomeScreen extends Component {
-  
+
  /* 
   * Inicio da construção do modal
-  */  
+  */
   constructor(props) {
     super(props);
     //Lista todos os modals e se estao visiveis
@@ -56,22 +57,16 @@ export class WelcomeScreen extends Component {
     this.closeWindowsModal = this.closeWindowsModal.bind(this);
     this.showWindowsModal = this.showWindowsModal.bind(this);
   }
-
   
+  closeWindowsModal() {
+    this.setState({ isWindowsModalVisible: false })
+  }
 
   showWindowsModal() {
     this.setState({ isWindowsModalVisible: true })
   }
 
-  closeWindowsModal = () => {
-    this.setState({ isWindowsModalVisible: false })
-  }
-
-
-
-
-  
-  /* 
+  /*
   * Fim da construção do modal
   */
 
@@ -119,9 +114,9 @@ export class WelcomeScreen extends Component {
           layout="horizontal"
           icon={<EuiIcon size="xl" type={icon} />}
           title={TabDescription[tab].title}
-          onClick={() => this.showWindowsModal(WindowsModal)}
           description={TabDescription[tab].description}
-         />
+          onClick={windows.location('../../../templates/logs360/loga.html')}
+          />
       </EuiFlexItem>
     );
   }
@@ -156,7 +151,7 @@ export class WelcomeScreen extends Component {
       </EuiPopover>
     );
   }
-/* inicio da pagina modal
+/* Inicio da pagina modal
   render() {
     let WindowsModal;
 
@@ -177,41 +172,40 @@ export class WelcomeScreen extends Component {
       );
     }
 
-fim da pagina modal*/   
+Fim da pagina modal*/   
+  render() {
+    let modalwindows;
 
-render() {
-  let windowsmodal;
-if (this.state.isWindowsModalVisible) {
-  windowsmodal = (
-    <EuiOverlayMask>
-      <EuiModal onClose={this.closeWindowsModal}>
-        <EuiModalHeader>
-          <EuiModalHeaderTitle>Overflow test</EuiModalHeaderTitle>
-        </EuiModalHeader>
+    if (this.state.isWindowsModalVisible) {
+      modalwindows = (
+        <EuiOverlayMask>
+          <EuiModal onClose={this.closeWindowsModal}>
+            <EuiModalHeader>
+              <EuiModalHeaderTitle>Overflow test</EuiModalHeaderTitle>
+            </EuiModalHeader>
 
-        <EuiModalBody>
-          <EuiText>
-            <p>
-              KING. Whats he that wishes so? My cousin, Westmorland? No, my
-              fair cousin; If we are mark&rsquo;d to die, we are enow To do
-              our country loss; and if to live, The fewer men, the greater
-              share of honour. God&rsquo;
-            </p>
-          </EuiText>
-        </EuiModalBody>
+            <EuiModalBody>
+              <EuiText>
+                <p>
+                  KING. Whats he that wishes so? My cousin, Westmorland? No, my
+                  fair cousin; If we are mark&rsquo;d to die, we are enow To do
+                  our country loss; and if to live, The fewer men, the greater
+                  share of honour. 
+                </p>
+              </EuiText>
+            </EuiModalBody>
 
-        <EuiModalFooter>
-          <EuiButtonEmpty onClick={this.closeWindowsModal}>Fechar</EuiButtonEmpty>
+            <EuiModalFooter>
+              <EuiButtonEmpty onClick={this.closeWindowsModal}>Cancel</EuiButtonEmpty>
 
-          <EuiButton onClick={this.closeWindowsModal} fill>
-            Adiquirir
-          </EuiButton>
-        </EuiModalFooter>
-      </EuiModal>
-    </EuiOverlayMask>
-  );
-}
-
+              <EuiButton onClick={this.closeWindowsModal} fill>
+                Save
+              </EuiButton>
+            </EuiModalFooter>
+          </EuiModal>
+        </EuiOverlayMask>
+      );
+    }
     return (
       <div>
        <EuiFlexGroup>
