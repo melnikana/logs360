@@ -27,7 +27,7 @@ pattern: logs360-alerts-1.x-*
 # Defines which checks must to be consider by the healthcheck
 # step once the Logs360 app starts. Values must to be true or false.
 checks.pattern : true
-checks.template: true
+checks.template: false
 checks.api     : true
 checks.setup   : true
 #

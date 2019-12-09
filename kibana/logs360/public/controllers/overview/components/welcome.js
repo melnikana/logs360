@@ -11,6 +11,7 @@
  * Find more information about this on the LICENSE file.
  */
 import React, { Component } from 'react';
+import Modal from 'react-awesome-modal';
 import PropTypes from 'prop-types';
 import {
   EuiCard,
@@ -25,50 +26,34 @@ import {
   EuiFormRow,
   EuiFlexGrid,
   EuiCallOut,
-  EuiModal,
-  EuiModalBody,
-  EuiModalFooter,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiOverlayMask,
-  EuiText,
   EuiButton,
-  EuiButtonEmpty,
+  EuiConfirmModal,
+  EuiOverlayMask,
 } from '@elastic/eui';
 
 
 import { TabDescription } from '../../../../server/reporting/tab-description';
 
-
 export class WelcomeScreen extends Component {
 
- /* 
-  * Inicio da construção do modal
-  */
   constructor(props) {
     super(props);
-    //Lista todos os modals e se estao visiveis
     this.state = {
-      extensions: this.props.extensions,
-      isWindowsModalVisible: false,
-      isAzureModalVisible: false
-    };
+        visible : false
+    }
+}
 
-    this.closeWindowsModal = this.closeWindowsModal.bind(this);
-    this.showWindowsModal = this.showWindowsModal.bind(this);
-  }
-  
-  closeWindowsModal() {
-    this.setState({ isWindowsModalVisible: false })
-  }
+openModal() {
+    this.setState({
+        visible : true
+    });
+}
 
-  showWindowsModal() {
-    this.setState({ isWindowsModalVisible: true })
-  }
-
-  /*
-  * Fim da construção do modal
-  */
+closeModal() {
+    this.setState({
+        visible : false
+    });
+}
 
   onButtonClick(btn) {
     this.setState({
@@ -107,19 +92,36 @@ export class WelcomeScreen extends Component {
       </EuiFlexItem>
     );
   }
- buildCustomCard(tab, icon, WindowsModal) {
-    return (
-      <EuiFlexItem>
-        <EuiCard
-          layout="horizontal"
-          icon={<EuiIcon size="xl" type={icon} />}
-          title={TabDescription[tab].title}
-          description={TabDescription[tab].description}
-          onClick={windows.location('../../../templates/logs360/loga.html')}
-          />
-      </EuiFlexItem>
-    );
-  }
+
+buildCustomCard(tab, icon, modal) { 
+        return (
+        <EuiFlexItem>
+          <EuiCard
+            layout="horizontal"
+            icon={<EuiIcon size="xl" type={icon} />}
+            title={TabDescription[tab].title}
+            description={TabDescription[tab].description}
+            onClick={() => this.openModal(modal)}
+            modal={<section>
+              <Modal 
+                  visible={this.state.visible}
+                  width="400"
+                  height="300"
+                  effect="fadeInUp"
+                  onClickAway={() => this.closeModal()}
+              >
+                  <div>
+                      <h1>Title</h1>
+                      <p>Some Contents</p>
+                      <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
+                  </div>
+              </Modal>
+          </section>}
+          />               
+        </EuiFlexItem>
+    );  
+  }  
+
 
   buildPopover(popoverName, extensions) {
     const switches = extensions.map(extension => {
@@ -151,61 +153,8 @@ export class WelcomeScreen extends Component {
       </EuiPopover>
     );
   }
-/* Inicio da pagina modal
+
   render() {
-    let WindowsModal;
-
-    if(this.state.isWindowsModalVisible) {
-      WindowsModal = (
-        <EuiOverlayMask>
-          <EuiConfirmModal
-            title="Do this thing"
-            onCancel={this.CloseWindowsModal}
-            onConfirm={this.CloseWindowsModal}
-            cancelButtonText="Cancelar"
-            confirmButtonText="Adiquirir"
-            defaultFocusedButton="Confirmar">
-            <p>You&rsquo;re about to do something.</p>
-            <p>Are you sure you want to do this?</p>
-          </EuiConfirmModal>
-        </EuiOverlayMask>
-      );
-    }
-
-Fim da pagina modal*/   
-  render() {
-    let modalwindows;
-
-    if (this.state.isWindowsModalVisible) {
-      modalwindows = (
-        <EuiOverlayMask>
-          <EuiModal onClose={this.closeWindowsModal}>
-            <EuiModalHeader>
-              <EuiModalHeaderTitle>Overflow test</EuiModalHeaderTitle>
-            </EuiModalHeader>
-
-            <EuiModalBody>
-              <EuiText>
-                <p>
-                  KING. Whats he that wishes so? My cousin, Westmorland? No, my
-                  fair cousin; If we are mark&rsquo;d to die, we are enow To do
-                  our country loss; and if to live, The fewer men, the greater
-                  share of honour. 
-                </p>
-              </EuiText>
-            </EuiModalBody>
-
-            <EuiModalFooter>
-              <EuiButtonEmpty onClick={this.closeWindowsModal}>Cancel</EuiButtonEmpty>
-
-              <EuiButton onClick={this.closeWindowsModal} fill>
-                Save
-              </EuiButton>
-            </EuiModalFooter>
-          </EuiModal>
-        </EuiOverlayMask>
-      );
-    }
     return (
       <div>
        <EuiFlexGroup>
@@ -216,7 +165,7 @@ Fim da pagina modal*/
               </EuiFlexGroup>
                 <EuiFlexItem />
               <EuiFlexGrid columns={3}>
-                {this.buildCustomCard('windows', 'logoWindows', 'WindowsModal')}
+                {this.buildCustomCard('windows', 'logoWindows', 'Modal')}
                 {this.buildCustomCard('firewall', 'securityAnalyticsApp', '')}
                 {this.buildCustomCard('bd', 'sqlApp', '')}
                 {this.buildCustomCard('webserver', 'indexPatternApp', '')}
@@ -367,3 +316,4 @@ WelcomeScreen.propTypes = {
   setExtensions: PropTypes.func,
   api: PropTypes.string
 };
+
