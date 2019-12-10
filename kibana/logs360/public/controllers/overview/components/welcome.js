@@ -53,17 +53,13 @@ export class WelcomeScreen extends Component {
   }
 
   
-
-  ShowWindowsModal() {
+  showWindowsModal() {
     this.setState({ isWindowsModalVisible: true })
   }
 
-  CloseWindowsModal = () => {
+  closeWindowsModal = () => {
     this.setState({ isWindowsModalVisible: false })
   }
-
-
-
 
   
   /* 
@@ -107,14 +103,14 @@ export class WelcomeScreen extends Component {
       </EuiFlexItem>
     );
   }
- buildCustomCard(tab, icon, modalname) {
+ buildCustomCard(tab, icon, WindowsModal) {
     return (
       <EuiFlexItem>
         <EuiCard
           layout="horizontal"
           icon={<EuiIcon size="xl" type={icon} />}
           title={TabDescription[tab].title}
-          onClick={this.ShowWindowsModal}
+          onClick={() => this.showWindowsModal()}
           description={TabDescription[tab].description}
         />
       </EuiFlexItem>
@@ -184,20 +180,20 @@ export class WelcomeScreen extends Component {
               </EuiFlexGroup>
                 <EuiFlexItem />
               <EuiFlexGrid columns={3}>
-                {this.buildCustomCard('windows', 'logoWindows', 'WindowsModal')}
-                {this.buildCustomCard('firewall', 'securityAnalyticsApp', 'WindowsModal')}
-                {this.buildCustomCard('bd', 'sqlApp', 'WindowsModal')}
-                {this.buildCustomCard('webserver', 'indexPatternApp', 'WindowsModal')}
-                {this.buildCustomCard('antivirus', 'securityApp', 'WindowsModal')}
-                {this.buildCustomCard('email', 'email', 'WindowsModal')}
-                {this.buildCustomCard('vpn', 'graphApp', 'WindowsModal')}
-                {this.buildCustomCard('azure1', 'logoAzure', 'WindowsModal')}
+                {this.buildCustomCard('windows', 'logoWindows','')}
+                {this.buildCustomCard('firewall', 'securityAnalyticsApp', '')}
+                {this.buildCustomCard('bd', 'sqlApp', '')}
+                {this.buildCustomCard('webserver', 'indexPatternApp', '')}
+                {this.buildCustomCard('antivirus', 'securityApp', '')}
+                {this.buildCustomCard('email', 'email', '')}
+                {this.buildCustomCard('vpn', 'graphApp', '')}
+                {this.buildCustomCard('azure1', 'logoAzure', '')}
                 {this.buildCustomCard('aws1', 'logoAWS', '')}
-                {this.buildCustomCard('proxy', 'securityAnalyticsApp', 'WindowsModal')}
-                {this.buildCustomCard('ftp', 'indexPatternApp', 'WindowsModal')}
-                {this.buildCustomCard('docker1', 'logoDocker', 'WindowsModal')}
-                {this.buildCustomCard('linux', 'consoleApp', 'WindowsModal')}
-                {this.buildCustomCard('costum', 'devToolsApp', 'WindowsModal')}
+                {this.buildCustomCard('proxy', 'securityAnalyticsApp', '')}
+                {this.buildCustomCard('ftp', 'indexPatternApp', '')}
+                {this.buildCustomCard('docker1', 'logoDocker', '')}
+                {this.buildCustomCard('linux', 'consoleApp', '')}
+                {this.buildCustomCard('costum', 'devToolsApp', '')}
               </EuiFlexGrid>
             </EuiPanel>
           </EuiFlexItem>

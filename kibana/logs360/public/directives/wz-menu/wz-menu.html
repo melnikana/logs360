@@ -38,8 +38,18 @@
         </md-button> 
         -->
 
+
+         <!-- Adicionado menu Elastalert -->
+
+        <md-button class="wz-menu-button" ng-href="/app/elastalert-kibana-plugin" ng-click="setMenuNavItem('wazuh-loja')"
+        ng-class="{'wz-menu-active': menuNavItem === 'wazuh-loja'"
+        aria-label="Agents tab">
+        <i class="fa fa-fw fa-exclamation-triangle" aria-hidden="true"></i> Elastalert
+        </md-button> 
+        
+
         <!-- Adicionado menu praeco-->
-        <md-button class="wz-menu-button" ng-href="http://logs360app.southcentralus.cloudapp.azure.com:8080/" ng-click="setMenuNavItem('wazuh-praeco')"
+        <md-button class="wz-menu-button" ng-href="http://logs360app.southcentralus.cloudapp.azure.com:8080"  target="_blank" ng-click="setMenuNavItem('wazuh-praeco')"
             ng-class="{'wz-menu-active': menuNavItem === 'wazuh-praeco'}" aria-label="Agents tab">
             <i class="fa fa-fw fa-bullhorn" aria-hidden="true"></i> Praeco
         </md-button>
