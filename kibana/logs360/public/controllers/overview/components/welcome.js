@@ -53,7 +53,7 @@ export class WelcomeScreen extends Component {
   }
 
   
-  showWindowsModal() {
+  showWindowsModal = () => {
     this.setState({ isWindowsModalVisible: true })
   }
 
@@ -103,14 +103,14 @@ export class WelcomeScreen extends Component {
       </EuiFlexItem>
     );
   }
- buildCustomCard(tab, icon, WindowsModal) {
+ buildCustomCard = (tab, icon, WindowsModal) => {
     return (
       <EuiFlexItem>
         <EuiCard
           layout="horizontal"
           icon={<EuiIcon size="xl" type={icon} />}
           title={TabDescription[tab].title}
-          onClick={() => this.showWindowsModal()}
+          onClick={() => this.showWindowsModal(WindowsModal)}
           description={TabDescription[tab].description}
         />
       </EuiFlexItem>
@@ -149,15 +149,15 @@ export class WelcomeScreen extends Component {
   }
 /* inicio da pagina modal*/
   render() {
-    let WindowsModal;
+    let windowsmodal;
 
     if(this.state.isWindowsModalVisible) {
-      WindowsModal = (
+      windowsmodal = (
         <EuiOverlayMask>
           <EuiConfirmModal
             title="Do this thing"
-            onCancel={this.CloseWindowsModal}
-            onConfirm={this.CloseWindowsModal}
+            onCancel={this.closeWindowsModal}
+            onConfirm={this.closeWindowsModal}
             cancelButtonText="Cancelar"
             confirmButtonText="Adiquirir"
             defaultFocusedButton="Confirmar">
