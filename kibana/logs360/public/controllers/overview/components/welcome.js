@@ -48,8 +48,8 @@ export class WelcomeScreen extends Component {
       isAzureModalVisible: false
     };
 
-    this.CloseWindowsModal = this.CloseWindowsModal.bind(this);
-    this.ShowWindowsModal = this.ShowWindowsModal.bind(this);
+    this.closeWindowsModal = this.closeWindowsModal.bind(this);
+    this.showWindowsModal = this.showWindowsModal.bind(this);
   }
 
   
