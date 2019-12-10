@@ -11,7 +11,6 @@
  * Find more information about this on the LICENSE file.
  */
 import React, { Component } from 'react';
-import Modal from 'react-awesome-modal';
 import PropTypes from 'prop-types';
 import {
   EuiCard,
@@ -35,25 +34,41 @@ import {
 import { TabDescription } from '../../../../server/reporting/tab-description';
 
 export class WelcomeScreen extends Component {
+  
 
+ /* 
+  * Inicio da construção do modal
+  */  
   constructor(props) {
     super(props);
+    //Lista todos os modals e se estao visiveis
     this.state = {
-        visible : false
-    }
-}
+      extensions: this.props.extensions,
+      isWindowsModalVisible: false,
+      isAzureModalVisible: false
+    };
 
-openModal() {
-    this.setState({
-        visible : true
-    });
-}
+    this.CloseWindowsModal = this.CloseWindowsModal.bind(this);
+    this.ShowWindowsModal = this.ShowWindowsModal.bind(this);
+  }
 
-closeModal() {
-    this.setState({
-        visible : false
-    });
-}
+  
+
+  ShowWindowsModal() {
+    this.setState({ isWindowsModalVisible: true })
+  }
+
+  CloseWindowsModal = () => {
+    this.setState({ isWindowsModalVisible: false })
+  }
+
+
+
+
+  
+  /* 
+  * Fim da construção do modal
+  */
 
   onButtonClick(btn) {
     this.setState({
@@ -92,36 +107,19 @@ closeModal() {
       </EuiFlexItem>
     );
   }
-
-buildCustomCard(tab, icon, modal) { 
-        return (
-        <EuiFlexItem>
-          <EuiCard
-            layout="horizontal"
-            icon={<EuiIcon size="xl" type={icon} />}
-            title={TabDescription[tab].title}
-            description={TabDescription[tab].description}
-            onClick={() => this.openModal(modal)}
-            modal={<section>
-              <Modal 
-                  visible={this.state.visible}
-                  width="400"
-                  height="300"
-                  effect="fadeInUp"
-                  onClickAway={() => this.closeModal()}
-              >
-                  <div>
-                      <h1>Title</h1>
-                      <p>Some Contents</p>
-                      <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
-                  </div>
-              </Modal>
-          </section>}
-          />               
-        </EuiFlexItem>
-    );  
-  }  
-
+ buildCustomCard(tab, icon, modalname) {
+    return (
+      <EuiFlexItem>
+        <EuiCard
+          layout="horizontal"
+          icon={<EuiIcon size="xl" type={icon} />}
+          title={TabDescription[tab].title}
+          onClick={this.ShowWindowsModal}
+          description={TabDescription[tab].description}
+        />
+      </EuiFlexItem>
+    );
+  }
 
   buildPopover(popoverName, extensions) {
     const switches = extensions.map(extension => {
@@ -153,8 +151,29 @@ buildCustomCard(tab, icon, modal) {
       </EuiPopover>
     );
   }
-
+/* inicio da pagina modal*/
   render() {
+    let WindowsModal;
+
+    if(this.state.isWindowsModalVisible) {
+      WindowsModal = (
+        <EuiOverlayMask>
+          <EuiConfirmModal
+            title="Do this thing"
+            onCancel={this.CloseWindowsModal}
+            onConfirm={this.CloseWindowsModal}
+            cancelButtonText="Cancelar"
+            confirmButtonText="Adiquirir"
+            defaultFocusedButton="Confirmar">
+            <p>You&rsquo;re about to do something.</p>
+            <p>Are you sure you want to do this?</p>
+          </EuiConfirmModal>
+        </EuiOverlayMask>
+      );
+    }
+
+/*fim da pagina modal*/    
+
     return (
       <div>
        <EuiFlexGroup>
@@ -165,20 +184,20 @@ buildCustomCard(tab, icon, modal) {
               </EuiFlexGroup>
                 <EuiFlexItem />
               <EuiFlexGrid columns={3}>
-                {this.buildCustomCard('windows', 'logoWindows', 'Modal')}
-                {this.buildCustomCard('firewall', 'securityAnalyticsApp', '')}
-                {this.buildCustomCard('bd', 'sqlApp', '')}
-                {this.buildCustomCard('webserver', 'indexPatternApp', '')}
-                {this.buildCustomCard('antivirus', 'securityApp', '')}
-                {this.buildCustomCard('email', 'email', '')}
-                {this.buildCustomCard('vpn', 'graphApp', '')}
-                {this.buildCustomCard('azure1', 'logoAzure', '')}
+                {this.buildCustomCard('windows', 'logoWindows', 'WindowsModal')}
+                {this.buildCustomCard('firewall', 'securityAnalyticsApp', 'WindowsModal')}
+                {this.buildCustomCard('bd', 'sqlApp', 'WindowsModal')}
+                {this.buildCustomCard('webserver', 'indexPatternApp', 'WindowsModal')}
+                {this.buildCustomCard('antivirus', 'securityApp', 'WindowsModal')}
+                {this.buildCustomCard('email', 'email', 'WindowsModal')}
+                {this.buildCustomCard('vpn', 'graphApp', 'WindowsModal')}
+                {this.buildCustomCard('azure1', 'logoAzure', 'WindowsModal')}
                 {this.buildCustomCard('aws1', 'logoAWS', '')}
-                {this.buildCustomCard('proxy', 'securityAnalyticsApp', '')}
-                {this.buildCustomCard('ftp', 'indexPatternApp', '')}
-                {this.buildCustomCard('docker1', 'logoDocker', '')}
-                {this.buildCustomCard('linux', 'consoleApp', '')}
-                {this.buildCustomCard('costum', 'devToolsApp', '')}
+                {this.buildCustomCard('proxy', 'securityAnalyticsApp', 'WindowsModal')}
+                {this.buildCustomCard('ftp', 'indexPatternApp', 'WindowsModal')}
+                {this.buildCustomCard('docker1', 'logoDocker', 'WindowsModal')}
+                {this.buildCustomCard('linux', 'consoleApp', 'WindowsModal')}
+                {this.buildCustomCard('costum', 'devToolsApp', 'WindowsModal')}
               </EuiFlexGrid>
             </EuiPanel>
           </EuiFlexItem>
@@ -316,4 +335,3 @@ WelcomeScreen.propTypes = {
   setExtensions: PropTypes.func,
   api: PropTypes.string
 };
-

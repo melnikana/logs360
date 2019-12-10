@@ -28,10 +28,20 @@
             ng-class="{'wz-menu-active': menuNavItem === 'wazuh-dev' }" aria-label="Dev Tools tab">
             <react-component name="EuiIcon" class="kbnGlobalNavLink__euiIcon" props="{type:'console'}" /> Ferramentas Dev
         </md-button>
-        <!-- Adicionado menu de loja-->
+
+        <!-- Adicionado menu Loja
+
+        <md-button class="wz-menu-button" ng-href="#/logs360-loja" ng-click="setMenuNavItem('wazuh-loja')"
+        ng-class="{'wz-menu-active': menuNavItem === 'wazuh-loja'"
+        aria-label="Agents tab">
+        <i class="fa fa-fw fa-shopping-cart" aria-hidden="true"></i> Loja de Apps
+        </md-button> 
+        -->
+
+        <!-- Adicionado menu praeco-->
         <md-button class="wz-menu-button" ng-href="http://logs360app.southcentralus.cloudapp.azure.com:8080/" ng-click="setMenuNavItem('wazuh-praeco')"
             ng-class="{'wz-menu-active': menuNavItem === 'wazuh-praeco'}" aria-label="Agents tab">
-            <i class="fas fa-bullhorn" aria-hidden="true"></i> Praeco
+            <i class="fa fa-fw fa-bullhorn" aria-hidden="true"></i> Praeco
         </md-button>
 
         <!-- Fill up the space between left and right area -->
