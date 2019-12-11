@@ -33,12 +33,42 @@ import {
 
 import { TabDescription } from '../../../../server/reporting/tab-description';
 
+
+function Example() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
+      <EuiCard onClick={handleShow}/>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
+render(<Example />);
+
 export class WelcomeScreen extends Component {
   
 
  /* 
   * Inicio da construção do modal
-  */  
+ 
   constructor(props) {
     super(props);
     //Lista todos os modals e se estao visiveis
@@ -62,9 +92,9 @@ export class WelcomeScreen extends Component {
   }
 
   
-  /* 
-  * Fim da construção do modal
-  */
+ 
+ Fim da construção do modal
+*/
 
   onButtonClick(btn) {
     this.setState({
@@ -103,14 +133,15 @@ export class WelcomeScreen extends Component {
       </EuiFlexItem>
     );
   }
- buildCustomCard = (tab, icon, WindowsModal) => {
+ buildCustomCard = (tab, icon, Example) => {
     return (
       <EuiFlexItem>
         <EuiCard
           layout="horizontal"
           icon={<EuiIcon size="xl" type={icon} />}
           title={TabDescription[tab].title}
-          onClick={() => this.showWindowsModal(WindowsModal)}
+          onClick={Example()}
+          //onClick={() => this.showWindowsModal(WindowsModal)}
           description={TabDescription[tab].description}
         />
       </EuiFlexItem>
@@ -178,22 +209,22 @@ export class WelcomeScreen extends Component {
             <EuiSpacer size="xl" />
               <EuiFlexGroup gutterSize="xs">
               </EuiFlexGroup>
-                <EuiFlexItem />
+                <EuiFlexItem/>
               <EuiFlexGrid columns={3}>
-                {this.buildCustomCard('windows', 'logoWindows','')}
-                {this.buildCustomCard('firewall', 'securityAnalyticsApp', '')}
+                {this.buildCustomCard('windows', 'logoWindows')}
+                {this.buildCustomCard('firewall', 'securityAnalyticsApp')}
                 {this.buildCustomCard('bd', 'sqlApp', '')}
-                {this.buildCustomCard('webserver', 'indexPatternApp', '')}
-                {this.buildCustomCard('antivirus', 'securityApp', '')}
-                {this.buildCustomCard('email', 'email', '')}
-                {this.buildCustomCard('vpn', 'graphApp', '')}
-                {this.buildCustomCard('azure1', 'logoAzure', '')}
+                {this.buildCustomCard('webserver', 'indexPatternApp')}
+                {this.buildCustomCard('antivirus', 'securityApp')}
+                {this.buildCustomCard('email', 'email')}
+                {this.buildCustomCard('vpn', 'graphApp')}
+                {this.buildCustomCard('azure1', 'logoAzure')}
                 {this.buildCustomCard('aws1', 'logoAWS', '')}
-                {this.buildCustomCard('proxy', 'securityAnalyticsApp', '')}
-                {this.buildCustomCard('ftp', 'indexPatternApp', '')}
-                {this.buildCustomCard('docker1', 'logoDocker', '')}
-                {this.buildCustomCard('linux', 'consoleApp', '')}
-                {this.buildCustomCard('costum', 'devToolsApp', '')}
+                {this.buildCustomCard('proxy', 'securityApp')}
+                {this.buildCustomCard('ftp', 'indexPatternApp')}
+                {this.buildCustomCard('docker1', 'logoDocker')}
+                {this.buildCustomCard('linux', 'consoleApp')}
+                {this.buildCustomCard('costum', 'devToolsApp')}
               </EuiFlexGrid>
             </EuiPanel>
           </EuiFlexItem>
@@ -215,7 +246,7 @@ export class WelcomeScreen extends Component {
                 {this.buildTabCard('fim', 'loggingApp')}
                 {this.props.extensions.aws &&
                   this.buildTabCard('aws', 'logoAWSMono')}
-                  {this.buildTabCard('office365', 'searchProfilerApp')}
+                  {this.buildTabCard('office365', 'lensApp')}
               </EuiFlexGrid>
             </EuiPanel>
           </EuiFlexItem>
