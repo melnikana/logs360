@@ -34,35 +34,6 @@ import {
 import { TabDescription } from '../../../../server/reporting/tab-description';
 
 
-function Example() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  return (
-    <>
-      <EuiCard onClick={handleShow}/>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
-  );
-}
-render(<Example />);
-
 export class WelcomeScreen extends Component {
   
 
@@ -91,8 +62,6 @@ export class WelcomeScreen extends Component {
     this.setState({ isWindowsModalVisible: false })
   }
 
-  
- 
  Fim da construção do modal
 */
 
@@ -133,6 +102,8 @@ export class WelcomeScreen extends Component {
       </EuiFlexItem>
     );
   }
+
+
  buildCustomCard = (tab, icon, Example) => {
     return (
       <EuiFlexItem>
@@ -140,7 +111,7 @@ export class WelcomeScreen extends Component {
           layout="horizontal"
           icon={<EuiIcon size="xl" type={icon} />}
           title={TabDescription[tab].title}
-          onClick={Example()}
+          onClick={windows.alert('card clicado')}
           //onClick={() => this.showWindowsModal(WindowsModal)}
           description={TabDescription[tab].description}
         />
@@ -178,10 +149,12 @@ export class WelcomeScreen extends Component {
       </EuiPopover>
     );
   }
-/* inicio da pagina modal*/
   render() {
-    let windowsmodal;
 
+
+/* inicio da pagina modal
+
+    let windowsmodal;
     if(this.state.isWindowsModalVisible) {
       windowsmodal = (
         <EuiOverlayMask>
@@ -198,8 +171,7 @@ export class WelcomeScreen extends Component {
         </EuiOverlayMask>
       );
     }
-
-/*fim da pagina modal*/    
+fim da pagina modal*/   
 
     return (
       <div>
@@ -213,13 +185,13 @@ export class WelcomeScreen extends Component {
               <EuiFlexGrid columns={3}>
                 {this.buildCustomCard('windows', 'logoWindows')}
                 {this.buildCustomCard('firewall', 'securityAnalyticsApp')}
-                {this.buildCustomCard('bd', 'sqlApp', '')}
+                {this.buildCustomCard('bd', 'sqlApp')}
                 {this.buildCustomCard('webserver', 'indexPatternApp')}
                 {this.buildCustomCard('antivirus', 'securityApp')}
                 {this.buildCustomCard('email', 'email')}
                 {this.buildCustomCard('vpn', 'graphApp')}
                 {this.buildCustomCard('azure1', 'logoAzure')}
-                {this.buildCustomCard('aws1', 'logoAWS', '')}
+                {this.buildCustomCard('aws1', 'logoAWS')}
                 {this.buildCustomCard('proxy', 'securityApp')}
                 {this.buildCustomCard('ftp', 'indexPatternApp')}
                 {this.buildCustomCard('docker1', 'logoDocker')}
@@ -229,7 +201,6 @@ export class WelcomeScreen extends Component {
             </EuiPanel>
           </EuiFlexItem>
           </EuiFlexGroup>
-
 
           <EuiSpacer size="xl" />
         <EuiFlexGroup>
