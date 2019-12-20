@@ -33,13 +33,12 @@ import {
 
 import { TabDescription } from '../../../../server/reporting/tab-description';
 
-
 export class WelcomeScreen extends Component {
   
 
  /* 
   * Inicio da construção do modal
- 
+  */  
   constructor(props) {
     super(props);
     //Lista todos os modals e se estao visiveis
@@ -54,6 +53,7 @@ export class WelcomeScreen extends Component {
   }
 
   
+
   showWindowsModal = () => {
     this.setState({ isWindowsModalVisible: true })
   }
@@ -62,8 +62,13 @@ export class WelcomeScreen extends Component {
     this.setState({ isWindowsModalVisible: false })
   }
 
- Fim da construção do modal
-*/
+
+
+
+  
+  /* 
+  * Fim da construção do modal
+  */
 
   onButtonClick(btn) {
     this.setState({
@@ -102,17 +107,14 @@ export class WelcomeScreen extends Component {
       </EuiFlexItem>
     );
   }
-
-
- buildCustomCard = (tab, icon, Example) => {
+ buildCustomCard(tab, icon, modalname) {
     return (
       <EuiFlexItem>
         <EuiCard
           layout="horizontal"
           icon={<EuiIcon size="xl" type={icon} />}
           title={TabDescription[tab].title}
-          onClick={windows.alert('card clicado')}
-          //onClick={() => this.showWindowsModal(WindowsModal)}
+          onClick={this.showWindowsModal}
           description={TabDescription[tab].description}
         />
       </EuiFlexItem>
@@ -149,14 +151,12 @@ export class WelcomeScreen extends Component {
       </EuiPopover>
     );
   }
+/* inicio da pagina modal*/
   render() {
+    let WindowsModal;
 
-
-/* inicio da pagina modal
-
-    let windowsmodal;
     if(this.state.isWindowsModalVisible) {
-      windowsmodal = (
+      WindowsModal = (
         <EuiOverlayMask>
           <EuiConfirmModal
             title="Do this thing"
@@ -171,17 +171,20 @@ export class WelcomeScreen extends Component {
         </EuiOverlayMask>
       );
     }
-fim da pagina modal*/   
+
+/*fim da pagina modal*/    
 
     return (
       <div>
+     {WindowsModal} 
+
        <EuiFlexGroup>
           <EuiFlexItem>
             <EuiPanel betaBadgeLabel="Logs360 Store">
             <EuiSpacer size="xl" />
               <EuiFlexGroup gutterSize="xs">
               </EuiFlexGroup>
-                <EuiFlexItem/>
+                <EuiFlexItem />
               <EuiFlexGrid columns={3}>
                 {this.buildCustomCard('windows', 'logoWindows')}
                 {this.buildCustomCard('firewall', 'securityAnalyticsApp')}
@@ -192,7 +195,7 @@ fim da pagina modal*/
                 {this.buildCustomCard('vpn', 'graphApp')}
                 {this.buildCustomCard('azure1', 'logoAzure')}
                 {this.buildCustomCard('aws1', 'logoAWS')}
-                {this.buildCustomCard('proxy', 'securityApp')}
+                {this.buildCustomCard('proxy', 'securityAnalyticsApp')}
                 {this.buildCustomCard('ftp', 'indexPatternApp')}
                 {this.buildCustomCard('docker1', 'logoDocker')}
                 {this.buildCustomCard('linux', 'consoleApp')}
@@ -201,6 +204,7 @@ fim da pagina modal*/
             </EuiPanel>
           </EuiFlexItem>
           </EuiFlexGroup>
+
 
           <EuiSpacer size="xl" />
         <EuiFlexGroup>
@@ -217,7 +221,7 @@ fim da pagina modal*/
                 {this.buildTabCard('fim', 'loggingApp')}
                 {this.props.extensions.aws &&
                   this.buildTabCard('aws', 'logoAWSMono')}
-                  {this.buildTabCard('office365', 'lensApp')}
+                  {this.buildTabCard('office365', 'searchProfilerApp')}
               </EuiFlexGrid>
             </EuiPanel>
           </EuiFlexItem>
