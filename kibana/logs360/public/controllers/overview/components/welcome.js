@@ -26,9 +26,7 @@ import {
   EuiFlexGrid,
   EuiCallOut,
   EuiButton,
-  EuiConfirmModal,
   EuiOverlayMask,
-  EuiImage,
   EuiModal,
   EuiModalHeader,
   EuiModalBody,
@@ -228,7 +226,6 @@ export class WelcomeScreen extends Component {
   /* 
   * Fim da construção do modal
   */
-
 
 
 
@@ -502,7 +499,6 @@ export class WelcomeScreen extends Component {
   }
 /* inicio da pagina modal*/
   render() {
-
     const cardFooterContent = (
       <EuiFlexGroup justifyContent="flexEnd">
         <EuiFlexItem grow={false}>
@@ -522,14 +518,14 @@ export class WelcomeScreen extends Component {
             </EuiModalHeader>
             <EuiModalBody> 
               <EuiFlexGroup gutterSize="l">
-                  <EuiFlexItem>
+              <EuiFlexItem>
                     <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="Active Directory"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -538,9 +534,9 @@ export class WelcomeScreen extends Component {
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="Comportamento de Usuário"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -549,9 +545,9 @@ export class WelcomeScreen extends Component {
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="File Server"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -585,9 +581,9 @@ export class WelcomeScreen extends Component {
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="Active Directory"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -596,9 +592,9 @@ export class WelcomeScreen extends Component {
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="Comportamento de Usuário"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -607,9 +603,9 @@ export class WelcomeScreen extends Component {
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="File Server"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -638,14 +634,14 @@ export class WelcomeScreen extends Component {
             </EuiModalHeader>
             <EuiModalBody> 
               <EuiFlexGroup gutterSize="l">
-                  <EuiFlexItem>
+              <EuiFlexItem>
                     <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="Active Directory"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -654,9 +650,9 @@ export class WelcomeScreen extends Component {
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="Comportamento de Usuário"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -665,9 +661,9 @@ export class WelcomeScreen extends Component {
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="File Server"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -696,14 +692,14 @@ export class WelcomeScreen extends Component {
             </EuiModalHeader>
             <EuiModalBody> 
               <EuiFlexGroup gutterSize="l">
-                  <EuiFlexItem>
+              <EuiFlexItem>
                     <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="Active Directory"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -712,9 +708,9 @@ export class WelcomeScreen extends Component {
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="Comportamento de Usuário"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -723,9 +719,9 @@ export class WelcomeScreen extends Component {
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="File Server"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -754,14 +750,14 @@ export class WelcomeScreen extends Component {
             </EuiModalHeader>
             <EuiModalBody> 
               <EuiFlexGroup gutterSize="l">
-                  <EuiFlexItem>
+              <EuiFlexItem>
                     <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="Active Directory"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -770,9 +766,9 @@ export class WelcomeScreen extends Component {
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="Comportamento de Usuário"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -780,10 +776,10 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="File Antivirus"
-                      description="- Verfique atividades.
-                      - Monitore conteúdo.
-                      - Desempenho."
+                      title="File Server"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -806,16 +802,55 @@ export class WelcomeScreen extends Component {
     if(this.state.isEmailModalVisible) {
       EmailModal = (
         <EuiOverlayMask>
-          <EuiConfirmModal
-            title="Do this thing"
-            onCancel={this.closeEmailModal}
-            onConfirm={this.closeEmailModal}
-            cancelButtonText="Cancelar"
-            confirmButtonText="Adiquirir"
-            defaultFocusedButton="Confirmar">
-            <p>You&rsquo;re about to do something.</p>
-            <p>Are you sure you want to do this?</p>
-          </EuiConfirmModal>
+                    <EuiModal onClose={this.closeEmailModal}>
+            <EuiModalHeader>
+              <EuiModalHeaderTitle>Tudo para Email</EuiModalHeaderTitle>
+            </EuiModalHeader>
+            <EuiModalBody> 
+              <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Active Directory"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Comportamento de Usuário"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="File Server"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                </EuiFlexGroup>
+            </EuiModalBody>
+
+            <EuiModalFooter>
+            <EuiButton onClick={this.closeEmailModal} fill>
+                Fechar
+            </EuiButton>
+
+            </EuiModalFooter>
+          </EuiModal>
         </EuiOverlayMask>
       );
     }
@@ -825,16 +860,55 @@ export class WelcomeScreen extends Component {
     if(this.state.isVpnModalVisible) {
       VpnModal = (
         <EuiOverlayMask>
-          <EuiConfirmModal
-            title="Do this thing"
-            onCancel={this.closeVpnModal}
-            onConfirm={this.closeVpnModal}
-            cancelButtonText="Cancelar"
-            confirmButtonText="Adiquirir"
-            defaultFocusedButton="Confirmar">
-            <p>You&rsquo;re about to do something.</p>
-            <p>Are you sure you want to do this?</p>
-          </EuiConfirmModal>
+                    <EuiModal onClose={this.closeVpnModal}>
+            <EuiModalHeader>
+              <EuiModalHeaderTitle>Tudo para VPN</EuiModalHeaderTitle>
+            </EuiModalHeader>
+            <EuiModalBody> 
+              <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Active Directory"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Comportamento de Usuário"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="File Server"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                </EuiFlexGroup>
+            </EuiModalBody>
+
+            <EuiModalFooter>
+            <EuiButton onClick={this.closeVpnModal} fill>
+                Fechar
+            </EuiButton>
+
+            </EuiModalFooter>
+          </EuiModal>
         </EuiOverlayMask>
       );
     }
@@ -844,16 +918,55 @@ export class WelcomeScreen extends Component {
     if(this.state.isAzureModalVisible) {
       AzureModal = (
         <EuiOverlayMask>
-          <EuiConfirmModal
-            title="Do this thing"
-            onCancel={this.closeAzureModal}
-            onConfirm={this.closeAzureModal}
-            cancelButtonText="Cancelar"
-            confirmButtonText="Adiquirir"
-            defaultFocusedButton="Confirmar">
-            <p>You&rsquo;re about to do something.</p>
-            <p>Are you sure you want to do this?</p>
-          </EuiConfirmModal>
+          <EuiModal onClose={this.closeAzureModal}>
+            <EuiModalHeader>
+              <EuiModalHeaderTitle>Tudo para Azure</EuiModalHeaderTitle>
+            </EuiModalHeader>
+            <EuiModalBody> 
+              <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Active Directory"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Comportamento de Usuário"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="File Server"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                </EuiFlexGroup>
+            </EuiModalBody>
+
+            <EuiModalFooter>
+            <EuiButton onClick={this.closeAzureModal} fill>
+                Fechar
+            </EuiButton>
+
+            </EuiModalFooter>
+          </EuiModal>
         </EuiOverlayMask>
       );
     }
@@ -863,16 +976,55 @@ export class WelcomeScreen extends Component {
     if(this.state.isAwsModalVisible) {
       AwsModal = (
         <EuiOverlayMask>
-          <EuiConfirmModal
-            title="Do this thing"
-            onCancel={this.closeAwsModal}
-            onConfirm={this.closeAwsModal}
-            cancelButtonText="Cancelar"
-            confirmButtonText="Adiquirir"
-            defaultFocusedButton="Confirmar">
-            <p>You&rsquo;re about to do something.</p>
-            <p>Are you sure you want to do this?</p>
-          </EuiConfirmModal>
+<EuiModal onClose={this.closeAwsModal}>
+            <EuiModalHeader>
+              <EuiModalHeaderTitle>Tudo para Antivirus</EuiModalHeaderTitle>
+            </EuiModalHeader>
+            <EuiModalBody> 
+              <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Active Directory"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Comportamento de Usuário"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="File Server"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                </EuiFlexGroup>
+            </EuiModalBody>
+
+            <EuiModalFooter>
+            <EuiButton onClick={this.closeAwsModal} fill>
+                Fechar
+            </EuiButton>
+
+            </EuiModalFooter>
+          </EuiModal>
         </EuiOverlayMask>
       );
     }
@@ -882,16 +1034,55 @@ export class WelcomeScreen extends Component {
     if(this.state.isProxyModalVisible) {
       ProxyModal = (
         <EuiOverlayMask>
-          <EuiConfirmModal
-            title="Do this thing"
-            onCancel={this.closeProxyModal}
-            onConfirm={this.closeProxyModal}
-            cancelButtonText="Cancelar"
-            confirmButtonText="Adiquirir"
-            defaultFocusedButton="Confirmar">
-            <p>You&rsquo;re about to do something.</p>
-            <p>Are you sure you want to do this?</p>
-          </EuiConfirmModal>
+                    <EuiModal onClose={this.closeProxyModal}>
+            <EuiModalHeader>
+              <EuiModalHeaderTitle>Tudo para Proxy</EuiModalHeaderTitle>
+            </EuiModalHeader>
+            <EuiModalBody> 
+              <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Active Directory"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Comportamento de Usuário"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="File Server"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                </EuiFlexGroup>
+            </EuiModalBody>
+
+            <EuiModalFooter>
+            <EuiButton onClick={this.closeProxyModal} fill>
+                Fechar
+            </EuiButton>
+
+            </EuiModalFooter>
+          </EuiModal>
         </EuiOverlayMask>
       );
     }
@@ -901,16 +1092,55 @@ export class WelcomeScreen extends Component {
     if(this.state.isFtpModalVisible) {
       FtpModal = (
         <EuiOverlayMask>
-          <EuiConfirmModal
-            title="Do this thing"
-            onCancel={this.closeFtpModal}
-            onConfirm={this.closeFtpModal}
-            cancelButtonText="Cancelar"
-            confirmButtonText="Adiquirir"
-            defaultFocusedButton="Confirmar">
-            <p>You&rsquo;re about to do something.</p>
-            <p>Are you sure you want to do this?</p>
-          </EuiConfirmModal>
+            <EuiModal onClose={this.closeFtpModal}>
+            <EuiModalHeader>
+              <EuiModalHeaderTitle>Tudo para FTP</EuiModalHeaderTitle>
+            </EuiModalHeader>
+            <EuiModalBody> 
+              <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Active Directory"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Comportamento de Usuário"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="File Server"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                </EuiFlexGroup>
+            </EuiModalBody>
+
+            <EuiModalFooter>
+            <EuiButton onClick={this.closeFtpModal} fill>
+                Fechar
+            </EuiButton>
+
+            </EuiModalFooter>
+          </EuiModal>
         </EuiOverlayMask>
       );
     }
@@ -920,16 +1150,55 @@ export class WelcomeScreen extends Component {
     if(this.state.isDockerModalVisible) {
       DockerModal = (
         <EuiOverlayMask>
-          <EuiConfirmModal
-            title="Do this thing"
-            onCancel={this.closeDockerModal}
-            onConfirm={this.closeDockerModal}
-            cancelButtonText="Cancelar"
-            confirmButtonText="Adiquirir"
-            defaultFocusedButton="Confirmar">
-            <p>You&rsquo;re about to do something.</p>
-            <p>Are you sure you want to do this?</p>
-          </EuiConfirmModal>
+                    <EuiModal onClose={this.closeDockerModal}>
+            <EuiModalHeader>
+              <EuiModalHeaderTitle>Tudo para Docker</EuiModalHeaderTitle>
+            </EuiModalHeader>
+            <EuiModalBody> 
+              <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Active Directory"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Comportamento de Usuário"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="File Server"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                </EuiFlexGroup>
+            </EuiModalBody>
+
+            <EuiModalFooter>
+            <EuiButton onClick={this.closeDockerModal} fill>
+                Fechar
+            </EuiButton>
+
+            </EuiModalFooter>
+          </EuiModal>
         </EuiOverlayMask>
       );
     }
@@ -939,16 +1208,55 @@ export class WelcomeScreen extends Component {
     if(this.state.isLinuxModalVisible) {
       LinuxModal = (
         <EuiOverlayMask>
-          <EuiConfirmModal
-            title="Do this thing"
-            onCancel={this.closeLinuxModal}
-            onConfirm={this.closeLinuxModal}
-            cancelButtonText="Cancelar"
-            confirmButtonText="Adiquirir"
-            defaultFocusedButton="Confirmar">
-            <p>You&rsquo;re about to do something.</p>
-            <p>Are you sure you want to do this?</p>
-          </EuiConfirmModal>
+                    <EuiModal onClose={this.closeLinuxModal}>
+            <EuiModalHeader>
+              <EuiModalHeaderTitle>Tudo para Linux</EuiModalHeaderTitle>
+            </EuiModalHeader>
+            <EuiModalBody> 
+              <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Active Directory"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Comportamento de Usuário"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="File Server"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                </EuiFlexGroup>
+            </EuiModalBody>
+
+            <EuiModalFooter>
+            <EuiButton onClick={this.closeLinuxModal} fill>
+                Fechar
+            </EuiButton>
+
+            </EuiModalFooter>
+          </EuiModal>
         </EuiOverlayMask>
       );
     }
@@ -958,16 +1266,33 @@ export class WelcomeScreen extends Component {
     if(this.state.isCustomModalVisible) {
       CustomModal = (
         <EuiOverlayMask>
-          <EuiConfirmModal
-            title="Do this thing"
-            onCancel={this.closeCustomModal}
-            onConfirm={this.closeCustomModal}
-            cancelButtonText="Cancelar"
-            confirmButtonText="Adiquirir"
-            defaultFocusedButton="Confirmar">
-            <p>You&rsquo;re about to do something.</p>
-            <p>Are you sure you want to do this?</p>
-          </EuiConfirmModal>
+                    <EuiModal onClose={this.closeCustomModal}>
+            <EuiModalHeader>
+              <EuiModalHeaderTitle>Pacote customizado.</EuiModalHeaderTitle>
+            </EuiModalHeader>
+            <EuiModalBody> 
+              <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Active Directory"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>                  
+                </EuiFlexGroup>
+            </EuiModalBody>
+
+            <EuiModalFooter>
+            <EuiButton onClick={this.closeCustomModal} fill>
+                Fechar
+            </EuiButton>
+
+            </EuiModalFooter>
+          </EuiModal>
         </EuiOverlayMask>
       );
     }
