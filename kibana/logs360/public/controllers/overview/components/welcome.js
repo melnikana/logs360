@@ -658,7 +658,7 @@ export class WelcomeScreen extends Component {
                   <EuiFlexItem>
                   <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/l2lA3oQ.png"
                       title="Monitoramento de Acesso"
                       description={
                       <div>
@@ -704,15 +704,15 @@ export class WelcomeScreen extends Component {
         <EuiOverlayMask>
           <EuiModal onClose={this.closeServerModal}>
             <EuiModalHeader>
-              <EuiModalHeaderTitle>Tudo para Server</EuiModalHeaderTitle>
+              <EuiModalHeaderTitle>Tudo para Web Server</EuiModalHeaderTitle>
             </EuiModalHeader>
             <EuiModalBody> 
               <EuiFlexGroup gutterSize="l">
               <EuiFlexItem>
                     <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
-                      title="Active Directory"
+                      image="https://i.imgur.com/Md5gfOP.png"
+                      title="Monitoramento de segurança"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -722,8 +722,8 @@ export class WelcomeScreen extends Component {
                   <EuiFlexItem>
                   <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
-                      title="Comportamento de Usuário"
+                      image="https://i.imgur.com/a9xBmro.png"
+                      title="Compliance"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -733,8 +733,8 @@ export class WelcomeScreen extends Component {
                   <EuiFlexItem>
                   <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
-                      title="File Server"
+                      image="https://i.imgur.com/oURuXYV.png"
+                      title="Analitics"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -769,8 +769,8 @@ export class WelcomeScreen extends Component {
               <EuiFlexItem>
                     <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
-                      title="Active Directory"
+                      image="https://i.imgur.com/NS4jGdj.png"
+                      title="Monitoramento de Segurança"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -780,25 +780,14 @@ export class WelcomeScreen extends Component {
                   <EuiFlexItem>
                   <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
-                      title="Comportamento de Usuário"
+                      image="https://i.imgur.com/a9xBmro.png"
+                      title="Compliance"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
-                  </EuiFlexItem>
-                  <EuiFlexItem>
-                  <EuiCard
-                      textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
-                      title="File Server"
-                      description={<div>- Verfique atividades.<br />
-                        - Monitore conteúdo.<br />
-                        - Desempenho. <br /> </div>}
-                      footer={cardFooterContent}
-                    />
-                  </EuiFlexItem>
+                  </EuiFlexItem>                 
                 </EuiFlexGroup>
             </EuiModalBody>
 
@@ -828,7 +817,7 @@ export class WelcomeScreen extends Component {
                     <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Active Directory"
+                      title="Monitoramento de Segurança"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -839,7 +828,7 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Comportamento de Usuário"
+                      title="Compliance"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -850,7 +839,7 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="File Server"
+                      title="Analitics"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -886,7 +875,7 @@ export class WelcomeScreen extends Component {
                     <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Active Directory"
+                      title="Monitoramento de Segurança"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -908,7 +897,7 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="File Server"
+                      title="Compliance"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -944,7 +933,7 @@ export class WelcomeScreen extends Component {
                     <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Active Directory"
+                      title="Monitoramento de Segurança"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -955,18 +944,7 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Comportamento de Usuário"
-                      description={<div>- Verfique atividades.<br />
-                        - Monitore conteúdo.<br />
-                        - Desempenho. <br /> </div>}
-                      footer={cardFooterContent}
-                    />
-                  </EuiFlexItem>
-                  <EuiFlexItem>
-                  <EuiCard
-                      textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
-                      title="File Server"
+                      title="Storage"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -1002,7 +980,7 @@ export class WelcomeScreen extends Component {
                     <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Active Directory"
+                      title="Wodle"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -1013,7 +991,7 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Comportamento de Usuário"
+                      title="Cloudtrail"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -1024,7 +1002,115 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="File Server"
+                      title="Errors"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                </EuiFlexGroup>
+
+                <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Monitoramento de Acesso"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Guard Duty"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Maciel Alerts"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                </EuiFlexGroup>
+
+                <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="VPC Flow"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="AWS Config"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Config History"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                </EuiFlexGroup>
+
+                <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Trusty Advisor"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="AWS KMS"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="AWS Inspector"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -1060,10 +1146,13 @@ export class WelcomeScreen extends Component {
                     <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Active Directory"
-                      description={<div>- Verfique atividades.<br />
+                      title="Monitoramento de segurança"
+                      description={
+                      <div>
+                        - Verfique atividades.<br />
                         - Monitore conteúdo.<br />
-                        - Desempenho. <br /> </div>}
+                        - Desempenho. <br />
+                      </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
@@ -1071,7 +1160,7 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Comportamento de Usuário"
+                      title="Analytics"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -1118,7 +1207,20 @@ export class WelcomeScreen extends Component {
                     <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Active Directory"
+                      title="Monitoramento de segurança"
+                      description={
+                      <div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> 
+                      </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Controle de Acesso"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -1129,18 +1231,7 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Comportamento de Usuário"
-                      description={<div>- Verfique atividades.<br />
-                        - Monitore conteúdo.<br />
-                        - Desempenho. <br /> </div>}
-                      footer={cardFooterContent}
-                    />
-                  </EuiFlexItem>
-                  <EuiFlexItem>
-                  <EuiCard
-                      textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
-                      title="File Server"
+                      title="Compliance"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -1176,7 +1267,7 @@ export class WelcomeScreen extends Component {
                     <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Active Directory"
+                      title="Monitoramento de segurança"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -1187,7 +1278,7 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Comportamento de Usuário"
+                      title="Monitoramento de Containers"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -1198,13 +1289,38 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="File Server"
+                      title="Monitoramento de Hardware"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>
+                </EuiFlexGroup>
+
+                <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Compliance"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                  <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Controle de Autenticação"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>                  
                 </EuiFlexGroup>
             </EuiModalBody>
 
@@ -1234,7 +1350,7 @@ export class WelcomeScreen extends Component {
                     <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Active Directory"
+                      title="Controle de Acesso"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -1245,7 +1361,21 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="Comportamento de Usuário"
+                      title="Compliance"
+                      description={<div>- Verfique atividades.<br />
+                        - Monitore conteúdo.<br />
+                        - Desempenho. <br /> </div>}
+                      footer={cardFooterContent}
+                    />
+                  </EuiFlexItem>                  
+                </EuiFlexGroup>
+
+                <EuiFlexGroup gutterSize="l">
+              <EuiFlexItem>
+                    <EuiCard
+                      textAlign="left"
+                      image="https://source.unsplash.com/400x200/?Nature"
+                      title="Sys Log"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
@@ -1256,13 +1386,13 @@ export class WelcomeScreen extends Component {
                   <EuiCard
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
-                      title="File Server"
+                      title="Analytics"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
                         - Desempenho. <br /> </div>}
                       footer={cardFooterContent}
                     />
-                  </EuiFlexItem>
+                  </EuiFlexItem>                  
                 </EuiFlexGroup>
             </EuiModalBody>
 
@@ -1293,9 +1423,14 @@ export class WelcomeScreen extends Component {
                       textAlign="left"
                       image="https://source.unsplash.com/400x200/?Nature"
                       title="Active Directory"
-                      description={<div>- Verfique atividades.<br />
-                        - Monitore conteúdo.<br />
-                        - Desempenho. <br /> </div>}
+                      description={
+                      <div>Pellentesque lobortis velit quis consequat dignissim. 
+                        Pellentesque sagittis sollicitudin neque et aliquet. 
+                        Duis mattis nisi nibh, luctus suscipit ex convallis nec. 
+                        Nunc aliquet felis et gravida ornare. 
+                        Maecenas volutpat fringilla risus sed sagittis.
+                        Nulla a fringilla dolor. 
+                        Donec ut purus id magna scelerisque consequat commodo sed ligula </div>}
                       footer={cardFooterContent}
                     />
                   </EuiFlexItem>                  
