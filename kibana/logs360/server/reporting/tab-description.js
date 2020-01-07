@@ -107,67 +107,67 @@ export const TabDescription = {
   windows: {
     title: 'Tudo para windows',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para Windows.'
+      'Montamos um pacote especialmente para você com os principais recursos para Windows.'
   },
   firewall: {
     title: 'Tudo para Firewall',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para Firewall.'
+      'Montamos um pacote especialmente para você com os principais recursos para Firewall.'
   },
   bd: {
     title: 'Tudo para banco de dados',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para Banco de dados.'
+      'Montamos um pacote especialmente para você com os principais recursos para Banco de dados.'
   },
   webserver: {
     title: 'Tudo para servidores web',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para Web Server.'
+      'Montamos um pacote especialmente para você com os principais recursos para Web Server.'
   },
   antivirus: {
     title: 'Tudo para Antivírus / Endpoint',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para Antivírus/Endpoint.'
+      'Montamos um pacote especialmente para você com os principais recursos para Antivírus/Endpoint.'
   },
   email: {
     title: 'Tudo para E-mail',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para E-mail.'
+      'Montamos um pacote especialmente para você com os principais recursos para E-mail.'
   },
   vpn: {
     title: 'Tudo para VPN',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para VPN.'
+      'Montamos um pacote especialmente para você com os principais recursos para VPN.'
   },
   azure1: {
     title: 'Tudo para Azure',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para Azure.'
+      'Montamos um pacote especialmente para você com os principais recursos para Azure.'
   },
   aws1: {
     title: 'Tudo para Amazon AWS',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para Amazon AWS.'
+      'Montamos um pacote especialmente para você com os principais recursos para Amazon AWS.'
   },
   proxy: {
     title: 'Tudo para Proxy',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para Proxy.'
+      'Montamos um pacote especialmente para você com os principais recursos para Proxy.'
   },
   ftp: {
     title: 'Tudo para FTP',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para FTP.'
+      'Montamos um pacote especialmente para você com os principais recursos para FTP.'
   },
   docker1: {
     title: 'Tudo para Docker',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para Docker.'
+      'Montamos um pacote especialmente para você com os principais recursos para Docker.'
   },
   linux: {
     title: 'Tudo para Linux',
     description:
-      'Montamos um pacote especialmente para com os principais recursos para Linux.'
+      'Montamos um pacote especialmente para você com os principais recursos para Linux.'
   },
   costum: {
     title: 'Personalize seu pacote',
