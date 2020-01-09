@@ -970,16 +970,16 @@ export class WelcomeScreen extends Component {
     if(this.state.isAwsModalVisible) {
       AwsModal = (
         <EuiOverlayMask>
-<EuiModal onClose={this.closeAwsModal}>
+          <EuiModal onClose={this.closeAwsModal}>
             <EuiModalHeader>
-              <EuiModalHeaderTitle>Tudo para Antivirus</EuiModalHeaderTitle>
+              <EuiModalHeaderTitle>Tudo para Amazon AWS</EuiModalHeaderTitle>
             </EuiModalHeader>
             <EuiModalBody> 
               <EuiFlexGroup gutterSize="l">
               <EuiFlexItem>
                     <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/FbiIWjx.png"
                       title="Wodle"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
@@ -990,7 +990,7 @@ export class WelcomeScreen extends Component {
                   <EuiFlexItem>
                   <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/PqvySAQ.png"
                       title="Cloudtrail"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
@@ -1001,7 +1001,7 @@ export class WelcomeScreen extends Component {
                   <EuiFlexItem>
                   <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/eglIVce.png"
                       title="Errors"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
@@ -1015,7 +1015,7 @@ export class WelcomeScreen extends Component {
               <EuiFlexItem>
                     <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/jvuM55j.png"
                       title="Monitoramento de Acesso"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
@@ -1026,7 +1026,7 @@ export class WelcomeScreen extends Component {
                   <EuiFlexItem>
                   <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/Z1ovWN0.png"
                       title="Guard Duty"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
@@ -1037,7 +1037,7 @@ export class WelcomeScreen extends Component {
                   <EuiFlexItem>
                   <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/yjCCsZT.png"
                       title="Maciel Alerts"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
@@ -1051,7 +1051,7 @@ export class WelcomeScreen extends Component {
               <EuiFlexItem>
                     <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/xQaKra5.png"
                       title="VPC Flow"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
@@ -1062,7 +1062,7 @@ export class WelcomeScreen extends Component {
                   <EuiFlexItem>
                   <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/tvW4qe7.png"
                       title="AWS Config"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
@@ -1073,7 +1073,7 @@ export class WelcomeScreen extends Component {
                   <EuiFlexItem>
                   <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/C3mGBaI.png"
                       title="Config History"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
@@ -1087,7 +1087,7 @@ export class WelcomeScreen extends Component {
               <EuiFlexItem>
                     <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/esLE0lU.png"
                       title="Trusty Advisor"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
@@ -1098,7 +1098,7 @@ export class WelcomeScreen extends Component {
                   <EuiFlexItem>
                   <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/1hDXbv3.png"
                       title="AWS KMS"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
@@ -1109,7 +1109,7 @@ export class WelcomeScreen extends Component {
                   <EuiFlexItem>
                   <EuiCard
                       textAlign="left"
-                      image="https://source.unsplash.com/400x200/?Nature"
+                      image="https://i.imgur.com/uZyP4Es.png"
                       title="AWS Inspector"
                       description={<div>- Verfique atividades.<br />
                         - Monitore conteúdo.<br />
@@ -1414,7 +1414,7 @@ export class WelcomeScreen extends Component {
         <EuiOverlayMask>
                     <EuiModal onClose={this.closeCustomModal}>
             <EuiModalHeader>
-              <EuiModalHeaderTitle>Pacote customizado.</EuiModalHeaderTitle>
+              <EuiModalHeaderTitle>Pacote Custom.</EuiModalHeaderTitle>
             </EuiModalHeader>
             <EuiModalBody> 
               <EuiFlexGroup gutterSize="l">
@@ -1422,7 +1422,7 @@ export class WelcomeScreen extends Component {
                     <EuiCard
                       textAlign="left"
                       image="https://i.imgur.com/KS3u2Dz.png"
-                      title="Active Directory"
+                      title="Personalise seu pacote"
                       description={
                       <div>Pellentesque lobortis velit quis consequat dignissim. 
                         Pellentesque sagittis sollicitudin neque et aliquet. 
