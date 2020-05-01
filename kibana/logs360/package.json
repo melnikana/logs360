@@ -45,7 +45,8 @@
     "reactstrap": "^8.2.0",
     "simple-tail": "^1.1.0",
     "timsort": "^0.3.0",
-    "winston": "3.0.0"
+    "winston": "3.0.0",
+    "snyk": "^1.316.1"
   },
   "build": {
     "git": {
@@ -54,5 +55,10 @@
       "date": "Thu, 5 Sep 2019 21:03:16 -0600"
     },
     "date": "Mon Sep 23 2019 11:23:38 GMT+0000 (UTC)"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
